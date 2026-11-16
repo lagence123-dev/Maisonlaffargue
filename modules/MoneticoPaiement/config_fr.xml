@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>MoneticoPaiement</name>
+    <displayName><![CDATA[Monetico Paiement]]></displayName>
+    <version><![CDATA[1.5.0]]></version>
+    <description><![CDATA[Module de paiement pour la solution Monetico Paiement]]></description>
+    <author><![CDATA[Monetico Paiement]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Êtes-vous sûr de vouloir désinstaller ce module]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+</module>

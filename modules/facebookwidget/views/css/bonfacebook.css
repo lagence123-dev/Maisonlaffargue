@@ -1,0 +1,162 @@
+#facebook-menu-open {
+    left: 0;
+    top: 360px;
+    background: #46629e;
+    width: 30px;
+    position: fixed;
+    height: 30px;
+    transition: all 0.3s linear;
+    z-index: 999;
+    border: none;
+    cursor: pointer;
+}
+
+#facebook-menu-open i {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 3px;
+}
+
+#facebook-menu-open:focus {
+    outline: none;
+}
+
+.facebook-custom-menu {
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: -320px;
+    top: 360px;
+    height: 520px;
+    z-index: 1000;
+    background: #fff;
+    transition: all 0.3s linear;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .16);
+    overflow: scroll;
+}
+
+
+.bon-facebook-column {
+    margin-bottom: 20px;
+}
+
+.bon-facebook-column .title_block {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+
+.facebook-custom-menu::-webkit-scrollbar,
+.facebook-custom-menu-nav::-webkit-scrollbar {
+    display: none;
+}
+
+#facebook-menu-open.active {
+    left: 318px;
+}
+
+.facebook-custom-menu.active {
+    left: 0;
+}
+
+.facebook-custom-menu .title_block,
+.facebook-custom-menu-nav .title_block {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dedede;
+}
+
+.facebook-custom-menu .facebook-custom-menu-wrapper,
+.facebook-custom-menu-nav .facebook-custom-menu-wrapper {
+    padding: 17px 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    overflow: hidden;
+}
+.facebook-custom-menu-nav {
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    right: 76px;
+    bottom: 15.5%;
+    height: 520px;
+    visibility: hidden;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    background: #fff;
+    transition: all 0.2s linear;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, .1);
+    overflow: scroll;
+    transform: translateX(-25px);
+}
+
+.facebook-menu-open-nav-button {
+    display: flex;
+    justify-content: center;
+}
+.facebook-menu-open-nav-button:before {
+    content: "\e900";
+    font-family: 'bonicon';
+    color: #3a3a3a;
+    font-size: 28px;
+}
+.facebook-menu-open-nav-button:hover {
+    cursor: pointer;
+}
+.facebook-menu-open-nav-wrapper {
+    transition: all 0.6s ease 0s;
+}
+.facebook-menu-open-nav-wrapper:hover .facebook-custom-menu-nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: all 0.3s linear;
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 992px) {
+    body.header-1 #wrapper #facebook-menu-open {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #category .bon-facebook-column {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 991px) {
+
+    #facebook-menu-open,
+    .facebook-custom-menu {
+        top: 315px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #facebook-menu-open,
+    .facebook-custom-menu {
+        top: 292px;
+    }
+}
+@media screen and (max-width: 576px) {
+    #facebook-menu-open,
+    .facebook-custom-menu {
+        top: 295px;
+    }
+}
+
+@media screen and (max-width: 387px) {
+    #facebook-menu-open,
+    .facebook-custom-menu {
+        top: 310px;
+    }
+} */

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>wkgiftcard</name>
+    <displayName><![CDATA[Carte Cadeau ]]></displayName>
+    <version><![CDATA[5.2.1]]></version>
+    <description><![CDATA[Ajouter la carte de cadeau et minimiser le prix de produit]]></description>
+    <author><![CDATA[Webkul]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

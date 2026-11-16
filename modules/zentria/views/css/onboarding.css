@@ -1,0 +1,294 @@
+/**
+*  Copyright 2025 Zentria
+*
+*  @author    Zentria <zentria@profileo.com>
+*  @copyright 2025 Zentria
+*  @license   Commercial
+*  link      https://zentria.profileo.com
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=block');
+
+.zentria_onboarding .h1 {
+	font-size: 36px;
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 800;
+	line-height: 40px;
+}
+
+.zentria_onboarding .h5 {
+	font-size: 16px;
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.zentria_onboarding p {
+	font-size: 14px;
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 18px;
+	margin-bottom: 0;
+}
+
+.zentria_onboarding .text-grey {
+	color: #6D6D77;
+}
+
+.zentria_onboarding .fw-medium {
+	font-weight: 500;
+}
+
+.zentria_onboarding .my-5 {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.zentria_onboarding .mb-5 {
+	margin-bottom: 3rem;
+}
+
+.zentria_onboarding .my-2 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.zentria_onboarding .my-4 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.zentria_onboarding .mt-2 {
+	margin-top: 0.5rem;
+}
+
+.zentria_onboarding .mt-5 {
+	margin-top: 3rem;
+}
+
+.zentria_onboarding .mb-2 {
+	margin-bottom: 0.5rem;
+}
+
+.zentria_onboarding .mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.zentria_onboarding .gap-2 {
+	gap: 0.5rem;
+}
+
+.zentria_onboarding .gap-3 {
+	gap: 1rem;
+}
+
+.zentria_onboarding .align-items-center {
+	align-items: center;
+}
+
+.zentria_onboarding .d-flex {
+	display: flex;
+}
+
+.zentria_onboarding .flex-column {
+	flex-direction: column;
+}
+
+.zentria_onboarding .container, .zentria_onboarding .container-fluid,
+.zentria_onboarding .container-xxl, .zentria_onboarding .container-xl,
+.zentria_onboarding .container-lg, .zentria_onboarding .container-md,
+.zentria_onboarding .container-sm {
+	--cms-gutter-x: 1.5rem;
+	--cms-gutter-y: 0;
+	width: 100%;
+	padding-right: calc(var(--cms-gutter-x)* 0.5);
+	padding-left: calc(var(--cms-gutter-x)* 0.5);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media ( min-width : 1400px) {
+	.zentria_onboarding .container-xxl, .zentria_onboarding .container-xl,
+	.zentria_onboarding .container-lg, .zentria_onboarding .container-md,
+	.zentria_onboarding .container-sm, .zentria_onboarding .container {
+		max-width: 1320px;
+	}
+}
+
+.zentria_onboarding .row {
+	--cms-gutter-x: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(-0.5 * var(--cms-gutter-x));
+	margin-left: calc(-0.5 * var(--cms-gutter-x));
+}
+
+.zentria_onboarding .row>* {
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: calc(var(--cms-gutter-x)* 0.5);
+	padding-left: calc(var(--cms-gutter-x)* 0.5);
+}
+
+.zentria_onboarding .col-8 {
+	width: 70%;
+}
+
+.zentria_onboarding .top-container, .zentria_onboarding #onboarding_item
+{
+	color: #000046;
+}
+
+.zentria_onboarding #onboarding_item {
+	display: flex;
+	flex-direction: column;
+}
+
+.zentria_onboarding #onboarding_steps .step-list-btn {
+	display: inline-flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.zentria_onboarding #onboarding_steps .btn {
+	display: inline-block;
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	padding: 0.75rem 1.5rem;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.zentria_onboarding #onboarding_steps .btn-primary-onboarding {
+	color: #fff;
+	background-color: #9270FE;
+	border-color: #9270FE;
+}
+
+.zentria_onboarding #onboarding_steps .btn-primary-onboarding:hover {
+	color: #fff;
+	background-color: #a285fe;
+	border-color: #9d7efe;
+}
+
+.zentria_onboarding #onboarding_steps .btn-outline-primary-onboarding {
+	color: #9270FE;
+	background-color: #ffffff;
+	border-color: #9270FE;
+}
+
+.zentria_onboarding #onboarding_steps .btn-outline-primary-onboarding:hover {
+	background-color: #F1EDFF;
+}
+
+.zentria_onboarding #onboarding_steps .btn-primary-onboarding:focus,
+.zentria_onboarding #onboarding_steps .btn-outline-primary-onboarding:focus {
+	outline: none;
+}
+
+.zentria_onboarding #onboarding_item .step-item {
+	position: relative;
+}
+
+.zentria_onboarding #onboarding_item .step-item:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 25px;
+	top: 60px;
+	height: 100%;
+	border-left: 1px solid #774CFE;
+}
+
+.zentria_onboarding #onboarding_item .step-item:not(:last-child) {
+	margin-bottom: 70px;
+}
+
+.zentria_onboarding #onboarding_item .step-item:nth-child(4):after {
+	border: none;
+}
+
+.zentria_onboarding #onboarding_item .step-content.inactive_step {
+	display: none;
+}
+
+.zentria_onboarding .icon-onboarding-step-1 {
+	background-image:
+			url("data:image/svg+xml,%3Csvg width='50' height='51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='.5' width='50' height='50' rx='25' fill='%23774CFE' fill-opacity='.2'/%3E%3Cpath d='M22.576 21.9v-2.064h3.856V31.5h-2.304v-9.6h-1.552Z' fill='%23774CFE'/%3E%3C/svg%3E");
+	width: 50px;
+	height: 51px;
+}
+
+.zentria_onboarding .icon-onboarding-step-2 {
+	background-image:
+			url("data:image/svg+xml;charset=utf8, %3Csvg width='50' height='51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='.5' width='50' height='50' rx='25' fill='%23774CFE' fill-opacity='.2'/%3E%3Cpath d='M21.552 28.972A62.276 62.276 0 0 0 24 26.844a10.126 10.126 0 0 0 1.52-1.792c.405-.619.608-1.227.608-1.824 0-.544-.128-.97-.384-1.28-.256-.31-.65-.464-1.184-.464-.533 0-.944.181-1.232.544-.288.352-.437.837-.448 1.456h-2.176c.043-1.28.421-2.25 1.136-2.912.725-.661 1.643-.992 2.752-.992 1.216 0 2.15.325 2.8.976.65.64.976 1.488.976 2.544 0 .832-.224 1.627-.672 2.384a9.63 9.63 0 0 1-1.536 1.984 50.64 50.64 0 0 1-2.256 2.016h4.72v1.856H20.72v-1.664l.832-.704Z' fill='%23774CFE'/%3E%3C/svg%3E");
+	width: 50px;
+	height: 51px;
+}
+
+.zentria_onboarding .icon-onboarding-step-3 {
+	background-image:
+			url("data:image/svg+xml;charset=utf8, %3Csvg width='50' height='51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='.5' width='50' height='50' rx='25' fill='%23774CFE' fill-opacity='.2'/%3E%3Cpath d='M20.88 22.908c.053-1.067.427-1.888 1.12-2.464.704-.587 1.627-.88 2.768-.88.779 0 1.445.139 2 .416.555.267.97.635 1.248 1.104.288.459.432.981.432 1.568 0 .672-.176 1.243-.528 1.712-.341.459-.752.768-1.232.928v.064c.619.192 1.099.533 1.44 1.024.352.49.528 1.12.528 1.888 0 .64-.15 1.21-.448 1.712-.288.501-.72.896-1.296 1.184-.565.277-1.248.416-2.048.416-1.205 0-2.187-.304-2.944-.912-.757-.608-1.157-1.504-1.2-2.688h2.176c.021.523.197.944.528 1.264.341.31.805.464 1.392.464.544 0 .96-.15 1.248-.448.299-.31.448-.704.448-1.184 0-.64-.203-1.099-.608-1.376-.405-.277-1.035-.416-1.888-.416h-.464v-1.84h.464c1.515 0 2.272-.507 2.272-1.52 0-.459-.139-.816-.416-1.072-.267-.256-.656-.384-1.168-.384-.501 0-.89.139-1.168.416-.267.267-.421.608-.464 1.024H20.88Z' fill='%23774CFE'/%3E%3C/svg%3E");
+	width: 50px;
+	height: 51px;
+}
+
+.zentria_onboarding .icon-onboarding-step-4 {
+	background-image:
+			url("data:image/svg+xml,%3Csvg width='50' height='51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='.5' width='50' height='50' rx='25' fill='%23774CFE' fill-opacity='.2'/%3E%3Cpath d='M20.252 29.228v-1.76l5.232-7.488h2.608v7.296H29.5v1.952h-1.408V31.5h-2.24v-2.272h-5.6Zm5.744-6.848-3.28 4.896h3.28V22.38Z' fill='%23774CFE'/%3E%3C/svg%3E");
+	width: 50px;
+	height: 51px;
+}
+
+.zentria_onboarding .icon-onboarding-step-succeed {
+	background-image:
+			url("data:image/svg+xml;charset=utf8, %3Csvg width='50' height='51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='.5' width='50' height='50' rx='25' fill='%23774cfe'/%3E%3Cpath d='M31.666 20.5 22.5 29.667 18.333 25.5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	width: 50px;
+	height: 51px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.zentria_onboarding #onboarding_steps .step-list-btn {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.zentria_onboarding .h1 {
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.zentria_onboarding .h5 {
+		font-size: 15px;
+		line-height: 19px;
+	}
+	.zentria_onboarding #onboarding_steps .btn {
+		font-size: 12px;
+		line-height: 14px;
+		padding: 0.5rem 1rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.zentria_onboarding .h1 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.zentria_onboarding .h5 {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.zentria_onboarding p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+}

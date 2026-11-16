@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>bonpromotion</name>
+    <displayName><![CDATA[Banni&egrave;re de compte &agrave; rebours de remise promotionnelle]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Afficher des banni&egrave;res promotionnelles]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Désinstaller ce module]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

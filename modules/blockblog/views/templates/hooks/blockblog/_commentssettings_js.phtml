@@ -1,0 +1,62 @@
+<?php
+
+
+$_html .= "<script type=\"text/javascript\">
+    	$('document').ready( function() {
+
+    	    if(".$bcaptcha_type." == 1){
+    				$( \"#captcha-".$this->name."2\" ).remove();
+    				$( \"#captcha-".$this->name."3\" ).remove();
+    				$( \"#bcaptcha_site_key\" ).parent().parent().hide();
+      				$( \"#bcaptcha_secret_key\" ).parent().parent().hide();
+    		}
+
+
+            if(".$bcaptcha_type." == 2){
+    				$( \"#bcaptcha_type\" ).after(\"".$text_2."\");
+    		} else {
+    				$( \"#captcha-".$this->name."2\" ).remove();
+
+    		}
+
+            if(".$bcaptcha_type." == 3){
+    				$( \"#bcaptcha_type\" ).after(\"".$text_3."\");
+    		} else {
+    				$( \"#captcha-".$this->name."3\" ).remove();
+
+    		}
+
+            $( \"#bcaptcha_type\" ).change(function() {
+  				    if($( \"#bcaptcha_type option:selected\" ).val() == 3 || $( \"#bcaptcha_type option:selected\" ).val() == 2){
+      				    $( \"#bcaptcha_site_key\" ).parent().parent().show();
+      				    $( \"#bcaptcha_secret_key\" ).parent().parent().show();
+		    		} else {
+		    			$( \"#captcha-".$this->name."2\" ).remove();
+		    			$( \"#captcha-".$this->name."3\" ).remove();
+		    			$( \"#bcaptcha_site_key\" ).parent().parent().hide();
+      				    $( \"#bcaptcha_secret_key\" ).parent().parent().hide();
+		    		}
+			});
+
+
+    		$( \"#bcaptcha_type\" ).change(function() {
+  				    if($( \"#bcaptcha_type option:selected\" ).val() == 3){
+      				    $( \"#bcaptcha_type\" ).after(\"".$text_3."\");
+		    		} else {
+		    			$( \"#captcha-".$this->name."3\" ).remove();
+		    		}
+			});
+
+
+			$( \"#bcaptcha_type\" ).change(function() {
+  				    if($( \"#bcaptcha_type option:selected\" ).val() == 2){
+      				    $( \"#bcaptcha_type\" ).after(\"".$text_2."\");
+		    		} else {
+		    			$( \"#captcha-".$this->name."2\" ).remove();
+		    		}
+			});
+
+    	});
+    	</script>
+    	";
+

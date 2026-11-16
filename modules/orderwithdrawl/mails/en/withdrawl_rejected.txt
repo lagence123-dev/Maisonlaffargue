@@ -1,0 +1,16 @@
+Withdrawal Request Rejected
+
+Hello {firstname} {lastname},
+
+Your withdrawal request for order {order_identifier} has unfortunately been rejected.
+
+Decision details
+Order ID: {order_identifier}
+Email: {email}
+Decision date: {date}
+
+{status_message}
+
+
+If you have questions about this decision or would like to clarify the reasons, please contact our customer service using the contact details on our website.
+

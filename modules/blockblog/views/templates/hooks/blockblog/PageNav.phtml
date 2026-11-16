@@ -1,0 +1,695 @@
+<?php
+
+
+
+$product_count = $count;
+
+if($is_arch == 1){
+    $res .= '<input type="hidden" name="'.$this->_name.'y" id="'.$this->_name.'y" value= "'.$year.'" />';
+    $res .= '<input type="hidden" name="'.$this->_name.'m" id="'.$this->_name.'m" value= "'.$month.'" />';
+
+}
+
+if($is_search == 1){
+    $search = isset($_data['search'])?$_data['search']:'';
+    $res .= '<input type="hidden" name="'.$this->_name.'search" id="'.$this->_name.'search" value= "'.$search.'" />';
+}
+
+if($post_id){
+    $res .= '<input type="hidden" name="'.$this->_name.'post_id" id="'.$this->_name.'post_id" value= "'.$post_id.'" />';
+}
+
+if($is_author == 1){
+    $author_id =$_data['author_id'];
+    $res .= '<input type="hidden" name="'.$this->_name.'author_id" id="'.$this->_name.'author_id" value= "'.$author_id.'" />';
+}
+
+
+if($is_authors == 1){
+    $is_search_authors =isset($_data['is_search_authors'])?$_data['is_search_authors']:0;
+    if($is_search_authors) {
+        $search = isset($_data['search_authors']) ? $_data['search_authors'] : '';
+        $res .= '<input type="hidden" name="' . $this->_name . 'search" id="' . $this->_name . 'search" value= "' . $search . '" />';
+    }
+}
+
+$is_myblogposts = isset($_data['is_myblogposts'])?$_data['is_myblogposts']:0;
+$is_myblogcom = isset($_data['is_myblogcom'])?$_data['is_myblogcom']:0;
+
+$is_gallery = isset($_data['gallery'])?$_data['gallery']:0;
+
+$is_old_design = 0;
+
+if($is_old_design) {
+    $res .= '<div class="toolbar-bottom">';
+    $res .= '<div class="sortTools16 sortTools text-align-center">';
+
+
+    $res .= '<div class="pages">';
+    $res .= '<span class="text-page">' . $page_translate . ':</span>';
+    $res .= '<span class="nums">';
+} else {
+
+    $res .= '<nav>
+                <ul class="pagination">';
+}
+
+/*$data_url = $this->getSEOURLs();
+
+$delimeter_rewrite = "&";
+if(Configuration::get('PS_REWRITING_SETTINGS')){
+    $delimeter_rewrite = "?";
+}*/
+
+
+### prev next ###
+
+if($start > 0) {
+
+    $start1 = $start;
+
+    $prev_next_start  = $start1;
+
+    //$prev_next_start = ($p - 1)*$step;
+
+    $p_prev_next = $prev_next_start/$step + 1;
+
+    $prev_next_start = ($p_prev_next-2)*$step;
+
+    $par = '<';
+
+    if($_admin){
+        $currentIndex = $_data['currentIndex'];
+        $token = $_data['token'];
+        $item = $_data['item'];
+
+        if($is_old_design) {
+            $res .= '<a href="' . $currentIndex . '&page' . $item . '=' . $prev_next_start . $token . '" >' . $par . '</a>';
+        } else {
+
+            $res .= '<li class="page-item"><a class="page-link" href="' . $currentIndex . '&page' . $item . '=' . $prev_next_start . $token . '" >' . $par . '</a></li>';
+        }
+    } else {
+        if($is_category == 1){
+
+            // categories page //
+
+            if($is_old_design) {
+                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'categories\',\''.$ajax_url.'\')">'.$par.'</a>';
+            } else {
+
+                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'categories\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+            }
+
+            // categories page //
+
+
+        } else {
+
+            if($category_id != 0){
+                // category page //
+
+                if($is_old_design) {
+                    $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'category\', '.$category_id.' ,\''.$ajax_url.'\')">'.$par.'</a>';
+                } else {
+
+                    $res .= '<li class="page-item"><a class="page-link"href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'category\', ' . $category_id . ',\''.$ajax_url.'\' )">' . $par . '</a></li>';
+                }
+
+                // category page //
+
+            }else{
+                if(Tools::strlen($all_posts)>0){
+
+                    if($is_search == 1){
+                        // search //
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'search\',\'search\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'search\',\'search\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // search //
+
+                    } elseif($is_arch == 1){
+
+                        // posts archive ///
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'archive\',\'archive\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'archive\',\'archive\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // posts archive ///
+
+                    }else {
+                        // all posts page
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'allposts\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'allposts\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // all posts page
+
+                    }
+
+                }elseif(Tools::strlen($all_comments)>0) {
+
+
+                    // all comments //
+
+
+                    if ($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'allcomments\',\'' . $ajax_url . '\')">' . $par . '</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'allcomments\',\'' . $ajax_url . '\')">' . $par . '</a></li>';
+                    }
+
+                    // all comments //
+
+                }elseif($is_author == 1){
+
+
+                    // author page //
+
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'author\',\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'author\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // author page //
+
+                }elseif($is_authors == 1){
+
+
+                    // all authors //
+
+                    $is_search_authors =isset($_data['is_search_authors'])?$_data['is_search_authors']:0;
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'authors\',  '.(($is_search_authors)?'\'search\',':'').'  \''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'authors\', '.(($is_search_authors)?'\'search\',':'').' \''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // all authors //
+
+                }elseif($is_gallery == 1){
+
+
+                    // gallery //
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'gallery\',\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'gallery\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // gallery //
+
+                } else{
+
+                    if($tag_id){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'tag\', \''.$tag_id.'\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'tag\', \''.urlencode($tag_id).'\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    }elseif($is_myblogposts == 1){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'myblogposts\', \''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'myblogposts\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    }elseif($is_myblogcom == 1){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'myblogcom\', \''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'myblogcom\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    } else {
+
+                        // post page //
+
+                        if ($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                        // post page //
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+### prev next ###
+
+
+$start1 = $start;
+for ($start1 = ($start - $step*4 >= 0 ? $start - $step*4 : 0); $start1 < ($start + $step*5 < $product_count ? $start + $step*5 : $product_count); $start1 += $step)
+{
+
+
+    $par = (int)($start1 / $step) + 1;
+    if ($start1 == $start)
+    {
+
+        if($is_old_design) {
+            $res .= '<b>'. $par .'</b>';
+        } else {
+            $res .= '<li class="page-item active"><span class="page-link">' . $par . '</span></li>';
+        }
+    }
+    else
+    {
+        if($_admin){
+            $currentIndex = $_data['currentIndex'];
+            $token = $_data['token'];
+            $item = $_data['item'];
+
+            if($is_old_design) {
+                $res .= '<a href="' . $currentIndex . '&page' . $item . '=' . ($start1 ? $start1 : 0) . $token . '" >' . $par . '</a>';
+            } else {
+
+                $res .= '<li class="page-item"><a class="page-link" href="' . $currentIndex . '&page' . $item . '=' . ($start1 ? $start1 : 0) . $token . '" >' . $par . '</a></li>';
+            }
+        } else {
+            if($is_category == 1){
+
+                // categories page //
+
+                if($is_old_design) {
+                    $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'categories\',\''.$ajax_url.'\')">'.$par.'</a>';
+                } else {
+
+                    $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'categories\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                }
+
+                // categories page //
+
+            } else {
+
+                if($category_id != 0){
+                    // category page //
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'category\', '.$category_id.' ,\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link"href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'category\', ' . $category_id . ' ,\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // category page //
+
+                }else{
+                    if(Tools::strlen($all_posts)>0){
+
+                        if($is_search == 1){
+                            // search //
+
+                            if($is_old_design) {
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'search\',\'search\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'search\',\'search\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+
+                            // search //
+
+
+                        } elseif($is_arch == 1){
+
+                            // posts archive ///
+
+                            if($is_old_design) {
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'archive\',\'archive\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'archive\',\'archive\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+
+                            // posts archive ///
+
+                        }else {
+                            // all posts page
+
+                            if($is_old_design) {
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'allposts\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'allposts\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+
+                            // all posts page
+
+                        }
+
+                    }elseif(Tools::strlen($all_comments)>0){
+
+
+                        // all comments //
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'allcomments\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'allcomments\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // all comments //
+
+                    }elseif($is_author == 1){
+
+
+                        // author page //
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'author\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'author\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // author page //
+
+                    }elseif($is_authors == 1){
+
+
+                        // all authors page //
+                        $is_search_authors =isset($_data['is_search_authors'])?$_data['is_search_authors']:0;
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'authors\',  '.(($is_search_authors)?'\'search\',':'').'  \''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'authors\',  '.(($is_search_authors)?'\'search\',':'').'  \''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // all authors page //
+
+                    }elseif($is_gallery == 1){
+
+                        // gallery //
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'gallery\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'gallery\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // gallery //
+
+
+                    } else{
+
+                        if($tag_id){
+                            if($is_old_design) {
+
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'tag\', \''.$tag_id.'\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'tag\', \''.urlencode($tag_id).'\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+                        }elseif($is_myblogposts == 1){
+                            if($is_old_design) {
+
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'myblogposts\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'myblogposts\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+                        }elseif($is_myblogcom == 1){
+                            if($is_old_design) {
+
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.($start1 ? $start1 : 0).', \'myblogcom\',\''.$ajax_url.'\')">'.$par.'</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'myblogcom\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+                        } else {
+
+                            // post page //
+
+                            if ($is_old_design) {
+
+                                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a>';
+                            } else {
+
+                                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . ($start1 ? $start1 : 0) . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                            }
+                            // post page //
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+
+### prev next ###
+
+if($start + $step < $product_count){
+    //if($start > 0) {
+
+    $start1 = $start;
+
+    $prev_next_start  = $start1;
+
+    //$prev_next_start = ($p - 1)*$step;
+
+    $p_prev_next = $prev_next_start/$step + 1;
+
+    $prev_next_start = $p_prev_next*$step;
+
+    $par = '>';
+
+    if($_admin){
+        $currentIndex = $_data['currentIndex'];
+        $token = $_data['token'];
+        $item = $_data['item'];
+
+        if($is_old_design) {
+            $res .= '<a href="' . $currentIndex . '&page' . $item . '=' . $prev_next_start . $token . '" >' . $par . '</a>';
+        } else {
+
+            $res .= '<li class="page-item"><a class="page-link" href="' . $currentIndex . '&page' . $item . '=' . $prev_next_start . $token . '" >' . $par . '</a></li>';
+        }
+    } else {
+        if($is_category == 1){
+
+            // categories page //
+
+            if($is_old_design) {
+                $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'categories\',\''.$ajax_url.'\')">'.$par.'</a>';
+            } else {
+
+                $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'categories\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+            }
+
+            // categories page //
+
+
+        } else {
+
+            if($category_id != 0){
+                // category page //
+
+                if($is_old_design) {
+                    $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'category\', '.$category_id.' ,\''.$ajax_url.'\')">'.$par.'</a>';
+                } else {
+
+                    $res .= '<li class="page-item"><a class="page-link"href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'category\', ' . $category_id . ' ,\''.$ajax_url.'\')">' . $par . '</a></li>';
+                }
+
+                // category page //
+
+            }else{
+                if(Tools::strlen($all_posts)>0){
+
+                    if($is_search == 1){
+                        // search //
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'search\',\'search\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'search\',\'search\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // search //
+
+                    } elseif($is_arch == 1){
+
+                        // posts archive ///
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'archive\',\'archive\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'archive\',\'archive\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // posts archive ///
+
+
+                    }else {
+                        // all posts page
+
+                        if($is_old_design) {
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'allposts\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'allposts\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+
+                        // all posts page
+
+                    }
+
+                }elseif(Tools::strlen($all_comments)>0){
+
+
+                    // all comments //
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'allcomments\',\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'allcomments\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // all comments //
+
+
+                }elseif($is_author == 1){
+
+
+                    // author page //
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'author\',\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'author\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // author page //
+
+                }elseif($is_authors== 1){
+
+
+                    // all authors page //
+                    $is_search_authors =isset($_data['is_search_authors'])?$_data['is_search_authors']:0;
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'authors\', '.(($is_search_authors)?'\'search\',':'').'  \''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'authors\', '.(($is_search_authors)?'\'search\',':'').'  \''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // all authors page //
+                }elseif($is_gallery == 1){
+
+
+                    // gallery //
+
+                    if($is_old_design) {
+                        $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'gallery\',\''.$ajax_url.'\')">'.$par.'</a>';
+                    } else {
+
+                        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'gallery\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                    }
+
+                    // gallery //
+
+                } else{
+
+                    if($tag_id){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'tag\', \''.$tag_id.'\',\''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'tag\', \''.urlencode($tag_id).'\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    }elseif($is_myblogposts == 1){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'myblogposts\', \''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'myblogposts\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    }elseif($is_myblogcom == 1){
+                        if($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( '.$prev_next_start.', \'myblogcom\', \''.$ajax_url.'\')">'.$par.'</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'myblogcom\', \''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                    } else {
+
+                        // post page //
+
+                        if ($is_old_design) {
+
+                            $res .= '<a href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a>';
+                        } else {
+
+                            $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_blockblog( ' . $prev_next_start . ', \'comments\', \'comments\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+                        }
+                        // post page //
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+### prev next ###
+
+
+
+if($is_old_design) {
+    $res .= '</span>';
+    $res .= '</div>';
+
+    $res .= '</div>';
+    $res .= '</div>';
+} else {
+
+    $res .= '</ul>
+                 </nav>';
+}
+
+
+?>

@@ -1,0 +1,24 @@
+Confirmarea cererii dvs. de retragere
+
+Bună ziua {firstname} {lastname},
+
+Cererea dvs. de retragere a fost primită. Mai jos găsiți detaliile cererii:
+
+Număr comandă: {order_identifier}
+Nume: {consumer_name}
+E-mail pentru confirmarea primirii: {email}
+Data și ora primirii: {date}
+Domeniul retragerii: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Puteți urmări comanda în contul dvs., la Istoricul comenzilor:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

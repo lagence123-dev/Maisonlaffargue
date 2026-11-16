@@ -1,0 +1,36 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bonfaq}prestashop>bonfaq_5405d8a903c83e89cb649f1b518ef1be'] = 'czêsto zadawane pytania';
+$_MODULE['<{bonfaq}prestashop>bonfaq_8be6549069d205c1dd3e136ac325c14a'] = 'Wyświetl stronę często zadawanych pytań.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_526a37ef550a583bc1719d46a2fc82cc'] = 'Odinstaluj tien moduł';
+$_MODULE['<{bonfaq}prestashop>bonfaq_cc251d41a3384be12d0b6cece46521be'] = 'Zaktualizuj czêsto zadawane pytania';
+$_MODULE['<{bonfaq}prestashop>bonfaq_8a4168cb96229a2a91174e31ea9f18c7'] = 'Dodaj FAQ';
+$_MODULE['<{bonfaq}prestashop>bonfaq_b78a3223503896721cca1303f776159b'] = 'tytuł';
+$_MODULE['<{bonfaq}prestashop>bonfaq_f15c1cae7882448b3fb0404682e17e61'] = 'treść';
+$_MODULE['<{bonfaq}prestashop>bonfaq_ec53a8c4f07baed5d8825072c89799be'] = 'status';
+$_MODULE['<{bonfaq}prestashop>bonfaq_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'włączony';
+$_MODULE['<{bonfaq}prestashop>bonfaq_b9f5c797ebbf55adccdd8539a65a0241'] = 'wyłączony';
+$_MODULE['<{bonfaq}prestashop>bonfaq_c9cc8cce247e49bae79f15173ce97354'] = 'zapisać';
+$_MODULE['<{bonfaq}prestashop>bonfaq_630f6dc397fe74e52d5189e2c80f282b'] = 'powrót lusteloos';
+$_MODULE['<{bonfaq}prestashop>bonfaq_490aa6e856ccf208a054389e47ce0d06'] = 'identyfikator';
+$_MODULE['<{bonfaq}prestashop>bonfaq_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'pozycja';
+$_MODULE['<{bonfaq}prestashop>bonfaq_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Dodaje nu obiekt';
+$_MODULE['<{bonfaq}prestashop>bonfaq_508ccb9d6ad8c8988e3cdf1f5453d6ae'] = 'FAQ nie można dodać.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_989eab8197e712dc04bd30893017065e'] = 'FAQ nie mogło zostać zaktualizowane.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_f642ef5da96788da835a40dc88fe3660'] = 'FAK jest rejestrowany.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_f3b9de34364942606ebb991132523f83'] = 'Wystąpił nieznany błąd.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_0327f472dc40cbbf26d18485fda1fb09'] = 'Wymagana jest nazwa FAQ.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_6e13d54425370cdd6a2cefd94eb4e255'] = 'Wystąpił błąd podczas usuwania karty';
+$_MODULE['<{bonfaq}prestashop>bonfaq_493b7ecf3a201c1156c32579addf8aa7'] = 'Karta została pomyślnie usunięta';
+$_MODULE['<{bonfaq}prestashop>bonfaq_22ae03024d9085a4b98c8007e982c7dd'] = 'Status karty nie mógł zostać zaktualizowany.';
+$_MODULE['<{bonfaq}prestashop>bonfaq_27364c18e496ff2acf5c2247b36caf52'] = 'Status karty został pomyślnie zaktualizowany.';
+$_MODULE['<{bonfaq}prestashop>faq_58674eb29fcce52481c292ef4aa4bbc3'] = 'czêsto zadawane pytania';
+$_MODULE['<{bonfaq}prestashop>faq_375781fffb982f40624577eb9038f774'] = 'Brak pozycji FAQ.';
+$_MODULE['<{bonfaq}prestashop>faq_1_7_58674eb29fcce52481c292ef4aa4bbc3'] = 'czêsto zadawane pytania';
+$_MODULE['<{bonfaq}prestashop>faq_1_7_3606f1328766ab25495936c08cc59dc6'] = 'Lorem ipsum dolor zit amett.';
+$_MODULE['<{bonfaq}prestashop>faq_1_7_bbfcfc692b2c84ce4c549cb1d6c7f1b5'] = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+$_MODULE['<{bonfaq}prestashop>faq_1_7_375781fffb982f40624577eb9038f774'] = 'Brak pozycji FAQ.';
+$_MODULE['<{bonfaq}prestashop>faq-my-account_58674eb29fcce52481c292ef4aa4bbc3'] = 'czêsto zadawane pytania';
+$_MODULE['<{bonfaq}prestashop>faq-my-account_1_7_58674eb29fcce52481c292ef4aa4bbc3'] = 'czêsto zadawane pytania';

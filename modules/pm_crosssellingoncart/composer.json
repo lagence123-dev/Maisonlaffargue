@@ -1,0 +1,13 @@
+{
+    "name": "prestamodule/pm_crosssellingoncart",
+    "description": "Increase your sales with cross-selling. Display relevant product recommendations on cart and product pages",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "config": {
+        "platform-check": false,
+        "preferred-install": "dist",
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+}

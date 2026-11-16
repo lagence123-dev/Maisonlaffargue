@@ -1,0 +1,7 @@
+Euro-Information accorde au Client pour la durée de leur relation contractuelle, une licence non exclusive permettant au Client d’utiliser, d’exécuter, d’afficher le module PrestaShop Monetico Paiement pour ses propres besoins.
+Le Client reconnaît n’être titulaire d’aucun droit de propriété sur le module.
+En conséquence, le Client n’a aucun droit de :
+-	Adaptation, modification, correction, développement, transcription, traduction, du module. Le Client n’a pas le droit de créer des versions dérivées du module.
+-	Décompiler, désassembler le module, de pratiquer l’ingénierie inverse ou de tenter de découvrir ou reconstituer le code source, les idées qui en sont la base, les algorithmes, les formats des fichiers ou les interfaces homme/machine, les interfaces de programmation ou d’interopérabilité du module de quelque manière que ce soit.
+-	Modifier, fusionner tout ou partie du module dans d’autres programmes informatiques.
+-	Commercialisation, distribution, exploitation à des fins non prévues à la présente licence, de quelque façon que ce soit, du module.

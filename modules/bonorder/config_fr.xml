@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>bonorder</name>
+    <displayName><![CDATA[Etre rappel&eacute;]]></displayName>
+    <version><![CDATA[1.0.2]]></version>
+    <description><![CDATA[Activ&eacute; la commande en 1 clic]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

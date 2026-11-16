@@ -1,0 +1,11 @@
+Dear {customer_name}, you transform points into a voucher and get voucher with discount in the shop : {shop_name}:
+
+{firsttext} {discountvalue}
+
+{secondtext} {voucher_code}
+
+{threetext} {date_until}
+
+See your loyalty points here: {loyalty_account_url}
+
+Your {shop_name} team

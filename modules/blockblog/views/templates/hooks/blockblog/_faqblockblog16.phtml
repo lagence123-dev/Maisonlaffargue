@@ -1,0 +1,40 @@
+<?php
+
+$_html  = '';
+
+$_html .= '<div class="panel">
+
+		<div class="panel-heading"><i class="fa fa-question-circle fa-lg"></i>&nbsp;'.$this->l('Frequently Asked Questions').'</div>';
+
+
+$_html .= '<div class="row ">';
+
+
+$_html .= '
+
+						<div class="span">
+							<p>
+								<span style="font-weight: bold; font-size: 15px;" class="question">
+									-  '.$this->l('I get 500 Internal Error, when try get Images (Images does not load or does not work). ').'.
+								</span>
+								<br/><br/>
+								<span style="color: black;" class="answer">
+									'.$this->l('Internal 500 error - this error related with setting of your server.').
+    '<br/><br/>'.$this->l('- The problem may be in the access rights to the folder /upload/'.$this->name.'/ Must be 0777 or 0755').'
+									<br/><br/>'.$this->l('- The problem may be in the .htaccess file in the folder /upload/ . Try delete/rename file .htaccess').'
+									<br/><br/>'.$this->l('- The problem may be in the index.php file in the folder /upload/ . Try delete/rename file index.php').'
+
+
+								</span>
+							</p>
+						</div>
+					<br/><br/>';
+
+
+$_html .= '</div>';
+
+$_html .= '</div>';
+
+echo $_html;
+
+?>

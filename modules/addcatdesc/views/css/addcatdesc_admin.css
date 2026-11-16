@@ -1,0 +1,167 @@
+div.margin-form{
+	padding-left: 0px;
+}
+
+.form-group label{
+	text-align:left !important;
+}
+
+.img_logo{
+	border: 1px solid #CCCCCC;
+	padding:0;
+}
+
+.text_id{
+	width:80px;
+}
+
+.cat_id_name{
+	width:230px;
+}
+
+.el-small{
+    width:150px !important;
+}
+.el-middle{
+    width:300px !important;
+}
+.el-big{
+    width:75% !important;
+}
+
+.color-small {
+	margin-left:5px;
+}
+
+#fieldset_1_1 .col-lg-9, #fieldset_2_2 .col-lg-9{
+    width:100%;
+}
+
+.btn-group-action{
+    padding-right:15px;
+}
+
+.btn-group-action .dropdown-menu{
+    right:-25px !important;
+}
+
+.border_lr{
+	border-left: 1px solid #eaedef;
+	border-right: 1px solid #eaedef;
+}
+
+td .btn-group-action a{
+	text-align:left !important;
+	width:100%;
+}
+
+div#cat_pagination{
+	padding-top:10px;
+	text-align:center;
+}
+
+div#cat_pagination a, div#cat_pagination span{
+    border: 1px solid #EEEEEE;
+    border-radius: 2px 2px 2px 2px;
+    color: #999999;
+    display: inline-block;
+    font: 11px/24px Arial,Verdana,sans-serif;
+    height: 26px;
+    width: 24px;
+    text-decoration:none;
+}
+
+div#cat_pagination a:hover{
+	color:black;
+	border: 1px solid black;
+}
+
+div#cat_pagination .pagination_first, div#cat_pagination .pagination_last {
+    padding: 0 8px;
+    width: auto;
+}
+
+div#cat_pagination a.pagination_first:hover, div#cat_pagination a.pagination_last:hover{
+	text-decoration: underline;
+}
+
+div#cat_pagination .pagination_first {
+	float:left;
+}
+
+div#cat_pagination .pagination_last {
+	float:right;
+}
+
+div#cat_pagination span.current_pos {
+    border: 1px solid #FFFFFF;
+    color: #000000;
+}
+
+.shop_switch span label, .col-lg-9 .prestashop-switch label {
+    text-align:center !important;
+}
+
+.lang_selection {
+    float:right;
+    width:50%;
+}
+
+.lang_selection label{
+    text-align: right !important;
+    margin-top: 8px;
+    padding-right: 10px;
+}
+            
+.lang_selection label{
+    font-size:15px;
+    font-weight:600;
+}
+
+/* Tooltip container */
+.faq_tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+  /* Tooltip text */
+.faq_tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.faq_tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.faq_tooltip .tooltiptext {
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.faq_tooltip span {
+    font-weight:700;
+    height: 25px;
+    width: 25px;
+    display: table-cell;
+    background-color: #ccc;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.faq_tooltip span:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,29 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{boncart}prestashop>boncart_f373b403975d367491574fb2c739fef7'] = 'winkelwagen';
+$_MODULE['<{boncart}prestashop>boncart_63a87fa4c5abaad3dcccbac08d906587'] = 'Winkelwagen bekijken';
+$_MODULE['<{boncart}prestashop>boncart_a7cc289efab9e5c372422d3fa0a98904'] = 'Sla parameters op';
+$_MODULE['<{boncart}prestashop>boncart_f4f70727dc34561dfde1a3c529b6205c'] = 'instellingen';
+$_MODULE['<{boncart}prestashop>boncart_0099c0173a3c7758b36025bdae9b4fc7'] = 'Ingeschakeld:';
+$_MODULE['<{boncart}prestashop>boncart_93cba07454f06a4a960172bbd6e2a435'] = 'ja';
+$_MODULE['<{boncart}prestashop>boncart_bafd7322c6e97d25b6299b5d6fe8920b'] = 'nee';
+$_MODULE['<{boncart}prestashop>boncart_cec59c4cf319e37788de60170226b705'] = 'Tel mobiel:';
+$_MODULE['<{boncart}prestashop>boncart_ec16e90b650301f5d0e870f03a1b8e3c'] = 'Positie:';
+$_MODULE['<{boncart}prestashop>boncart_945d5e233cf7d6240f6b783b36a374ff'] = 'links';
+$_MODULE['<{boncart}prestashop>boncart_92b09c7c48c520c3c55e497875da437c'] = 'rechts';
+$_MODULE['<{boncart}prestashop>boncart_b8a41ccad58aaf09b926bc1b4f38e57a'] = 'Knoop achtergrond';
+$_MODULE['<{boncart}prestashop>boncart_fa20e88573ea59fba619fb728edb1bea'] = 'Animatie:';
+$_MODULE['<{boncart}prestashop>boncart_04a5411dd8c9a2cbfacf479dfd20fa21'] = 'TADA';
+$_MODULE['<{boncart}prestashop>boncart_198b44a40aa77f2256886010c7526c0b'] = 'swing';
+$_MODULE['<{boncart}prestashop>boncart_8d2de5368588552fbae54044ac5c7b3d'] = 'rotatie';
+$_MODULE['<{boncart}prestashop>boncart_f285bec73b34c6b77026c180aae0e5ba'] = 'drukte';
+$_MODULE['<{boncart}prestashop>boncart_b3263eb38f8903efc271cc7a760da510'] = 'terug';
+$_MODULE['<{boncart}prestashop>boncart_c9cc8cce247e49bae79f15173ce97354'] = 'redden';
+$_MODULE['<{boncart}prestashop>boncart_ad0a32a319f287b98e907642ddfa2c7d'] = 'De telefoon-ID is vereist.';
+$_MODULE['<{boncart}prestashop>boncart_32a6eab2994d9509d994162ea1fdf185'] = 'Verkeerd telefoonformaat';
+$_MODULE['<{boncart}prestashop>boncart_f830709a91cf8a9f5ab848eb9fe8331f'] = 'Formatteringsfout "Achtergrondknop ".';
+$_MODULE['<{boncart}prestashop>boncart_57c1fee9db05c07a96c99d9260d38d6d'] = 'Winkelmand bekijken';
+$_MODULE['<{boncart}prestashop>boncart_7e0bf6d67701868aac3116ade8fea957'] = 'bestellen';
+$_MODULE['<{boncart}prestashop>boncart_2f0dca8966242e58b83e0afc012b178b'] = 'Er zijn meer items in uw winkelwagen';

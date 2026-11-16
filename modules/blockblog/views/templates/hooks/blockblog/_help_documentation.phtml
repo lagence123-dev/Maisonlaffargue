@@ -1,0 +1,25 @@
+<?php
+
+$_html = '';
+
+$_html .= '<div class="panel">
+
+				<div class="panel-heading"><i class="fa fa-question-circle fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_help_documentation_hd'].'</div>';
+
+$_html .= '<b style="text-transform:uppercase">'.$this->_data_translate_custom['_help_documentation_mod_doc'].':</b>
+<br/><br/><a target="_blank" href="../modules/'.$this->name.'/Installation_Guid.pdf" style="text-decoration:underline;font-weight:bold">Installation_Guid_en.pdf</a>
+
+    			<br/><br/>'.
+
+        '<b style="text-transform:uppercase">'.$this->_data_translate_custom['_help_documentation_how_to_conf_cron'].':</b>&nbsp;<a href="javascript:void(0)" onclick="tabs_custom(101)" style="text-decoration:underline;font-weight:bold">'.$this->_data_translate_custom['_help_documentation_cron_help'].'</a>
+    			<br/><br/>'.
+    '<b style="text-transform:uppercase">'.$this->_data_translate_custom['_help_documentation_g_rich_snip'].':</b>&nbsp;<a target="_blank" href="https://developers.google.com/structured-data/testing-tool/" style="text-decoration:underline;font-weight:bold">https://developers.google.com/structured-data/testing-tool/</a>
+    			<br/><br/>'.
+    '<b style="text-transform:uppercase">'.$this->_data_translate_custom['_help_documentation_cust_hook_help'].':</b>&nbsp;<a href="javascript:void(0)"
+                onclick="tabs_custom(102)" style="text-decoration:underline;font-weight:bold">'.$this->_data_translate_custom['_help_documentation_how_i_can_show'].'</a>
+    			<br/>';
+$_html .= '</div>';
+
+echo $_html;
+
+?>

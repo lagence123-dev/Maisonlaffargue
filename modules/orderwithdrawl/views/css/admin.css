@@ -1,0 +1,1080 @@
+/**
+ * Admin back-office CSS for the OrderWithdrawl module.
+ *
+ * Variable naming (UX-F-L5 admin portion):
+ * Admin styles use the short --ow-* prefix scoped to .ow-admin. Customer-facing
+ * front styles use --orderwithdrawl-* (see views/css/front.css); the two
+ * scopes never share variables to avoid leaking customer-configured colors
+ * into the back office.
+ */
+.ow-admin {
+  --ow-bg: #fff;
+  --ow-panel: #ffffff;
+  --ow-border: #e2e8f0;
+  --ow-muted: #64748b;
+  --ow-foreground: #0f172a;
+  --ow-accent: #333;
+  --ow-accent-soft: rgba(236, 128, 55, 0.1);
+  --ow-success: #16a34a;
+  --ow-error: #dc2626;
+  --ow-radius: 12px;
+  --ow-shadow: 0 20px 45px -25px rgba(15, 23, 42, 0.45);
+  background: var(--ow-bg);
+  border-radius: var(--ow-radius);
+  padding: 32px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: var(--ow-shadow);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  margin: 24px auto;
+  line-height: 1.6;
+}
+
+.ow-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--ow-border);
+  margin-bottom: 24px;
+}
+
+.ow-header__meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ow-header__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--ow-accent-soft);
+  color: var(--ow-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.ow-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-header p {
+  margin: 4px 0 0;
+  color: var(--ow-muted);
+  font-size: 14px;
+}
+
+.ow-header__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ow-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ow-badge--success {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--ow-success);
+}
+
+.ow-badge--muted {
+  background: rgba(148, 163, 184, 0.18);
+  color: var(--ow-muted);
+}
+
+.ow-alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--ow-radius);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.ow-alert i {
+  font-size: 18px;
+}
+
+.ow-alert--success {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--ow-success);
+}
+
+.ow-alert--error {
+  background: rgba(220, 38, 38, 0.12);
+  color: var(--ow-error);
+}
+
+.ow-grid {
+  display: flex;
+  gap: 24px;
+}
+
+.ow-panel {
+  background: var(--ow-panel);
+  border: 1px solid var(--ow-border);
+  border-radius: var(--ow-radius);
+  padding: 26px;
+}
+
+.ow-panel--secondary {
+  background: rgba(236, 128, 55, 0.1);
+}
+
+.ow-panel h3 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-stat {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: var(--ow-radius);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.ow-stat:last-child {
+  margin-bottom: 0;
+}
+
+.ow-stat__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(236, 128, 55, 0.1);
+  color: var(--ow-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.ow-stat__label {
+  margin: 0;
+  color: var(--ow-muted);
+  font-size: 13px;
+}
+
+.ow-stat__value {
+  margin: 4px 0 0;
+  font-weight: 600;
+  color: var(--ow-foreground);
+  font-size: 16px;
+}
+
+.ow-stat__value span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ow-muted);
+  margin-left: 4px;
+}
+
+.ow-panel__note {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.ow-panel__note h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-panel__note ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+/* .ow-main {
+    display: grid;
+    width: 100%;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+}
+
+@media (min-width: 1600px) {
+    .ow-main {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+} */
+
+.ow-panel__note li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ow-muted);
+}
+
+.ow-panel__note i {
+  color: var(--ow-accent);
+}
+
+.ow-card {
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: var(--ow-radius);
+  padding: 24px;
+  box-shadow: 0 14px 32px -28px rgba(15, 23, 42, 0.4);
+}
+
+.ow-card__header {
+  margin-bottom: 18px;
+}
+
+.ow-card__header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-card__header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ow-muted);
+}
+
+.ow-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ow-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ow-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ow-required {
+  color: var(--ow-error);
+  font-weight: 600;
+}
+
+.ow-input {
+  appearance: none;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 8px;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  color: var(--ow-foreground) !important;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  max-width: 360px;
+}
+
+.ow-input:focus {
+  outline: none;
+  border-color: var(--ow-accent);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.ow-input--color {
+  width: 56px;
+  height: 40px;
+  padding: 6px;
+}
+
+.ow-input--color-text {
+  max-width: 120px;
+  text-transform: uppercase;
+}
+
+.ow-color-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ow-textarea {
+  width: 100%;
+  max-width: 720px;
+  min-height: 120px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--ow-foreground);
+  background: #fff;
+  resize: vertical;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ow-textarea:focus {
+  outline: none;
+  border-color: var(--ow-accent);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.ow-help {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ow-muted);
+}
+
+.ow-picker {
+  display: grid;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.ow-picker__search,
+.ow-category-tree__filter,
+.ow-advanced .ow-input {
+  width: 100%;
+  max-width: 720px;
+}
+
+.ow-picker__results {
+  display: grid;
+  gap: 4px;
+  max-width: 720px;
+}
+
+.ow-picker__result {
+  width: 100%;
+  border: 1px solid var(--ow-border);
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: left;
+  color: var(--ow-foreground);
+  font-size: 13px;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.ow-picker__result:hover,
+.ow-picker__result:focus {
+  border-color: var(--ow-accent);
+  outline: none;
+}
+
+.ow-picker__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 32px;
+}
+
+.ow-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ow-border);
+  border-radius: 6px;
+  background: #f8fafc;
+  color: var(--ow-foreground);
+  padding: 6px 9px;
+  font-size: 13px;
+  line-height: 1.2;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.ow-chip:hover,
+.ow-chip:focus {
+  border-color: var(--ow-accent);
+  outline: none;
+}
+
+.ow-category-tree {
+  display: grid;
+  gap: 6px;
+  max-width: 720px;
+  max-height: 280px;
+  overflow: auto;
+  border: 1px solid var(--ow-border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+}
+
+.ow-category-tree__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: calc(var(--ow-level, 0) * 16px);
+  min-height: 28px;
+  color: var(--ow-foreground);
+  font-size: 13px;
+}
+
+.ow-category-tree__item input {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.ow-advanced {
+  max-width: 720px;
+  border: 1px dashed var(--ow-border);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.ow-advanced summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-advanced__grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.ow-advanced__grid label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ow-foreground);
+}
+
+.ow-risk-note {
+  max-width: 760px;
+  padding: 10px 12px;
+  border-left: 3px solid #f59e0b;
+  background: #fffbeb;
+  color: #7a4a00;
+}
+
+.ow-help--source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ow-help-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 116, 139, 0.45);
+  background: #fff;
+  color: var(--ow-muted);
+  cursor: help;
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ow-help-tooltip:hover,
+.ow-help-tooltip:focus-visible {
+  border-color: var(--ow-accent);
+  color: var(--ow-accent);
+  outline: none;
+}
+
+.ow-help-tooltip__icon {
+  transform: translateY(-0.5px);
+}
+
+.ow-help-tooltip__content {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  z-index: 40;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 64px));
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #fff;
+  box-shadow: 0 18px 38px -18px rgba(15, 23, 42, 0.65);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -4px);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    visibility 0.16s ease;
+}
+
+.ow-help-tooltip__content::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  background: #0f172a;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.ow-help-tooltip:hover .ow-help-tooltip__content,
+.ow-help-tooltip:focus-visible .ow-help-tooltip__content {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.ow-lang-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.ow-lang-field {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ow-lang-field--column {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ow-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--ow-accent);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ow-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ow-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ow-foreground);
+}
+
+.ow-checkbox__control {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ow-accent);
+  margin: 0;
+}
+
+.ow-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.ow-button {
+  border: none;
+  background: var(--ow-foreground);
+  color: #fff;
+  border-radius: 8px;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ow-button:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+.ow-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.2);
+}
+
+.ow-button--secondary {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--ow-foreground);
+  border: 1px solid rgba(37, 99, 235, 0.24);
+}
+
+.ow-button--secondary:hover {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+@media (min-width: 992px) {
+  .ow-lang-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 12px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ow-admin {
+    padding: 20px;
+    margin: 16px;
+  }
+
+  .ow-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ow-form__actions {
+    justify-content: stretch;
+  }
+
+  .ow-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ow-card {
+    padding: 20px;
+  }
+
+}
+
+.ow-lang-grid-p {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ow-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.ow-main {
+  width: 100%;
+}
+
+.ow-label,
+.ow-checkbox span {
+  text-align: left !important;
+}
+
+.ow-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ow-tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--ow-border);
+  margin-bottom: -1px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+}
+
+.ow-tab {
+  appearance: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 18px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ow-muted);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.ow-tab:hover,
+.ow-tab:focus {
+  color: var(--ow-foreground);
+}
+
+.ow-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+.ow-tab.is-active {
+  background: #fff;
+  color: var(--ow-foreground);
+  border-color: rgba(148, 163, 184, 0.6);
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 -4px 16px -12px rgba(15, 23, 42, 0.45);
+}
+
+.ow-tabs__panels {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ow-tab-pane {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ow-tab-pane.is-active {
+  display: flex;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+body .ow-admin .ow-checkbox {
+  display: flex !important;
+  align-items: center !important;
+  width: 100%;
+  min-height: 22px;
+  gap: 8px;
+}
+
+body .ow-admin .ow-checkbox__control {
+  flex: 0 0 18px;
+  margin: 0 !important;
+  position: relative;
+  top: 0;
+}
+
+body .ow-admin .ow-checkbox span {
+  display: block;
+  line-height: 1.4;
+}
+
+
+#main .ow-label{
+  width: auto;
+}
+
+/* New Language Tabs Styles */
+.ow-lang-tabs__nav {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--ow-border);
+  margin-bottom: 16px;
+}
+
+.ow-lang-tab {
+  padding: 6px 12px;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ow-muted);
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.ow-lang-tab:hover {
+  color: var(--ow-foreground);
+  background: rgba(0,0,0,0.02);
+}
+
+.ow-lang-tab.is-active {
+  background: #fff;
+  border-color: var(--ow-border);
+  border-bottom-color: #fff;
+  color: var(--ow-foreground);
+  margin-bottom: -1px;
+}
+
+.ow-lang-pane {
+  display: none;
+}
+
+.ow-lang-pane.is-active {
+  display: block;
+}
+
+/* Documentation Grid */
+.ow-docu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ow-docu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid var(--ow-border);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.ow-docu-item:hover {
+  border-color: var(--ow-primary);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.ow-docu-item__top {
+  display: none;
+}
+
+.ow-docu-item__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+
+.ow-docu-item__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ow-docu-item__title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ow-foreground);
+  line-height: 1.3;
+}
+
+.ow-docu-item__description {
+  display: none;
+}
+
+.ow-docu-item__action {
+  flex-shrink: 0;
+}
+
+.ow-docu-item__action .ow-button {
+  white-space: nowrap;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+  gap: 0.375rem;
+}
+
+.ow-docu-item__action .ow-button i {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .ow-docu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* UX-A-M5: On narrow viewports switch the horizontal tab-strip into a
+     stacked accordion. The JS leaves all panels in the DOM and toggles
+     [hidden]; CSS below restores them into a scroll-free, button-led list. */
+  .ow-tabs__nav {
+    flex-direction: column;
+    border-bottom: none;
+    gap: 4px;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .ow-tab {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+    padding: 12px 16px;
+    background: #f8fafc;
+    text-align: left;
+  }
+
+  .ow-tab.is-active {
+    background: var(--ow-accent-soft);
+    color: var(--ow-foreground);
+    box-shadow: none;
+  }
+
+  .ow-tab::after {
+    content: "\25BE";
+    float: right;
+    transition: transform 0.2s ease;
+    color: var(--ow-muted);
+  }
+
+  .ow-tab.is-active::after {
+    transform: rotate(180deg);
+  }
+
+  /* When the tab is active, the corresponding panel is shown immediately
+     below it (JS already handles [hidden] on others). */
+  .ow-tabs__panels {
+    gap: 16px;
+  }
+}
+
+/* UX-A-M3: ample vertical space for the trigger-state multi-select so
+   shops with >10 order states do not require an in-widget scroll. */
+.ow-input--multiselect {
+  min-height: 180px;
+  max-height: 320px;
+  height: auto;
+  padding: 8px !important;
+  max-width: 480px;
+}
+
+/* UX-A-M4: feedback area for native-validation errors that we surface
+   alongside each required field rather than as a top-level banner. */
+.ow-field-error {
+  display: none;
+  color: var(--ow-error);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.ow-field-error.is-visible {
+  display: block;
+}
+
+.ow-input.is-invalid,
+.ow-textarea.is-invalid {
+  border-color: var(--ow-error);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* UX-A-M1: admin mail preview iframe. */
+.ow-mail-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ow-mail-preview__controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ow-mail-preview__iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 1px solid var(--ow-border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.ow-mail-preview__status {
+  font-size: 13px;
+  color: var(--ow-muted);
+  min-height: 18px;
+}
+
+.ow-mail-preview__status--success {
+  color: var(--ow-success);
+}
+
+.ow-mail-preview__status--error {
+  color: var(--ow-error);
+}
+
+/* UX-A-L1: destructive action (reset to defaults) should look distinct
+   enough that an admin cannot confuse it with Save. */
+.ow-button--danger {
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--ow-error);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+}
+
+.ow-button--danger:hover {
+  background: rgba(220, 38, 38, 0.15);
+}
+
+.ow-form__actions--split {
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}

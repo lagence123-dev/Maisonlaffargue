@@ -1,0 +1,12 @@
+<?php
+
+if($is_b){$_html .= '<b>';}
+$_html .= '<a href="'.$href_a.'" '.($onclick?'onclick="'.$onclick.'"':'').' '.($disable_target_blank?'':'target="_blank"').' style="font-weight:bold;text-decoration:underline">';
+$_html .= $title_a;
+$_html .= '</a>';
+if($is_b){$_html .= '</b>';}
+if($br_after_count != 0){
+    for($i=0;$i<$br_after_count;$i++){
+        $_html .= '<br/>';
+    }
+}

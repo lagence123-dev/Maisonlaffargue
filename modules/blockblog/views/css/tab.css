@@ -1,0 +1,3 @@
+.icon-AdminBlockblog:before, .subtab-AdminBlockblogtest:before, #subtab-AdminBlockblogtest i:first-child  {
+    content: url("../../AdminBlockblog.gif");
+}

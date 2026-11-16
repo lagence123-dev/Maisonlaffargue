@@ -1,0 +1,25 @@
+Solicitud de desistimiento
+
+Un cliente ha enviado una solicitud de desistimiento.
+
+Detalles del pedido:
+Número de pedido: {order_identifier}
+Total del pedido: {order_total}
+
+Detalles del cliente:
+Nombre del cliente: {customer_name}
+E-mail del cliente: {customer_email}
+
+Fecha de desistimiento: {date}
+Alcance del desistimiento: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Nota del cliente:
+{customer_note}
+
+Procese esta solicitud de desistimiento conforme a su política de reembolsos.

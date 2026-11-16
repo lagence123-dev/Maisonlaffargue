@@ -1,0 +1,30 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bontab}prestashop>bontab_bb8f52c4740d5b1f85e422f74f6a3d6d'] = 'Productgrootte en verzendgids';
+$_MODULE['<{bontab}prestashop>bontab_ea6a9ed62c5324315ad5338997419e2c'] = 'Geef het pop-upvenster weer op de productpagina.';
+$_MODULE['<{bontab}prestashop>bontab_526a37ef550a583bc1719d46a2fc82cc'] = 'Verwijder deze module';
+$_MODULE['<{bontab}prestashop>bontab_f5c6bb33da24a6c5e9d957b42fc766a8'] = 'Tabblad bijwerken';
+$_MODULE['<{bontab}prestashop>bontab_ea44d72bb3383b275e1f49b333eb3050'] = 'Voeg een tabblad toe';
+$_MODULE['<{bontab}prestashop>bontab_b78a3223503896721cca1303f776159b'] = 'titel';
+$_MODULE['<{bontab}prestashop>bontab_f15c1cae7882448b3fb0404682e17e61'] = 'inhoud';
+$_MODULE['<{bontab}prestashop>bontab_ec53a8c4f07baed5d8825072c89799be'] = 'staat';
+$_MODULE['<{bontab}prestashop>bontab_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'geactiveerd';
+$_MODULE['<{bontab}prestashop>bontab_b9f5c797ebbf55adccdd8539a65a0241'] = 'uitgeschakeld';
+$_MODULE['<{bontab}prestashop>bontab_c9cc8cce247e49bae79f15173ce97354'] = 'redden';
+$_MODULE['<{bontab}prestashop>bontab_630f6dc397fe74e52d5189e2c80f282b'] = 'Terug naar de lijst';
+$_MODULE['<{bontab}prestashop>bontab_490aa6e856ccf208a054389e47ce0d06'] = 'ID';
+$_MODULE['<{bontab}prestashop>bontab_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'standpunt';
+$_MODULE['<{bontab}prestashop>bontab_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Item toevoegen';
+$_MODULE['<{bontab}prestashop>bontab_df9e2b16f6f27137eac6045eee65cf30'] = 'Tab kan niet worden toegevoegd';
+$_MODULE['<{bontab}prestashop>bontab_13c1e375b1216e6aa7ffe6a3bfdf9c7d'] = 'Het tabblad kan niet worden gewijzigd';
+$_MODULE['<{bontab}prestashop>bontab_246f06fbb3df99220b51b88c3919da89'] = 'Het tabblad is opgeslagen';
+$_MODULE['<{bontab}prestashop>bontab_f3b9de34364942606ebb991132523f83'] = 'Onbekende fout';
+$_MODULE['<{bontab}prestashop>bontab_c81e935f4542b3e2cc937f43b7f83d8e'] = 'Titel is verplicht';
+$_MODULE['<{bontab}prestashop>bontab_811179333665ff1dc696404bfa8e8605'] = 'Verkeerd titelformaat';
+$_MODULE['<{bontab}prestashop>bontab_142b1f21852405438fe7731441545b17'] = 'Verkeerd beschrijvingsformaat';
+$_MODULE['<{bontab}prestashop>bontab_6e13d54425370cdd6a2cefd94eb4e255'] = 'Fout na het verwijderen van tabblad';
+$_MODULE['<{bontab}prestashop>bontab_493b7ecf3a201c1156c32579addf8aa7'] = 'Het tabblad is verwijderd';
+$_MODULE['<{bontab}prestashop>bontab_22ae03024d9085a4b98c8007e982c7dd'] = 'De status van het tabblad kan niet worden gewijzigd';
+$_MODULE['<{bontab}prestashop>bontab_27364c18e496ff2acf5c2247b36caf52'] = 'De status van het tabblad is gewijzigd';

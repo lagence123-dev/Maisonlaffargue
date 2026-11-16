@@ -1,0 +1,34 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_a69a8e250d7465b3357efed7e4251deb'] = 'Google Pay';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_f05cac309238da9ccce0aca7e95fa175'] = 'Цей модуль інтегрує Google Pay.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_ff046bb1b0b321b6edfcc4740d9b5f94'] = 'Оплата пройшла успішно!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b201d130466f9fcba785c82d924e2494'] = 'Ми зв\'яжемося з вами найближчим часом.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_5911673d0a87f08866441c6388cdc0ac'] = 'Помилка оплати!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_a7cc289efab9e5c372422d3fa0a98904'] = 'Зберегти всі налаштування.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_f4f70727dc34561dfde1a3c529b6205c'] = 'Параметри';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_0099c0173a3c7758b36025bdae9b4fc7'] = 'Активувати:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_93cba07454f06a4a960172bbd6e2a435'] = 'Так';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_bafd7322c6e97d25b6299b5d6fe8920b'] = 'Ні';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_8a71fb55a68c5910e5dd344c74ca695a'] = 'Виберіть колір кнопки';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_25a81701fbfa4a1efdf660a950c1d006'] = 'Білий';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_e90dfb84e30edf611e326eeb04d680de'] = 'Чорний';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_3a6a677f37800e201af06b9d28b57c0e'] = 'Виберіть постачальника платежів';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_72fa62ea700278e80357f11a512fd29f'] = 'Відкритий ключ постачальника платежів (Merchant ID):';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_0a875d6ec0f95e66df2b1008c7b7f4ab'] = 'Таємний ключ постачальника платежів:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_d6e98485545670410ad2d3f59172312a'] = 'Ім\'я продавця видно користувачем:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_78ac2d22a70dd58386c29b9bd1367af0'] = 'Google Merchant ID:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_6d2c76c38df078aeefd883987c53bbd9'] = 'Попросіть клієнта ввести платіжну адресу:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_01bb42fa073a0905602e00f08b1df8cf'] = 'Попросіть клієнта ввести адресу доставки на сторінці товару:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b0ef101a17ed9399a8c167fb074a0e1b'] = 'Відображення режимів доставки на сторінці продукту:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_9a4391a69ed0218dcd8747f9bf4e87d2'] = 'Спосіб доставки на сторінці товару:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_c9cc8cce247e49bae79f15173ce97354'] = 'Зберегти';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b76390313a932045afef2d643cbeb22a'] = 'Потрібен відкритий ключ постачальника платежів.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_67ed543163e4f19b1ea9e16e46f8fc42'] = 'Потрібен секретний ключ постачальника платежів.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_8a4e4653f984447e3d7b2bf0664dd4fe'] = 'Будь ласка, введіть ім\'я продавця, яке видно користувачеві.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_e1562bb51b86e50db885870bf40cf97d'] = 'Потрібен ідентифікатор Google merchant ID.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-checkout_13848d8d7e2a7b2261de18fa4bc7a87e'] = 'Прийміть Умови використання';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-return_1a81759353d36dbd31059fc261af0aa2'] = 'Вітаю!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-return_32fa4aead2d74d08f731a564c8b37b0d'] = 'Ви тільки що завершили замовлення з Google Pay!';

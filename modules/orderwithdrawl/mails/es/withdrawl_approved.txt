@@ -1,0 +1,17 @@
+Solicitud de desistimiento aprobada
+
+Hola {firstname} {lastname},
+
+Su solicitud de desistimiento para el pedido {order_identifier} ha sido aprobada.
+
+Detalles de la aprobación
+Número de pedido: {order_identifier}
+Correo electrónico: {email}
+Fecha de decisión: {date}
+
+{status_message}
+
+
+Si tiene alguna pregunta sobre este desistimiento, responda directamente a este correo electrónico.
+
+

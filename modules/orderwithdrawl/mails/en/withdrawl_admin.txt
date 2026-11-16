@@ -1,0 +1,25 @@
+Order Withdrawal Request
+
+A customer has submitted a withdrawal request.
+
+Order Details:
+Order ID: {order_identifier}
+Order Total: {order_total}
+
+Customer Details:
+Customer Name: {customer_name}
+Customer Email: {customer_email}
+
+Date of withdrawal: {date}
+Scope of withdrawal: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Customer note:
+{customer_note}
+
+Please process this withdrawal request according to your refund policy.

@@ -1,0 +1,25 @@
+Cerere de retragere din contract
+
+Un client a trimis o cerere de retragere.
+
+Detalii comandă:
+Număr comandă: {order_identifier}
+Total comandă: {order_total}
+
+Detalii client:
+Nume client: {customer_name}
+E-mail client: {customer_email}
+
+Data retragerii: {date}
+Domeniul retragerii: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Notă client:
+{customer_note}
+
+Vă rugăm să procesați această cerere de retragere conform politicii dvs. de rambursare.

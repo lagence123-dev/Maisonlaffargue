@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>orderwithdrawl</name>
+    <displayName><![CDATA[European Legal Withdrawal Button]]></displayName>
+    <version><![CDATA[1.4.3]]></version>
+    <description><![CDATA[Adds a withdrawal button for orders to comply with EU law.]]></description>
+    <author><![CDATA[sjmedia GmbH]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+</module>

@@ -1,0 +1,101 @@
+#bon-login-image img {
+	margin-top: -6px;
+	margin-left: 0;
+}
+
+.bon-facebooklogin-button.btn,
+.bon-googlelogin-button.btn {
+	padding: 7px 14px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, .14);
+	text-transform: capitalize;
+	font-weight: 400;
+	white-space: inherit;
+	transition: all .2s linear;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.bon-facebooklogin-button.btn{
+	background-color: #1877F2;
+	color: #fff;
+}
+
+.bon-googlelogin-button.btn{
+	background-color: #DA2E2E;
+}
+
+#login-form .bon-googlelogin-button.btn, #checkout-personal-information-step .bon-googlelogin-button.btn{
+	display: none;
+}
+
+
+.bon-facebooklogin-button:hover,
+.bon-googlelogin-button.btn:hover,
+body #checkout #checkout-personal-information-step .bon-facebooklogin-button {
+	box-shadow: none;
+	color: #fff !important;
+}
+
+#login-form .form-footer .bon-facebooklogin-button {
+	width: unset;
+	margin: 0 0 0 15px;
+	font-size: 16px !important;
+	line-height: unset;
+	align-items: center;
+}
+
+#checkout-personal-information-step .bon-facebooklogin-button {
+	font-size: 14px !important;
+	width: unset;
+	margin-left: 1rem;
+}
+
+#checkout-personal-information-step .bon-facebooklogin-button:hover {
+	background: #1853f2;
+}
+
+body#checkout section#content #checkout-personal-information-step .nav .nav-item {
+	flex-wrap: wrap;
+}
+
+.login-form #login-form .form-footer {
+	flex-wrap: wrap;
+}
+
+@media (max-width: 575px) {
+
+	body #checkout-personal-information-step .bon-facebooklogin-button,
+	body #login-form .form-footer .bon-facebooklogin-button {
+		margin-left: 0;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.login-form #login-form .form-footer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#submit-login {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+}
+
+/* google button */
+
+.bon-login-popup .bon-googlelogin-button {
+	margin: 15px 0;
+	display: flex;
+	justify-content: center;
+}
+
+#login-form .bon-googlelogin-button,
+#checkout-personal-information-step .bon-googlelogin-button {
+	margin: 0 15px;
+}
+
+#_desktop_user_info .user-info .bon-login-popup {
+	width: max-content;
+	min-width: 180px !important;
+}

@@ -1,0 +1,369 @@
+<?php
+/**
+ * 2011 - 2020 StorePrestaModules SPM LLC.
+ *
+ * MODULE blockblog
+ *
+ * @author    SPM <spm.presto@gmail.com>
+ * @copyright Copyright (c) permanent, SPM
+ * @license   Addons PrestaShop license limitation
+ * @version   2.4.3
+ * @link      http://addons.prestashop.com/en/2_community-developer?contributor=790166
+ *
+ * NOTICE OF LICENSE
+ *
+ * Don't use this module on several shops. The license provided by PrestaShop Addons
+ * for all its modules is valid only once for a single shop.
+ */
+
+$name_module = isset($name_module)?$name_module:'';
+$slider_position = isset($slider_position)?$slider_position:'';
+$slider_height = isset($slider_height)?$slider_height:'';
+$slider_type = isset($slider_type)?$slider_type:'';
+$is_mobile = isset($is_mobile)?$is_mobile:0;
+
+?>
+
+<style>
+<?php  $slider_width = $slider_width-3; ?>
+
+
+
+	#fancytr-blockblog{
+		margin: 5px auto 15px;
+		display: inline-block;
+
+		/*float: left;*/
+	}
+
+	.ft-title {
+	    padding: 10px;
+	    text-align: left;
+	    /*width: <?php //echo $slider_width - 20?>px;*/
+		width: <?php echo $slider_width?>px;
+		font-family: 'Bookman Old Style', serif;
+		font-size: 25px;
+	}
+	#ft-buttons-fancytr{
+		position: relative;
+		right: 10px;
+		display: block;
+		z-index: 9999;
+		bottom: 35px;
+
+	}
+
+
+
+	.ft-next, .ft-prev{
+		display: block;
+		width: 60px;
+		height: 60px;
+	}
+
+
+    <?php if($slider_pn_on){ ?>
+	.ft-next{
+		background-image: url("<?php echo _MODULE_DIR_ . $name_module?>/views/img/fancytr/next.png");
+	}
+	.ft-prev{
+		background-image: url("<?php echo _MODULE_DIR_ . $name_module?>/views/img/fancytr/back.png");
+	}
+    <?php } ?>
+	.ft-button-fancytr, .ft-button-fancytr-active{
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+	}
+	.ft-button-fancytr{
+		background-image: url("<?php echo _MODULE_DIR_ . $name_module?>/views/img/fancytr/radio_inactive.png");
+	}
+	.ft-button-fancytr-active{
+		background-image: url("<?php echo _MODULE_DIR_ . $name_module?>/views/img/fancytr/radio_active.png");
+	}}
+</style>
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+	$(document).ready(function(){
+
+<?php 	if($slider_position == 1){?>
+			$('#center_column').prepend($('#fancytr-blockblog'));
+<?php 	}else{?>
+			$('#columns').prepend($('#fancytr-blockblog'));
+<?php 	}
+?>
+
+        var slider_fancytr_width = $('#fancytr-blockblog').width();
+        var slider_fancytr_parent_width = $('#fancytr-blockblog').parent().width();
+
+
+        if (slider_fancytr_width >  slider_fancytr_parent_width)
+            slider_fancytr_width = slider_fancytr_parent_width;
+        else
+            slider_fancytr_width = <?php echo $slider_width?>;
+
+        //alert(slider_fancytr_width); 797
+        //alert(slider_fancytr_parent_width); 761
+
+
+
+        $('#fancytr').jqFancyTransitions({width: slider_fancytr_width,
+										  height: <?php echo $slider_height?>,
+<?php   
+										switch ($slider_type){
+											case 1:
+												echo 'effect: "wave",';
+												break;
+											case 2:
+												echo 'effect: "zipper",';
+												break;
+											case 3:
+												echo 'effect: "curtain",';
+												break;
+											case 4:
+												echo 'position: "curtain", direction: "fountain",';
+												break;
+											case 5:
+												echo 'position: "top", direction: "fountain",';
+												break;
+											case 6:
+												echo 'position: "bottom", direction: "fountain",';
+												break;
+											case 7:
+												echo 'position: "alternate", direction: "fountain",';
+												break;
+											case 8:
+												echo 'position: "top", direction: "random",';
+												break;
+											case 9:
+												echo 'position: "bottom", direction: "random",';
+												break;
+											case 10:
+												echo 'position: "alternate", direction: "random",';
+												break;
+											case 11:
+												echo 'position: "curtain", direction: "random",';
+												break;
+											case 12:
+												echo 'position: "bottom", direction: "alternate",';
+												break;
+											case 13:
+												echo 'position: "top", direction: "fountainAlternate",';
+												break;
+											case 14:
+												echo 'position: "bottom", direction: "fountainAlternate",';
+												break;
+											case 15:
+												echo 'position: "alternate", direction: "fountainAlternate",';
+												break;
+											case 16:
+												echo 'position: "curtain", direction: "fountainAlternate",';
+												break;
+										}									?>
+										navigation: true,
+										titleOpacity: 0.6,
+										strips: 15,
+										links: true });
+        $('.ft-title').css('width', slider_fancytr_width);
+
+		<?php if(!$is_mobile) { ?>
+
+
+
+		$( window ).resize(function() {
+
+
+                setTimeout(function () {
+
+
+
+
+                    //var slider_width = $('#fancytr-blockblog').width();
+
+
+                    var slider_height = $('#fancytr-blockblog').height();
+
+                    if (slider_fancytr_width ><?php echo $slider_width?>)
+                        slider_fancytr_width = <?php echo $slider_width?>;
+
+                    $('#fancytr .ft-fancytr').remove();
+                    $('#fancytr #ft-prev-fancytr').remove();
+                    $('#fancytr #ft-next-fancytr').remove();
+
+                    $('#ft-buttons-fancytr').remove();
+                    $('#ft-title-fancytr').remove();
+
+
+                    $('#fancytr').jqFancyTransitions({
+                        width: slider_fancytr_width,
+                        height: <?php echo $slider_height?>,
+                        <?php
+                            switch ($slider_type){
+                                case 1:
+                                    echo 'effect: "wave",';
+                                    break;
+                                case 2:
+                                    echo 'effect: "zipper",';
+                                    break;
+                                case 3:
+                                    echo 'effect: "curtain",';
+                                    break;
+                                case 4:
+                                    echo 'position: "curtain", direction: "fountain",';
+                                    break;
+                                case 5:
+                                    echo 'position: "top", direction: "fountain",';
+                                    break;
+                                case 6:
+                                    echo 'position: "bottom", direction: "fountain",';
+                                    break;
+                                case 7:
+                                    echo 'position: "alternate", direction: "fountain",';
+                                    break;
+                                case 8:
+                                    echo 'position: "top", direction: "random",';
+                                    break;
+                                case 9:
+                                    echo 'position: "bottom", direction: "random",';
+                                    break;
+                                case 10:
+                                    echo 'position: "alternate", direction: "random",';
+                                    break;
+                                case 11:
+                                    echo 'position: "curtain", direction: "random",';
+                                    break;
+                                case 12:
+                                    echo 'position: "bottom", direction: "alternate",';
+                                    break;
+                                case 13:
+                                    echo 'position: "top", direction: "fountainAlternate",';
+                                    break;
+                                case 14:
+                                    echo 'position: "bottom", direction: "fountainAlternate",';
+                                    break;
+                                case 15:
+                                    echo 'position: "alternate", direction: "fountainAlternate",';
+                                    break;
+                                case 16:
+                                    echo 'position: "curtain", direction: "fountainAlternate",';
+                                    break;
+                            }									?>
+                        navigation: true,
+                        titleOpacity: 0.6,
+                        strips: 15,
+                        links: true
+                    });
+
+
+                    $('#ft-buttons-fancytr').css('width', slider_fancytr_width);
+
+                    $('.ft-title').css('width', slider_fancytr_width);
+
+                    //console.log('call');
+
+                }, 500);
+
+
+
+
+
+			
+		});
+		<?php } else {?>
+
+
+			setTimeout(function(){
+
+				//var slider_width = $('#fancytr-blockblog').parent().width();
+
+				var slider_height = $('#fancytr-blockblog').parent().height();
+
+
+
+				if(slider_fancytr_width><?php echo $slider_width?>)
+					slider_fancytr_width = <?php echo $slider_width?>;
+
+
+				$('#fancytr .ft-fancytr').remove();
+				$('#fancytr #ft-prev-fancytr').remove();
+				$('#fancytr #ft-next-fancytr').remove();
+				
+				$('#ft-buttons-fancytr').remove();
+				$('#ft-title-fancytr').remove();
+
+
+				
+				$('#fancytr').jqFancyTransitions({width: slider_fancytr_width,
+				  height: <?php echo $slider_height?>,
+			<?php   
+				switch ($slider_type){
+					case 1:
+						echo 'effect: "wave",';
+						break;
+					case 2:
+						echo 'effect: "zipper",';
+						break;
+					case 3:
+						echo 'effect: "curtain",';
+						break;
+					case 4:
+						echo 'position: "curtain", direction: "fountain",';
+						break;
+					case 5:
+						echo 'position: "top", direction: "fountain",';
+						break;
+					case 6:
+						echo 'position: "bottom", direction: "fountain",';
+						break;
+					case 7:
+						echo 'position: "alternate", direction: "fountain",';
+						break;
+					case 8:
+						echo 'position: "top", direction: "random",';
+						break;
+					case 9:
+						echo 'position: "bottom", direction: "random",';
+						break;
+					case 10:
+						echo 'position: "alternate", direction: "random",';
+						break;
+					case 11:
+						echo 'position: "curtain", direction: "random",';
+						break;
+					case 12:
+						echo 'position: "bottom", direction: "alternate",';
+						break;
+					case 13:
+						echo 'position: "top", direction: "fountainAlternate",';
+						break;
+					case 14:
+						echo 'position: "bottom", direction: "fountainAlternate",';
+						break;
+					case 15:
+						echo 'position: "alternate", direction: "fountainAlternate",';
+						break;
+					case 16:
+						echo 'position: "curtain", direction: "fountainAlternate",';
+						break;
+				}									?>
+				navigation: true,
+				titleOpacity: 0.6,
+				strips: 15,
+				links: true });
+
+
+				$('#ft-buttons-fancytr').css('width',slider_fancytr_width);
+				$('.ft-title').css('width',slider_fancytr_width);
+
+			}, 100);
+		<?php }?>
+
+        setTimeout(function(){
+        $('#ft-buttons-fancytr a:first').addClass('ft-button-fancytr-active');
+        }, 100);
+	});
+
+    });
+</script>

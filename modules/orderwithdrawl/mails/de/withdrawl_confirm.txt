@@ -1,0 +1,24 @@
+Bestätigung Ihrer Widerrufsanfrage
+
+Hallo {firstname} {lastname},
+
+Ihre Widerrufsanfrage ist bei uns eingegangen. Nachfolgend finden Sie die übermittelten Angaben:
+
+Bestellnummer: {order_identifier}
+Name: {consumer_name}
+E-Mail für Eingangsbestätigung: {email}
+Datum und Uhrzeit des Eingangs: {date}
+Umfang des Widerrufs: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Sie können Ihre Bestellung in Ihrem Kundenkonto unter Bestellverlauf verfolgen:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

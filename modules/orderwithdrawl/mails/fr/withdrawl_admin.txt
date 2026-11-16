@@ -1,0 +1,25 @@
+Demande de rétractation
+
+Un client a soumis une demande de rétractation.
+
+Détails de la commande :
+Numéro de commande : {order_identifier}
+Total de la commande : {order_total}
+
+Détails du client :
+Nom du client : {customer_name}
+E-mail du client : {customer_email}
+
+Date de rétractation : {date}
+Portée de la rétractation : {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Note du client :
+{customer_note}
+
+Veuillez traiter cette demande de rétractation conformément à votre politique de remboursement.

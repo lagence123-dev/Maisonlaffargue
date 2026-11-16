@@ -1,0 +1,65 @@
+.bootstrap .boncategory > tbody  tr.ui-sortable-helper td {
+    color:#fff !important;
+    right: 0!important;
+    background-color:#00aff0 !important;
+    -moz-transform:translate(5px, 10px);
+    -ms-transform:translate(5px, 10px);
+    -webkit-transform:translate(5px, 10px);
+    transform:translate(5px, 10px)
+}
+
+.bootstrap #table-boncategory{
+    border: 1px solid #a0d0eb;
+}
+.bootstrap #table-boncategory .icon-pencil:before {
+    content: "\e03e";
+    font-family: fl-outicons;
+    font-size: small;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bootstrap #table-boncategory .icon-caret-down:before {
+    content: "\e00e";
+    font-family: fl-outicons;
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bootstrap #table-boncategory .icon-trash:before {
+    content: "\F014";
+    color: #76786b;
+}
+.bootstrap #table-boncategory .dropdown-toggle {
+    border-left: 1px solid #dedede;
+}
+
+.ui-sortable-helper {
+    display: table;
+}
+.img-thumbnail-category {
+    width: 150px;
+}
+
+.bootstrap .form-group.bon_category_icons .fixed-width-xl {
+    width: 70px !important;
+}
+
+.bootstrap .form-group.bon_category_icons_type .fixed-width-xl {
+    width: 263px !important;
+}
+
+.ui-sortable-helper {
+    display: table;
+}
+
+.bon_category_icons .outicons{
+    font-family: "fl-outicons"    !important;
+    font-size: 16px !important;
+}
+
+.bon_category_icons .material_icons, .bon_category_icons .material-icons{
+    font-size: 18px !important;
+    font-family: 'Material Icons' !important;
+}

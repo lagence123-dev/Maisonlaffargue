@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>bontab</name>
+    <displayName><![CDATA[Guide des tailles et exp&eacute;dition du produit]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[ Afficher la fen&ecirc;tre contextuelle sur la page du produit.]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[ Désinstaller ce module]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

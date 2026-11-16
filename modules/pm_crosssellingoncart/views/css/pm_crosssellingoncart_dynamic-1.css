@@ -1,0 +1,16 @@
+.pm-csoc .carousel {
+  box-shadow: none;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.pm-csoc-owl-item .price {
+  font-size: 15px;
+}
+.product-title {
+  text-transform: none !important;
+}
+div.pm-csoc .product-miniature .button_display .btn {
+  width: 100%;
+}
+div.pm-csoc .product-miniature .button_display .btn i {
+  display: none;
+}

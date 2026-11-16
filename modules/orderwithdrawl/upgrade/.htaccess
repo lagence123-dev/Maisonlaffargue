@@ -1,0 +1,13 @@
+# Deny all direct web access to the upgrade scripts.
+# These PHP files are invoked by PrestaShop's module upgrade pipeline and
+# must not be reachable over HTTP (they assume a boot context and can
+# disclose module versioning history).
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

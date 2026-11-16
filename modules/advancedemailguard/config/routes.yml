@@ -1,0 +1,6 @@
+advancedemailguard_manage:
+  path: advancedemailguard/manage
+  methods: [GET, POST]
+  defaults:
+    _controller: 'PrestaShop\Module\AdvancedEmailGuard\Controller\Admin\ManageController::indexAction'
+    _legacy_controller: 'AdminAdvancedEmailGuard'

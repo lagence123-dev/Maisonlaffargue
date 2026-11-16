@@ -1,0 +1,17 @@
+Demande de rétractation approuvée
+
+Bonjour {firstname} {lastname},
+
+Votre demande de rétractation concernant la commande {order_identifier} a été approuvée.
+
+Détails de l’approbation
+Numéro de commande : {order_identifier}
+E-mail : {email}
+Date de décision : {date}
+
+{status_message}
+
+
+Si vous avez des questions concernant cette rétractation, veuillez répondre directement à cet e-mail.
+
+

@@ -1,0 +1,17 @@
+Solicitud de desistimiento rechazada
+
+Hola {firstname} {lastname},
+
+Su solicitud de desistimiento para el pedido {order_identifier} ha sido rechazada.
+
+Detalles de la decisión
+Número de pedido: {order_identifier}
+Correo electrónico: {email}
+Fecha de decisión: {date}
+
+{status_message}
+
+
+Si tiene preguntas sobre esta decisión o desea aclarar los motivos, póngase en contacto con nuestro servicio de atención al cliente utilizando los datos de contacto que figuran en nuestro sitio web.
+
+

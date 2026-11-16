@@ -1,0 +1,17 @@
+Herroepingsverzoek afgewezen
+
+Beste {firstname} {lastname},
+
+uw verzoek tot herroeping voor bestelling {order_identifier} is helaas afgewezen.
+
+Details van de beslissing
+Bestelnummer: {order_identifier}
+E-mail: {email}
+Beslissingsdatum: {date}
+
+{status_message}
+
+
+Als u vragen heeft over deze beslissing of de reden hiervoor wilt bespreken, neem dan contact op met onze klantenservice via de contactgegevens op onze website.
+
+

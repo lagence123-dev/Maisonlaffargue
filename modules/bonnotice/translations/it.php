@@ -1,0 +1,31 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bonnotice}prestashop>bonnotice_54fa13a6e404b1200df887a63bc82c29'] = 'Avviso di spedizione gratuita';
+$_MODULE['<{bonnotice}prestashop>bonnotice_77d9c1cc25c7b3ad6f5c1b03d8e71c45'] = 'Visualizza l \'avviso di spedizione gratuita';
+$_MODULE['<{bonnotice}prestashop>bonnotice_526a37ef550a583bc1719d46a2fc82cc'] = 'Disinstallare questo modulo';
+$_MODULE['<{bonnotice}prestashop>bonnotice_47a4a3546bebf5548a52ef59c074f618'] = 'Impostazioni aggiornate con successo.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f4f70727dc34561dfde1a3c529b6205c'] = 'impostazioni';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d73d2bdc982d68f7f6095a91b0d4d86c'] = 'Sfondo:';
+$_MODULE['<{bonnotice}prestashop>bonnotice_5177bdca0e157dd15da96b745e576eb3'] = 'Opacità:';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c9cc8cce247e49bae79f15173ce97354'] = 'salvare';
+$_MODULE['<{bonnotice}prestashop>bonnotice_14949374771dc24156330dbda2863486'] = 'Errore di formato  "Sfondo".';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f5c8e1264004a33789d0dcc82b29f783'] = 'È richiesta l\'opacità.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c3f9eee6816f8fc9384666936d84d130'] = 'Formato del limite di opacità';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f15c1cae7882448b3fb0404682e17e61'] = 'contenuto';
+$_MODULE['<{bonnotice}prestashop>bonnotice_ca0dbad92a874b2f69b549293387925e'] = 'codice';
+$_MODULE['<{bonnotice}prestashop>bonnotice_db3794c7d704611ce61c9d8cc09cd806'] = 'data di inizio';
+$_MODULE['<{bonnotice}prestashop>bonnotice_3c1429dca1ae285353b112dfacae5fe5'] = 'data di fine';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c06c1fdf2690acc9c0b4ed3f4c87b36e'] = 'L \'elemento non è stato aggiunto.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d9b36eff81dbacc1d424b5460ddcc482'] = 'L \'elemento non ha potuto essere aggiornato.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_72ed90af737192981c4b0dbf7463b70b'] = 'L \'elemento viene salvato.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f3b9de34364942606ebb991132523f83'] = 'Si verifica un errore sconosciuto.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c5abf5e49be9e3d6e9699a6dfcdff591'] = 'L\'avvio dei dati è obbligatorio.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_7d57726467bd43f570dd0d29cb84af5b'] = 'La fine dei dati è obbligatoria.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_208cdbf284339a73fb0f7ae4c7737b08'] = 'Campo di data non valido';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c7e56badecce297feefe2a9b50a68794'] = 'Intervallo di date non valido';
+$_MODULE['<{bonnotice}prestashop>bonnotice_44fdec47036f482b68b748f9d786801b'] = 'giorni';
+$_MODULE['<{bonnotice}prestashop>bonnotice_adab7b701f23bb82014c8506d3dc784e'] = 'ora';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d8bd79cc131920d5de426f914d17405a'] = 'min.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_74459ca3cf85a81df90da95ff6e7a207'] = 'seconda';

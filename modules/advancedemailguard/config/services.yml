@@ -1,0 +1,5 @@
+services:
+  PrestaShop\Module\AdvancedEmailGuard\Controller\Admin\ManageController:
+    autowire: true
+    autoconfigure: true
+    class: PrestaShop\Module\AdvancedEmailGuard\Controller\Admin\ManageController

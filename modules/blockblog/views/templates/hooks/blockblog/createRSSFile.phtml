@@ -1,0 +1,22 @@
+<?php
+
+
+$returnITEM = "<item>\n";
+# this will return the Title of the Article.
+$returnITEM .= "<title><![CDATA[".$post_title."]]></title>\n";
+# this will return the Description of the Article.
+$returnITEM .= "<description><![CDATA[".((Tools::strlen($img)>0)?"<img src=\"".$img."\" title=\"".$post_title."\" alt=\"thumb\" />":"").$post_description."]]></description>\n";
+# this will return the URL to the post.
+$returnITEM .= "<link>".str_replace('&','&amp;', $post_link)."</link>\n";
+$returnITEM .= "<guid>".str_replace('&','&amp;', $post_link)."</guid>\n";
+
+$returnITEM .= "<pubDate>".$post_pubdate."</pubDate>\n";
+$returnITEM .= "<author>".$author."</author>\n";
+
+$returnITEM .= "<slash:comments>".$count_comments."</slash:comments>\n";
+
+$returnITEM .= "</item>\n";
+
+
+
+?>

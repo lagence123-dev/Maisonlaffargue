@@ -1,0 +1,30 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bontab}prestashop>bontab_bb8f52c4740d5b1f85e422f74f6a3d6d'] = 'Tabela wielkości produktu i wysyłki';
+$_MODULE['<{bontab}prestashop>bontab_ea6a9ed62c5324315ad5338997419e2c'] = 'Wyświetl wyskakujące okienko na stronie produktu.';
+$_MODULE['<{bontab}prestashop>bontab_526a37ef550a583bc1719d46a2fc82cc'] = 'Odinstaluj ten moduł';
+$_MODULE['<{bontab}prestashop>bontab_f5c6bb33da24a6c5e9d957b42fc766a8'] = 'Zaktualizuj kartę';
+$_MODULE['<{bontab}prestashop>bontab_ea44d72bb3383b275e1f49b333eb3050'] = 'Dodaj kartę';
+$_MODULE['<{bontab}prestashop>bontab_b78a3223503896721cca1303f776159b'] = 'tytuł';
+$_MODULE['<{bontab}prestashop>bontab_f15c1cae7882448b3fb0404682e17e61'] = 'treść';
+$_MODULE['<{bontab}prestashop>bontab_ec53a8c4f07baed5d8825072c89799be'] = 'Stan';
+$_MODULE['<{bontab}prestashop>bontab_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'włączony';
+$_MODULE['<{bontab}prestashop>bontab_b9f5c797ebbf55adccdd8539a65a0241'] = 'wyłączony';
+$_MODULE['<{bontab}prestashop>bontab_c9cc8cce247e49bae79f15173ce97354'] = 'uratować';
+$_MODULE['<{bontab}prestashop>bontab_630f6dc397fe74e52d5189e2c80f282b'] = 'powrót do listy';
+$_MODULE['<{bontab}prestashop>bontab_490aa6e856ccf208a054389e47ce0d06'] = 'identyfikator';
+$_MODULE['<{bontab}prestashop>bontab_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'pozycja';
+$_MODULE['<{bontab}prestashop>bontab_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'dodać element';
+$_MODULE['<{bontab}prestashop>bontab_df9e2b16f6f27137eac6045eee65cf30'] = 'Tabulatury nie można dodać';
+$_MODULE['<{bontab}prestashop>bontab_13c1e375b1216e6aa7ffe6a3bfdf9c7d'] = 'Karty nie można modyfikować';
+$_MODULE['<{bontab}prestashop>bontab_246f06fbb3df99220b51b88c3919da89'] = 'Karta jest zapisana';
+$_MODULE['<{bontab}prestashop>bontab_f3b9de34364942606ebb991132523f83'] = 'Nieznany błąd';
+$_MODULE['<{bontab}prestashop>bontab_c81e935f4542b3e2cc937f43b7f83d8e'] = 'Tytuł jest obowiązkowy';
+$_MODULE['<{bontab}prestashop>bontab_811179333665ff1dc696404bfa8e8605'] = 'Niewłaściwy format tytułu';
+$_MODULE['<{bontab}prestashop>bontab_142b1f21852405438fe7731441545b17'] = 'Niewłaściwy format opisu';
+$_MODULE['<{bontab}prestashop>bontab_6e13d54425370cdd6a2cefd94eb4e255'] = 'Błąd po usunięciu karty';
+$_MODULE['<{bontab}prestashop>bontab_493b7ecf3a201c1156c32579addf8aa7'] = 'Karta została usunięta';
+$_MODULE['<{bontab}prestashop>bontab_22ae03024d9085a4b98c8007e982c7dd'] = 'Statusu karty nie można zmienić';
+$_MODULE['<{bontab}prestashop>bontab_27364c18e496ff2acf5c2247b36caf52'] = 'Status karty został zmieniony';

@@ -1,0 +1,33 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{customtab}prestashop>customtab_2e43a808fe8a47de053b9c633a879a31'] = 'Karta vlastní produkt';
+$_MODULE['<{customtab}prestashop>customtab_b154d60b0e3e523e3bd11f66496518d3'] = 'Vlastní záložka produktu displeje modulu.';
+$_MODULE['<{customtab}prestashop>customtab_546574244d84906a9ae3a968e66fe0fd'] = 'Karta aktualizovat';
+$_MODULE['<{customtab}prestashop>customtab_67b766b66c1b187ef3ad796aabf1753b'] = 'Přidejte kartu';
+$_MODULE['<{customtab}prestashop>customtab_8bb7dfeaab22c211f9d88ff2f88cdbf8'] = 'Vyberte produkt:';
+$_MODULE['<{customtab}prestashop>customtab_b78a3223503896721cca1303f776159b'] = 'Název';
+$_MODULE['<{customtab}prestashop>customtab_f15c1cae7882448b3fb0404682e17e61'] = 'Obsah';
+$_MODULE['<{customtab}prestashop>customtab_ec53a8c4f07baed5d8825072c89799be'] = 'Stav';
+$_MODULE['<{customtab}prestashop>customtab_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Povoleno';
+$_MODULE['<{customtab}prestashop>customtab_b9f5c797ebbf55adccdd8539a65a0241'] = 'Zakázáno';
+$_MODULE['<{customtab}prestashop>customtab_c9cc8cce247e49bae79f15173ce97354'] = 'Uložit';
+$_MODULE['<{customtab}prestashop>customtab_630f6dc397fe74e52d5189e2c80f282b'] = 'Zpět na seznam';
+$_MODULE['<{customtab}prestashop>customtab_9f41ae0e524e7e30921299e3e7a12977'] = 'Karta identifikátor';
+$_MODULE['<{customtab}prestashop>customtab_91ebef1d9e4c658b5befafa84e01c930'] = 'Identifikátor produktu';
+$_MODULE['<{customtab}prestashop>customtab_be53a0541a6d36f6ecb879fa2c584b08'] = 'Obrázek';
+$_MODULE['<{customtab}prestashop>customtab_49ee3087348e8d44e1feda1917443987'] = 'Jméno';
+$_MODULE['<{customtab}prestashop>customtab_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'Poloha';
+$_MODULE['<{customtab}prestashop>customtab_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Přidá nový objekt';
+$_MODULE['<{customtab}prestashop>customtab_df9e2b16f6f27137eac6045eee65cf30'] = 'Kartu nebylo možné přidat.';
+$_MODULE['<{customtab}prestashop>customtab_13c1e375b1216e6aa7ffe6a3bfdf9c7d'] = 'Kartu nebylo možné aktualizovat.';
+$_MODULE['<{customtab}prestashop>customtab_246f06fbb3df99220b51b88c3919da89'] = 'Karta je uložena.';
+$_MODULE['<{customtab}prestashop>customtab_f3b9de34364942606ebb991132523f83'] = 'Došlo k neznámé chybě.';
+$_MODULE['<{customtab}prestashop>customtab_c81e935f4542b3e2cc937f43b7f83d8e'] = 'Název je povinný.';
+$_MODULE['<{customtab}prestashop>customtab_51970da6f24b73a374654edf9b60ad68'] = 'Výrobek je vyžadován.';
+$_MODULE['<{customtab}prestashop>customtab_6e13d54425370cdd6a2cefd94eb4e255'] = 'Při odstraňování karty došlo k chybě';
+$_MODULE['<{customtab}prestashop>customtab_493b7ecf3a201c1156c32579addf8aa7'] = 'Karta byla úspěšně odstraněna';
+$_MODULE['<{customtab}prestashop>customtab_22ae03024d9085a4b98c8007e982c7dd'] = 'Stav karty nelze aktualizovat.';
+$_MODULE['<{customtab}prestashop>customtab_27364c18e496ff2acf5c2247b36caf52'] = 'Stav karty je úspěšně aktualizován.';
+$_MODULE['<{customtab}prestashop>list_footer_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Přidá nový objekt';

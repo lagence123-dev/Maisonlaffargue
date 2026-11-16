@@ -1,0 +1,84 @@
+.sw-nav,
+.n-hover:hover .sw-nav {
+	display: block;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 15px rgba(255,255,255, 0.3);
+	border-radius: 50%;
+	margin-top: -25px;
+	z-index: 10;
+	cursor: pointer;
+	text-align: center;
+	opacity: 1;
+	outline: none;
+	transition: all 0.1s ease-in-out;
+}
+.sw-nav.next,
+.n-hover:hover .sw-nav.next {
+	transform: rotate(180deg);
+	right: 20px;
+	left: auto;
+	opacity: 1;
+}
+.sw-nav:before {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #FFF;
+	transform: rotate(45deg);
+	border-width: 0 0 2px 2px;
+	margin-top: 20px;
+	margin-left: 2px;
+}
+.sw-nav:hover,
+.n-hover:hover .sw-nav:hover {
+	background: rgba(0,0,0,0.7);
+}
+.n-hover .sw-nav {
+	left: 0;
+	right: auto;
+	opacity: 0;
+}
+.n-hover .sw-nav.next {
+	right: 0;
+	left: auto;
+	opacity: 0;
+}
+.sw-pgn,
+.p-hover:hover .sw-pgn {
+	margin-top: 15px;
+	display: block;
+	text-align: center;
+	z-index: 10;
+	transition: all 0.1s ease-in-out;
+	opacity: 1;
+}
+.sw-pgn-bullet {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: #333;
+	border: 2px solid #FFF;
+	border-radius: 100%;
+	margin: 0 3px;
+	opacity: 0.2;
+	outline: none;
+	cursor: pointer;
+}
+.sw-pgn-bullet.active {
+	opacity: 1;
+}
+.p-hover .sw-pgn {
+	bottom: 0;
+	opacity: 0;
+}
+.sw-nav.hidden,
+.sw-pgn.hidden {
+	display: none!important;
+}
+/* since 3.0.3 */

@@ -1,0 +1,33 @@
+<?php
+
+global $_MODULE;
+$_MODULE = [];
+$_MODULE['<{customtab}prestashop>customtab_2e43a808fe8a47de053b9c633a879a31'] = 'Onglet personnalisé du produit';
+$_MODULE['<{customtab}prestashop>customtab_b154d60b0e3e523e3bd11f66496518d3'] = 'Onglet personnalisé du produit d\'affichage du module.';
+$_MODULE['<{customtab}prestashop>customtab_546574244d84906a9ae3a968e66fe0fd'] = 'Onglet Mettre à jour';
+$_MODULE['<{customtab}prestashop>customtab_67b766b66c1b187ef3ad796aabf1753b'] = 'Ajouter un onglet';
+$_MODULE['<{customtab}prestashop>customtab_8bb7dfeaab22c211f9d88ff2f88cdbf8'] = 'Choisissez un produit:';
+$_MODULE['<{customtab}prestashop>customtab_b78a3223503896721cca1303f776159b'] = 'Titre';
+$_MODULE['<{customtab}prestashop>customtab_f15c1cae7882448b3fb0404682e17e61'] = 'Contenu';
+$_MODULE['<{customtab}prestashop>customtab_ec53a8c4f07baed5d8825072c89799be'] = 'Statut';
+$_MODULE['<{customtab}prestashop>customtab_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activé';
+$_MODULE['<{customtab}prestashop>customtab_b9f5c797ebbf55adccdd8539a65a0241'] = 'Désactivé';
+$_MODULE['<{customtab}prestashop>customtab_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
+$_MODULE['<{customtab}prestashop>customtab_630f6dc397fe74e52d5189e2c80f282b'] = 'Retour à la liste';
+$_MODULE['<{customtab}prestashop>customtab_9f41ae0e524e7e30921299e3e7a12977'] = 'Onglet Identifiant';
+$_MODULE['<{customtab}prestashop>customtab_91ebef1d9e4c658b5befafa84e01c930'] = 'Identifiant produit';
+$_MODULE['<{customtab}prestashop>customtab_be53a0541a6d36f6ecb879fa2c584b08'] = 'Image';
+$_MODULE['<{customtab}prestashop>customtab_49ee3087348e8d44e1feda1917443987'] = 'Nom';
+$_MODULE['<{customtab}prestashop>customtab_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'Position';
+$_MODULE['<{customtab}prestashop>customtab_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Ajoute un nouvel objet';
+$_MODULE['<{customtab}prestashop>customtab_df9e2b16f6f27137eac6045eee65cf30'] = 'L\'onglet n\'a pas pu être ajouté.';
+$_MODULE['<{customtab}prestashop>customtab_13c1e375b1216e6aa7ffe6a3bfdf9c7d'] = 'L\'onglet n\'a pas pu être mis à jour.';
+$_MODULE['<{customtab}prestashop>customtab_246f06fbb3df99220b51b88c3919da89'] = 'L\'onglet est enregistré.';
+$_MODULE['<{customtab}prestashop>customtab_f3b9de34364942606ebb991132523f83'] = 'Une erreur inconnue s\'est produite.';
+$_MODULE['<{customtab}prestashop>customtab_c81e935f4542b3e2cc937f43b7f83d8e'] = 'Le titre est obligatoire.';
+$_MODULE['<{customtab}prestashop>customtab_51970da6f24b73a374654edf9b60ad68'] = 'Le produit est requis.';
+$_MODULE['<{customtab}prestashop>customtab_6e13d54425370cdd6a2cefd94eb4e255'] = 'Une erreur s\'est produite lors de la suppression de l\'onglet';
+$_MODULE['<{customtab}prestashop>customtab_493b7ecf3a201c1156c32579addf8aa7'] = 'L\'onglet a été supprimé avec succès';
+$_MODULE['<{customtab}prestashop>customtab_22ae03024d9085a4b98c8007e982c7dd'] = 'L\'état de l\'onglet n\'a pas pu être mis à jour.';
+$_MODULE['<{customtab}prestashop>customtab_27364c18e496ff2acf5c2247b36caf52'] = 'L\'état de l\'onglet est mis à jour avec succès.';
+$_MODULE['<{customtab}prestashop>list_footer_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Ajoute un nouvel objet';

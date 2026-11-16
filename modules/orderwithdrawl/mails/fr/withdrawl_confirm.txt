@@ -1,0 +1,24 @@
+Confirmation de votre demande de rétractation
+
+Bonjour {firstname} {lastname},
+
+Votre demande de rétractation a été reçue. Vous trouverez ci-dessous les informations de votre demande :
+
+Numéro de commande : {order_identifier}
+Nom : {consumer_name}
+E-mail pour l'accusé de réception : {email}
+Date et heure de réception : {date}
+Portée de la rétractation : {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Vous pouvez suivre votre commande depuis votre compte dans Historique des commandes :
+{history_url}
+
+--
+{shop_name}
+{shop_url}

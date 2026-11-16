@@ -1,0 +1,137 @@
+.cb-item {
+	text-align: center;
+	position: relative;
+}
+.cb-item-content{
+	position: relative;
+}
+.cb-item-content .cb-img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+.cb-item-content .cb-img.secondary-image,
+.cb-item-content:hover .cb-img.primary-image {
+	display: none;
+}
+.cb-item-content:hover .cb-img.secondary-image {
+	display: inline-block;
+}
+.html-over .custom-html {
+	display: table;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+.img-rb .cb-item-content img {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/* accordion */
+.cb-wrapper.type-4 {
+	margin-top: 1px;
+}
+.cb-wrapper.type-4 .cb-item {
+	width: 100%;
+}
+.cb-wrapper.type-4 .cb-item-title {
+	text-align: left;
+	padding: 10px;
+	border: 1px solid #D0D5DB;
+	margin-top: -1px;
+	cursor: pointer;
+}
+.cb-wrapper.type-4 .cb-item-title:before {
+	content: '+';
+	font: bold 1.2em/1 Arial;
+	color: #AAB2BD;
+	margin-right: 5px;
+}
+.cb-wrapper.type-4 .cb-item.active .cb-item-title:before {
+	content: '−';
+}
+/* grid values for 480 px. They are not present in BS 3 */
+@media (max-width: 479px) {
+	[class*=".col-xxs-"]{ float: left; }
+	.col-xxs-1  { width: 8.3%; }
+	.col-xxs-2  { width: 16.6%; }
+	.col-xxs-3  { width: 25%; }
+	.col-xxs-4  { width: 33.3%; }
+	.col-xxs-5  { width: 41.8%; }
+	.col-xxs-6  { width: 50%; }
+	.col-xxs-7  { width: 58.3%; }
+	.col-xxs-8  { width: 66.6%; }
+	.col-xxs-9  { width: 75%; }
+	.col-xxs-10 { width: 83.3%; }
+	.col-xxs-11 { width: 91.6%; }
+	.col-xxs-12 { width: 100%; }
+}
+/* special classes used in layout */
+.cb .compact-gutters-container {
+	margin: 0 -5px;
+}
+.cb .compact-gutters {
+	padding: 0 5px 9px 5px;
+}
+.box-shadow, .img-box-shadow img {
+	box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.15);
+}
+.clear-both {
+	clear: both;
+}
+/* grid */
+.cb-grid {
+	--n: 1;
+	--gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+	margin-top: var(--gap);
+	margin-bottom: var(--gap);
+}
+.cb-grid .cb-item {
+	flex-shrink: 0;
+	width: calc((100% - (var(--gap) * (var(--n) - 1))) / var(--n));
+}
+.cb-grid.xl-1 {--n: 1}
+.cb-grid.xl-2 {--n: 2}
+.cb-grid.xl-3 {--n: 3}
+.cb-grid.xl-4 {--n: 4}
+.cb-grid.xl-5 {--n: 5}
+.cb-grid.xl-6 {--n: 6}
+@media (max-width: 1199px) {
+	.cb-grid.lg-1 {--n: 1}
+	.cb-grid.lg-2 {--n: 2}
+	.cb-grid.lg-3 {--n: 3}
+	.cb-grid.lg-4 {--n: 4}
+	.cb-grid.lg-5 {--n: 5}
+	.cb-grid.lg-6 {--n: 6}
+}
+@media (max-width: 991px) {
+	.cb-grid.md-1 {--n: 1}
+	.cb-grid.md-2 {--n: 2}
+	.cb-grid.md-3 {--n: 3}
+	.cb-grid.md-4 {--n: 4}
+	.cb-grid.md-5 {--n: 5}
+	.cb-grid.md-6 {--n: 6}
+}
+@media (max-width: 767px) {
+	.cb-grid {--gap: 15px}
+	.cb-grid.sm-1 {--n: 1}
+	.cb-grid.sm-2 {--n: 2}
+	.cb-grid.sm-3 {--n: 3}
+	.cb-grid.sm-4 {--n: 4}
+	.cb-grid.sm-5 {--n: 5}
+	.cb-grid.sm-6 {--n: 6}
+}
+@media (max-width: 480px) {
+	.cb-grid.xs-1 {--n: 1}
+	.cb-grid.xs-2 {--n: 2}
+	.cb-grid.xs-3 {--n: 3}
+	.cb-grid.xs-4 {--n: 4}
+	.cb-grid.xs-5 {--n: 5}
+	.cb-grid.xs-6 {--n: 6}
+}
+/* since 3.0.2 */

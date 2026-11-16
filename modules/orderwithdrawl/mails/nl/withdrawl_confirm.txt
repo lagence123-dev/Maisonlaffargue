@@ -1,0 +1,24 @@
+Bevestiging van uw herroepingsverzoek
+
+Hallo {firstname} {lastname},
+
+Uw herroepingsverzoek is ontvangen. Hieronder vindt u de gegevens van uw verzoek:
+
+Bestelnummer: {order_identifier}
+Naam: {consumer_name}
+E-mail voor de ontvangstbevestiging: {email}
+Datum en tijd van ontvangst: {date}
+Omvang van de herroeping: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+U kunt uw bestelling volgen vanuit uw account onder Bestelgeschiedenis:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

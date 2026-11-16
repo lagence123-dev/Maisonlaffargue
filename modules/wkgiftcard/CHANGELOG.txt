@@ -1,0 +1,167 @@
+-------------------------------------------------------------------
+Changelog V5.2.0 To V5.2.1 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x.x
+-------------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Bug fixed:
+	- Fixed Validation issue.
+    - Fixed some design related issue.
+    - Some minor bug fixed.
+
+## Improvements:
+    - Configuration added to associate customer email to generated vouchers.
+    - In product page gift card two option are available for purchasing gift card (1. For self, 2. For other)
+
+-------------------------------------------------------------------
+Changelog V5.1.1 To V5.2.0 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x.x
+-------------------------------------------------------------------
+Improvements
+- Admin can select the category on which gift card voucher applied.
+- Improve the UI of gift card products page.
+- Users can purchase the same gift card multiple times at once.
+- Create tabs on the gift card product add page.
+- UPC barcode, EAN number, reference field added to gift card product add page.
+- Assign voucher to non customer when they create account.
+- Dispaly the recipient details pop up.
+
+Issue fixed
+- Design related issue fixed.
+- Voucher is generating according to order currency.
+- Add character limit in message field when gift card add.
+- Minor issue fixed.
+
+## Hook changes
+- The following hooks are added
+    - displayOverrideTemplate
+    - displayAfterProductVariant
+    - displayAfterCartProductLine
+    - displayAfterProductName
+    - displayProductPriceBlock
+    - actionCustomerAccountAdd
+    - displayAdminOrderMain
+
+- The following hooks are Removed
+    - displayProductAdditionalInfo
+    - displayOrderConfirmation2
+
+## Db Changes:
+- New column `is_category_restriction` added in wk_gift_card table
+- New column `allow_categories` added in wk_gift_card table
+- New column `is_category_restriction` added in wk_gift_card_shop table
+- New column `allow_categories` added in wk_gift_card_shop table
+- New column `id_customization` added in wk_gift_card_cart table
+- New column `id_customization` added in wk_gift_card_order_details table
+
+## Update Policy:
+- There are some database and hook changes, so admin needs to upgrade this module.
+
+--------------------------
+Changelog V5.1.0 To V5.1.1
+--------------------------
+
+Improvements:
+- Send gift card product image in voucher mail
+- Give config to send gift card voucher in a PDF on mail
+- Give option to admin to resend mail to customer with gift card details
+- Recipient customer can see voucher details in account section if recipient email id have an account in shop
+- Show Gift card page at FO and show/hide in menu from config
+- Code improved
+
+
+Issue Fixed:
+- Allow gift card only for selected products
+- Fixed product search for virtual product
+- Fixed product minimal quantity buy condition
+- Fixed cotalog mode condition
+- Text/design changes
+- Validation issue fixed
+
+## Update Policy:
+- Upload new modules files and upgrade module.
+
+## Register hook:
+- actionAdminControllerSetMedia
+- actionMetaPageSave
+
+
+--------------------------
+Changelog V5.0.0 To V5.1.0
+--------------------------
+
+Improvements:
+- Give category select option during gift card creation
+- Enable/Disable free shipping for voucher
+- Create dynamic gift card with tax from customer end
+- Create voucher with tax included
+- compatible with PS lower version
+- Display/content/UI improved
+- Validation improved
+- Translation improved
+
+
+## Update Policy:
+- Upload new modules files and upgrade module.
+## Register hook:
+- displayProductListReviews
+# DB Changes
+- Added free_shipping in wk_gift_card table
+
+--------------------------
+Changelog V4.0.2 To V5.0.0
+--------------------------
+
+Issue Fixed:
+- Removed customer specific voucher creation feature
+- Text/design changes
+
+Improvements:
+- AFL License updated
+- PrestaShop 8 compatible
+- Removed gift card creation from catalogue module section
+- Added new tab to create gift card under catalogue section
+- Removed percentage type discount feature
+- Removed start date and end date feature
+- Added voucher valid upto feature
+- Added dynamic price feature
+- Email template changed
+- Multishop compatible
+
+## Update Policy:
+- Upload new modules files and upgrade module.
+## Unregister hook:
+- displayAdminProductsExtra, actionAdminControllerSetMedia, actionProductSave
+## Register hook:
+- actionFrontControllerSetMedia, displayProductAdditionalInfo, displayHeader,displayOrderConfirmation2
+## Overriding Cart and Product class
+# DB Changes
+- Added valid_upto, dynamic_price in wk_gift_cardtable
+- Drop end_date, start_date, id_product in wk_gift_cardtable
+- Added id_shop, recipient_name, recipient_email, message, delivery_date, from_name in wk_gift_card_order_details
+- Add new table wk_gift_card_shop, wk_gift_card_product, wk_gift_card_product_shop, wk_gift_card_cart, wk_gift_card_delivery_schedule
+
+
+---------------------------
+Changelog V4.0.1 To V4.0.2
+---------------------------
+
+Issue Fixed:
+- Fixed fetal error on order gift card product
+- Fixed ContextErrorException on mail send
+- Fixed Design issue on enable gift card on product edit page
+- Fixed issue on showing Gift Card Available for all Products when it is only applied on 1
+- Fixed issue Gift card vouchers not getting displayed under "Vouchers" section of customer account
+
+Improvements:
+- Remove install.sql file
+- Code improvement
+
+--------------------------
+Changelog v4.0.0 to v4.0.1
+--------------------------
+
+Fixed bugs:
+- [BO] : Issue in form to create virtual product to Gift card is reolved.
+
+Update Policy
+- File changes, just upload the module.

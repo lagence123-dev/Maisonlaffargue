@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>bonportfolio</name>
+    <displayName><![CDATA[Portefeuille avec effet ma&ccedil;onnerie]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Vous permet de cr&eacute;er une belle page de portfolio avec un effet de ma&ccedil;onnerie.]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Désinstaller ce module]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,16 @@
+Withdrawal Request Approved
+
+Hello {firstname} {lastname},
+
+Your withdrawal request for order {order_identifier} has been approved.
+
+Approval details
+Order ID: {order_identifier}
+Email: {email}
+Decision date: {date}
+
+{status_message}
+
+
+If you have any questions regarding this withdrawal, please reply directly to this email.
+

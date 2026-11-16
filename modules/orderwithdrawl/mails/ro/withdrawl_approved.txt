@@ -1,0 +1,16 @@
+Cerere de retragere aprobată
+
+Bună ziua {firstname} {lastname},
+
+Cererea dvs. de retragere pentru comanda {order_identifier} a fost aprobată.
+
+Detalii aprobare
+Număr comandă: {order_identifier}
+E-mail: {email}
+Data deciziei: {date}
+
+{status_message}
+
+
+Dacă aveți întrebări privind această retragere, răspundeți direct la acest e-mail.
+

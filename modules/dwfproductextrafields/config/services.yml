@@ -1,0 +1,22 @@
+services:
+  DwfProductExtraFields\Form\Modifier\ProductFormModifier:
+    class: DwfProductExtraFields\Form\Modifier\ProductFormModifier
+    autowire: true
+    public: true
+    arguments:
+      - '@form.form_builder_modifier'
+      - '@translator'
+      - '@prestashop.adapter.legacy.context'
+
+  DwfProductExtraFields\Form\Type\DwfProductExtraFieldsTabType:
+    class: DwfProductExtraFields\Form\Type\DwfProductExtraFieldsTabType
+    arguments:
+      - '@translator'
+      - '@prestashop.adapter.legacy.context'
+    tags:
+      - { name: form.type }
+
+  DwfProductExtraFields\Twig\PriceExtension:
+    class: DwfProductExtraFields\Twig\PriceExtension
+    tags:
+      - { name: twig.extension }

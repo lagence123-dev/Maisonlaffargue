@@ -1,0 +1,17 @@
+Widerrufsanfrage genehmigt
+
+Hallo {firstname} {lastname},
+
+Ihre Widerrufsanfrage zur Bestellung {order_identifier} wurde genehmigt.
+
+Details zur Genehmigung
+Bestellnummer: {order_identifier}
+E-Mail: {email}
+Entscheidungsdatum: {date}
+
+{status_message}
+
+
+Wenn Sie Fragen zu diesem Widerruf haben, antworten Sie bitte direkt auf diese E-Mail.
+
+

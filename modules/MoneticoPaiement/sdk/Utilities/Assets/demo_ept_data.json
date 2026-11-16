@@ -1,0 +1,26 @@
+{
+  "IMMEDIATE": {
+    "ept_number": "9123450",
+    "ept_mac": "C4C6CF4123EB07A9A7BD30FD4246171C65E80D9F",
+    "code_site": "demomodule",
+    "code_site_emu": "EMU_demomodule"
+  },
+  "DIFFERED": {
+    "ept_number": "9123451",
+    "ept_mac": "F1236390A17E18B00DCAF82C767D10A465471492",
+    "code_site": "demomodule",
+    "code_site_emu": "EMU_demomodule"
+  },
+  "INSTALMENT": {
+    "ept_number": "9123452",
+    "ept_mac": "1005C4B8EA5D307A9F8AAC73CA67A9DE593B8191",
+    "code_site": "demomodule",
+    "code_site_emu": "EMU_demomodule"
+  },
+  "PARTIAL": {
+    "ept_number": "9123453",
+    "ept_mac": "7DF80AB6C5557A9B9F4B3FAC7B98E85552B47695",
+    "code_site": "demomodule",
+    "code_site_emu": "EMU_demomodule"
+  }
+}

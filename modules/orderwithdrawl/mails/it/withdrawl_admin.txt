@@ -1,0 +1,25 @@
+Richiesta di recesso
+
+Un cliente ha inviato una richiesta di recesso.
+
+Dettagli ordine:
+Numero ordine: {order_identifier}
+Totale ordine: {order_total}
+
+Dettagli cliente:
+Nome cliente: {customer_name}
+E-mail cliente: {customer_email}
+
+Data del recesso: {date}
+Ambito del recesso: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Nota del cliente:
+{customer_note}
+
+Si prega di elaborare questa richiesta di recesso secondo la vostra politica di rimborso.

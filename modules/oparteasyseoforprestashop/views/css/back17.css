@@ -1,0 +1,12 @@
+.bootstrap .nav-tabs>li {
+    float:none;
+}
+.bootstrap .nav-tabs {
+    border-top: 1px solid #ddd;
+}  
+.bootstrap .nav-tabs>li.active>a, .bootstrap .nav-tabs>li.active>a:hover, .bootstrap .nav-tabs>li.active>a:focus {
+    border: 1px solid #ddd;
+    border-width: 1px 0 1px 0;
+}.bootstrap .nav-tabs>li>a {
+    margin-right: 0;
+}

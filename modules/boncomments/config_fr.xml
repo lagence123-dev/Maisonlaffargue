@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>boncomments</name>
+    <displayName><![CDATA[Commentaires sur le produit]]></displayName>
+    <version><![CDATA[9.9.9]]></version>
+    <description><![CDATA[Permet aux utilisateurs de publier des avis et d&#039;&eacute;valuer les produits sur des crit&egrave;res sp&eacute;cifiques.]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>productbutton</name>
+    <displayName><![CDATA[Boutons de navigation Pr&eacute;c&eacute;dent et Suivant sur la page produit]]></displayName>
+    <version><![CDATA[1.0.1]]></version>
+    <description><![CDATA[Ajouter les boutons de navigation Pr&eacute;c&eacute;dent et Suivant &agrave; la page du produit.]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

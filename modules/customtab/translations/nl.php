@@ -1,0 +1,33 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{customtab}prestashop>customtab_2e43a808fe8a47de053b9c633a879a31'] = 'Product aangepast tabblad';
+$_MODULE['<{customtab}prestashop>customtab_b154d60b0e3e523e3bd11f66496518d3'] = 'Aangepast tabblad van het moduleweergaveproduct.';
+$_MODULE['<{customtab}prestashop>customtab_546574244d84906a9ae3a968e66fe0fd'] = 'Tabblad bijwerken';
+$_MODULE['<{customtab}prestashop>customtab_67b766b66c1b187ef3ad796aabf1753b'] = 'Voeg een tabblad toe';
+$_MODULE['<{customtab}prestashop>customtab_8bb7dfeaab22c211f9d88ff2f88cdbf8'] = 'Kies een product:';
+$_MODULE['<{customtab}prestashop>customtab_b78a3223503896721cca1303f776159b'] = 'titel';
+$_MODULE['<{customtab}prestashop>customtab_f15c1cae7882448b3fb0404682e17e61'] = 'inhoud';
+$_MODULE['<{customtab}prestashop>customtab_ec53a8c4f07baed5d8825072c89799be'] = 'status';
+$_MODULE['<{customtab}prestashop>customtab_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'geactiveerd';
+$_MODULE['<{customtab}prestashop>customtab_b9f5c797ebbf55adccdd8539a65a0241'] = 'uitgeschakeld';
+$_MODULE['<{customtab}prestashop>customtab_c9cc8cce247e49bae79f15173ce97354'] = 'opslaan';
+$_MODULE['<{customtab}prestashop>customtab_630f6dc397fe74e52d5189e2c80f282b'] = 'Terug naar de lijst';
+$_MODULE['<{customtab}prestashop>customtab_9f41ae0e524e7e30921299e3e7a12977'] = 'Tabblad Identificatie';
+$_MODULE['<{customtab}prestashop>customtab_91ebef1d9e4c658b5befafa84e01c930'] = 'Productidentificatie';
+$_MODULE['<{customtab}prestashop>customtab_be53a0541a6d36f6ecb879fa2c584b08'] = 'beeld';
+$_MODULE['<{customtab}prestashop>customtab_49ee3087348e8d44e1feda1917443987'] = 'naam';
+$_MODULE['<{customtab}prestashop>customtab_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'standpunt';
+$_MODULE['<{customtab}prestashop>customtab_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Voegt een nieuw object toe';
+$_MODULE['<{customtab}prestashop>customtab_df9e2b16f6f27137eac6045eee65cf30'] = 'Het tabblad kan niet worden toegevoegd.';
+$_MODULE['<{customtab}prestashop>customtab_13c1e375b1216e6aa7ffe6a3bfdf9c7d'] = 'Het tabblad kan niet worden bijgewerkt.';
+$_MODULE['<{customtab}prestashop>customtab_246f06fbb3df99220b51b88c3919da89'] = 'Het tabblad is opgeslagen.';
+$_MODULE['<{customtab}prestashop>customtab_f3b9de34364942606ebb991132523f83'] = 'Er is een onbekende fout opgetreden.';
+$_MODULE['<{customtab}prestashop>customtab_c81e935f4542b3e2cc937f43b7f83d8e'] = 'De titel is verplicht.';
+$_MODULE['<{customtab}prestashop>customtab_51970da6f24b73a374654edf9b60ad68'] = 'Het product is verplicht.';
+$_MODULE['<{customtab}prestashop>customtab_6e13d54425370cdd6a2cefd94eb4e255'] = 'Fout is opgetreden bij het verwijderen van het tabblad';
+$_MODULE['<{customtab}prestashop>customtab_493b7ecf3a201c1156c32579addf8aa7'] = 'Het tabblad is succesvol verwijderd';
+$_MODULE['<{customtab}prestashop>customtab_22ae03024d9085a4b98c8007e982c7dd'] = 'De tabstatus kan niet worden bijgewerkt.';
+$_MODULE['<{customtab}prestashop>customtab_27364c18e496ff2acf5c2247b36caf52'] = 'De tabstatus is succesvol bijgewerkt.';
+$_MODULE['<{customtab}prestashop>list_footer_ab03c8973cc7a3314e8ce68b5d88bcd9'] = 'Voegt een nieuw object toe';

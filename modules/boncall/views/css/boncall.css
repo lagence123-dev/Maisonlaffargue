@@ -1,0 +1,275 @@
+#btn-boncall p{
+  margin-bottom: 10px;
+}
+
+#btn-boncall .boncall-open {
+  left: 0;
+  top: 440px;
+  width: 30px;
+  position: fixed;
+  height: 30px;
+  transition: all 0.3s;
+  z-index: 998;
+  border: none;
+  cursor: pointer;
+  background: #1EAFBE;
+}
+.boncall-link-phone i,
+.boncall-link-email i {
+  margin-right: 6px;
+}
+#btn-boncall-nav .boncall-open-nav {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3a3a3a;
+}
+#btn-boncall .boncall-open:focus {
+  outline: none;
+}
+
+#btn-boncall .boncall-open .boncall-open_img{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+} 
+
+#btn-boncall .boncall-open .boncall-open_img i{
+  font-size: 22px;
+}
+
+#btn-boncall .boncall-wrapper {
+  top: 440px;
+  opacity: 0;
+  position: fixed;
+  background-color: white;
+  width: 320px;
+  max-height: 535px;
+  overflow: auto;
+  z-index: 99999;
+  transition: all 0.3s;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+}
+
+#btn-boncall-nav .boncall-wrapper-nav {
+  bottom: 2.5%;
+  right: 76px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  background-color: white;
+  width: 320px;
+  max-height: 535px;
+  overflow: auto;
+  z-index: 999;
+  transition: all 0.2s linear;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, .1);
+  transform: translateX(-25px);
+
+}
+
+#btn-boncall-nav {
+  transition: all 0.2s ease 0s;
+}
+
+#btn-boncall-nav:hover {
+  cursor: pointer;
+}
+
+#btn-boncall-nav:hover .boncall-wrapper-nav {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition: all 0.3s linear;
+  cursor: auto;
+}
+
+#btn-boncall .boncall-wrapper.left {
+  left: -320px;
+  opacity: 1;
+}
+#btn-boncall .boncall-wrapper.right {
+  right: -320px;
+  opacity: 1;
+}
+
+#btn-boncall .boncall-wrapper.left.active {
+  left: 0;
+}
+
+#btn-boncall .boncall-wrapper.right.active {
+  right: 0;
+}
+
+#btn-boncall-nav .boncall-wrapper-nav .form-group,
+#btn-boncall .boncall-wrapper .form-group{
+   margin-bottom: 10px;
+}
+
+#btn-boncall-nav .boncall-wrapper-nav .boncall-header-title,
+#btn-boncall .boncall-wrapper .boncall-header-title{
+  padding: 11px 40px 10px 15px;
+  background: #F4F4F4;
+}
+
+#btn-boncall-nav .boncall-wrapper-nav .boncall-header-title p,
+#btn-boncall .boncall-wrapper .boncall-header-title p{
+  color: #505050;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+#btn-boncall-nav .boncall-wrapper-nav .boncall-body,
+#btn-boncall .boncall-wrapper .boncall-body{
+  padding: 15px;
+}
+
+#btn-boncall-nav .boncall-wrapper-nav .boncall-body p:nth-child(2)
+#btn-boncall .boncall-wrapper .boncall-body p:nth-child(2){
+  display: none;
+}
+
+#btn-boncall .boncall-open.left.active {
+  left: 320px;
+}
+
+#btn-boncall .boncall-open.right {
+  right: 0;
+  left: unset;
+}
+
+#btn-boncall .boncall-open.right.active {
+  right: 320px;
+}
+
+#btn-boncall .block-callback a {
+  margin-left: 36px;
+}
+
+#btn-boncall .block-callback-link {
+  position: relative;
+}
+
+#btn-boncall-nav .boncall-title,
+#btn-boncall .boncall-title {
+  color: #3a3a3a;
+  display: none;
+}
+
+#btn-boncall .block-callback a {
+  display: flex;
+}
+
+#btn-boncall .block-callback a span {
+  hyphens: none;
+}
+
+#btn-boncall a i {
+  font-size: 14px;
+  margin-right: 7px;
+}
+
+#btn-boncall a.btn-boncall {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-weight: 400;
+  white-space: inherit;
+  /* transition: all 0.3s ease; */
+  font-size: 15px;
+  position: relative;
+}
+
+#btn-boncall a.btn-boncall span {
+  font-size: 13px;
+}
+
+#btn-boncall a.btn-boncall:hover {
+  box-shadow: none;
+}
+
+.boncall-wrapper .bon-call-success.alert-success {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.boncall_form .wh {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.boncall_form p {
+  margin-bottom: 12px;
+}
+
+.boncall_form .submit {
+  display: flex;
+  justify-content: center;
+}
+
+.boncall_form .submit .boncall_send {
+  padding: 11px 20px;
+  width: 100%;
+}
+
+.boncall_form fieldset {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  body.header-1 #wrapper #btn-boncall {
+      display: none;
+  }
+}
+
+/* @media (min-width: 768px) and (max-width: 991px) {
+  #btn-boncall .boncall-open,
+  #btn-boncall .boncall-wrapper{
+    top: 449px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #btn-boncall .boncall-open,
+  #btn-boncall .boncall-wrapper{
+    top: 411px;
+  }
+} */
+
+@media screen and (max-width: 575px) {
+  #btn-boncall .boncall-wrapper {
+    right: 0;
+  }
+  /* #btn-boncall .boncall-open,
+  #btn-boncall .boncall-wrapper{
+    top: 420px;
+  } */
+  #btn-boncall .boncall-wrapper {
+    overflow: auto;
+    height: 220px;
+  }
+  #btn-boncall .block-callback {
+    flex-direction: column-reverse;
+  }
+  #btn-boncall a.btn-boncall span {
+    font-size: 11px;
+  }
+  #btn-boncall a.btn-boncall::after {
+    right: 10%;
+  }
+}
+
+/* @media screen and (min-width: 320px) and (max-width: 386px){
+  #btn-boncall .boncall-open,
+  #btn-boncall .boncall-wrapper{
+    top: 426px;
+  }
+} */

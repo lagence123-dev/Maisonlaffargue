@@ -1,0 +1,64 @@
+<?php
+
+
+include_once(_PS_MODULE_DIR_.$this->name.'/classes/blogspm.class.php');
+$obj_blog = new blogspm();
+
+$data_count_rss = $obj_blog->countItemsForRSS();
+
+$count_items_rss = $data_count_rss['count'];
+
+$urls_array = array();
+if($count_items_rss>0){
+
+
+    $all_shops = Shop::getShops();
+    foreach ($all_shops as $_shop) {
+
+        $id_shop = (int)$_shop['id_shop'];
+
+        $all_laguages = Language::getLanguages(true, $id_shop);
+
+
+        foreach ($all_laguages as $item_lng) {
+
+            $id_lang = $item_lng['id_lang'];
+            $iso_code = $item_lng['iso_code'];
+
+            $data_url = $obj_blog->getSEOURLs(array('id_lang' => $id_lang, 'id_shop' => $id_shop));
+
+            $all_rss_data = $obj_blog->getItemsForRSS(array('id_shop' => $id_shop, 'id_lang' => $id_lang, 'iso_code' => $iso_code));
+            $all_rss = $all_rss_data['items'];
+
+            if(count($all_rss)>0) {
+                $rss_url = $data_url['rss_url'];
+                $rss_url = $obj_blog->handleLanguagesForSitemap(array('url'=>$rss_url,'id_lang' => $id_lang,'id_shop' => $id_shop));
+                $urls_array[$id_lang] = $rss_url;
+            }
+
+
+
+        }
+
+    }
+
+}
+
+$_html = '';
+if(count($urls_array)>0){
+
+    foreach($urls_array as $id_lang => $path) {
+
+
+        $_html .= '&nbsp;<img src="' . _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'img/l/' . $id_lang . '.jpg" />&nbsp;<a target="_blank" style="text-decoration:underline;" ';
+        $_html .= 'href="' . $path . '"';
+        $_html .= '>';
+        $_html .= $path;
+        $_html .= '</a>';
+        $_html .= '<br/>';
+    }
+
+
+}
+
+echo $_html;

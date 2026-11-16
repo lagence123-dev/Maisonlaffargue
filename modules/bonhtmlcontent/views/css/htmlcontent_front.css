@@ -1,0 +1,143 @@
+body .zopim {
+  left: inherit !important;
+  right: 76px !important;
+}
+
+body .footer-container .product-container {
+  z-index: 100;
+}
+
+#product .footer-container .product-container.active-list {
+  bottom: 110px;
+  display: none;
+}
+
+
+#bon-stick-cart .productcountdown,
+#bon-stick-cart .discount.discount-percentage {
+  display: none;
+}
+
+#bonhtmlcontent {
+  background-color: #fff;
+}
+
+#bonhtmlcontent ul {
+  margin-bottom: 0;
+}
+
+#bonhtmlcontent .link-htmlcontent {
+  display: block;
+  text-align: center;
+}
+
+#bonhtmlcontent .box-htmlcontent h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  font-weight: 500;
+  padding: 0;
+  margin: 20px 0 7px 0;
+}
+
+#bonhtmlcontent .box-htmlcontent h5 {
+  font-size: 13px;
+  color: #7a7a7a;
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#bonhtmlcontent .box-icon {
+  transition: all 0.5s ease;
+  width: 80px;
+  margin: 0 auto;
+}
+
+#bonhtmlcontent .box-icon i {
+  font-size: 60px;
+  transition: all 0.5s ease;
+  margin-right: -10px;
+}
+
+#bonhtmlcontent .box-icon i::before {
+  color: #7A7A7A;
+}
+
+#bonhtmlcontent .box-htmlcontent:hover .box-icon {
+  transform: rotateY(360deg);
+}
+
+#bonhtmlcontent .slick-next:before,
+#bonhtmlcontent .slick-prev:before {
+  font-family: "Mercury";
+  color: #777;
+  font-size: 25px;
+  transition: all .3s ease;
+}
+
+#bonhtmlcontent .slick-prev:before {
+  content: '\e802';
+}
+
+#bonhtmlcontent .slick-next:before {
+  content: '\e804';
+}
+
+#bonhtmlcontent .slick-next:hover:before,
+#bonhtmlcontent .slick-prev:hover:before {
+  color: #049e8f;
+}
+
+#bonhtmlcontent .slick-dots li button:before {
+  font-size: 14px;
+  transition: all 0.3s ease;
+  color: #44444469;
+}
+
+#bonhtmlcontent .slick-dots li.slick-active button:before,
+#bonhtmlcontent .slick-dots li button:hover:before {
+  color: #444444;
+}
+
+#bonhtmlcontent .slick-dots li {
+  margin: 0 3px;
+}
+
+#bonhtmlcontent .box-htmlcontent:hover .box-icon i {
+  color: #777;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #bonhtmlcontent {
+    padding: 50px 0 50px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #bonhtmlcontent .box-htmlcontent {
+    padding: 5px 0;
+    margin-bottom: 40px;
+  }
+  #bonhtmlcontent {
+    padding: 50px 0 10px 0;
+  }
+  #bonhtmlcontent li.col-xs-6.col-md-3:nth-child(2n+3) {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 575px) {
+ 
+
+  #bonhtmlcontent .box-htmlcontent h3 {
+    font-size: 13px;
+  }
+
+  #bonhtmlcontent .box-htmlcontent h5 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+ 
+}

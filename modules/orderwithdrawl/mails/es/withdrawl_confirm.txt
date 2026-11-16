@@ -1,0 +1,24 @@
+Confirmación de su solicitud de desistimiento
+
+Hola {firstname} {lastname},
+
+Su solicitud de desistimiento ha sido recibida. A continuación encontrará los datos de su solicitud:
+
+Número de pedido: {order_identifier}
+Nombre: {consumer_name}
+E-mail para la confirmación de recepción: {email}
+Fecha y hora de recepción: {date}
+Alcance del desistimiento: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Puede seguir su pedido desde su cuenta en Historial de pedidos:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

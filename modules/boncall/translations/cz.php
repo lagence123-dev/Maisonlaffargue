@@ -1,0 +1,38 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{boncall}prestashop>boncall_b3b4a57995fec19e1ebf0b748c02d169'] = 'Připomenout';
+$_MODULE['<{boncall}prestashop>boncall_265cb675e5ab67e7a2fd1521287c1b81'] = 'Umožňuje zákazníkům požadovat, aby byli odvoláni.';
+$_MODULE['<{boncall}prestashop>boncall_a3d4dcafbb6bd10a7b7a51bdce399b37'] = 'Vaše jméno je neplatné.';
+$_MODULE['<{boncall}prestashop>boncall_4a663e35739c4ae6a7f02bb1de026561'] = 'Neplatný e-mail.';
+$_MODULE['<{boncall}prestashop>boncall_00589e3bb6d7bbb598f17fe9bfe70052'] = 'Neplatné telefonní číslo';
+$_MODULE['<{boncall}prestashop>boncall_54bf2463eee38786368c975872fe8e39'] = 'Děkuji. ';
+$_MODULE['<{boncall}prestashop>boncall_a7cc289efab9e5c372422d3fa0a98904'] = 'Uložit všechna nastavení.';
+$_MODULE['<{boncall}prestashop>boncall_f4f70727dc34561dfde1a3c529b6205c'] = 'Parametry';
+$_MODULE['<{boncall}prestashop>boncall_ec16e90b650301f5d0e870f03a1b8e3c'] = 'Poloha:';
+$_MODULE['<{boncall}prestashop>boncall_945d5e233cf7d6240f6b783b36a374ff'] = 'Vlevo';
+$_MODULE['<{boncall}prestashop>boncall_92b09c7c48c520c3c55e497875da437c'] = 'Správně';
+$_MODULE['<{boncall}prestashop>boncall_6a1e265f92087bb6dd18194833fe946b'] = 'E-mail:';
+$_MODULE['<{boncall}prestashop>boncall_8079046115ec0c0047f818e25334c28a'] = 'Zobrazit e-mailovou adresu:';
+$_MODULE['<{boncall}prestashop>boncall_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Povoleno';
+$_MODULE['<{boncall}prestashop>boncall_b9f5c797ebbf55adccdd8539a65a0241'] = 'Zakázáno';
+$_MODULE['<{boncall}prestashop>boncall_673ae02fffb72f0fe68a66f096a01347'] = 'Telefon:';
+$_MODULE['<{boncall}prestashop>boncall_c9cc8cce247e49bae79f15173ce97354'] = 'Uložit';
+$_MODULE['<{boncall}prestashop>boncall_00dc89c631d51645011c7f637aa542d8'] = 'Je vyžadován e-mail.';
+$_MODULE['<{boncall}prestashop>boncall_ee35088c36b91b0a8e00e9e89cce33ad'] = 'Chyba formátu e-mailu';
+$_MODULE['<{boncall}prestashop>boncall_61982bae1146678bdcd1f58e3c39cb5a'] = 'Telefon je potřeba.';
+$_MODULE['<{boncall}prestashop>boncall_3361e93a539377cf915383bae2f54cc5'] = 'Chyba formátu telefonu';
+$_MODULE['<{boncall}prestashop>ajax_b3b4a57995fec19e1ebf0b748c02d169'] = 'Připomenout';
+$_MODULE['<{boncall}prestashop>boncall_071780dc5f14917a09322401a441ef1a'] = 'Zavolejte do našeho obchodu';
+$_MODULE['<{boncall}prestashop>boncall_7540bdde9314a63eeb7caf8f577061ef'] = 'Otevírací doba našeho obchodu:';
+$_MODULE['<{boncall}prestashop>boncall_f3d4e3d62b81dec57a4fe3337f47bb91'] = 'Pracovní dny:';
+$_MODULE['<{boncall}prestashop>boncall_2e5aaffcb65f6412eef6a7a4110f5c92'] = 'Sobota:';
+$_MODULE['<{boncall}prestashop>boncall_3e705c8e771f7f2d173324e41413b172'] = 'Neděle:';
+$_MODULE['<{boncall}prestashop>boncall_ef2a7317ca6ef62b198322bbe4e20cfc'] = 'od 8 do 9 hodin';
+$_MODULE['<{boncall}prestashop>boncall_e8ec044209b5c17450959e63a2d9dfeb'] = 'od 9 do 8 hodin';
+$_MODULE['<{boncall}prestashop>boncall_703a7cbbbd66fcce35d534aebdaa6cf8'] = 'od 10:00 do 17:00';
+$_MODULE['<{boncall}prestashop>boncall_221e705c06e231636fdbccfdd14f4d5c'] = 'Vaše jméno';
+$_MODULE['<{boncall}prestashop>boncall_d554d9bf0cd8f79c215600eeb77825e8'] = 'Váš e-mail';
+$_MODULE['<{boncall}prestashop>boncall_521daf39e372791baf8221f9ff0727e1'] = 'Vaše telefonní číslo';
+$_MODULE['<{boncall}prestashop>boncall_bfa8af2610f6e7a6a973896f8dc766fb'] = 'Čekající hovor';

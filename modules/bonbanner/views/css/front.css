@@ -1,0 +1,228 @@
+/**
+ * 2015-2020 Bonpresta
+ *
+ * Bonpresta Responsive banners
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the General Public License (GPL 2.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/GPL-2.0
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the module to newer
+ * versions in the future.
+ *
+ *  @author    Bonpresta
+ *  @copyright 2015-2020 Bonpresta
+ *  @license   http://opensource.org/licenses/GPL-2.0 General Public License (GPL 2.0)
+ */
+
+#bonbanners {
+  margin: 10px 0 40px 0;
+  overflow: hidden;
+}
+
+#bonbanners li:nth-child(1) .banner-inner h4 {
+  max-width: 50%;
+}
+#bonbanners li:nth-child(1) .banner-inner {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#bonbanners li:nth-child(2) .banner-inner {
+  top: 5%;
+}
+
+#bonbanners li:nth-child(3) .banner-inner {
+  top: 25%;
+}
+
+#bonbanners>ul>li {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#bonbanners.boxed-banners a .banner-inner h4 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+#bonbanners.boxed-banners a .banner-inner h3 {
+  font-size: 21px;
+}
+#bonbanners.boxed-banners a .banner-inner p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#bonbanners.boxed-banners a .banner-inner span{
+  padding: 12px 20px;
+}
+
+#bonbanners ul {
+  margin-bottom: 0;
+}
+
+#bonbanners a {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: #333333;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#bonbanners a img {
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: all .3s linear;
+}
+
+#bonbanners a:hover img {
+  transform: scale(1.02);
+}
+
+#bonbanners a .banner-inner {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  text-align: left;
+}
+
+#bonbanners a .banner-inner p {
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 100%;
+}
+
+#bonbanners a .banner-inner p strong {
+  font-weight: 500;
+}
+
+#bonbanners a .banner-inner h4 {
+  font-family: "Playfair Display";
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+#bonbanners p {
+  font-weight: 200;
+}
+
+@media (min-width: 576px) {
+  #bonbanners a .banner-inner h4 {
+    font-size: calc(12px + (46 - 12) * ((100vw - 320px) / (1880 - 320)));
+    margin-bottom: calc(3px + (15 - 3) * ((100vw - 320px) / (1880 - 320)));
+  }
+  #bonbanners a .banner-inner {
+    padding-left: calc(5px + (33 - 5) * ((100vw - 320px) / (1880 - 320)));
+  }
+  #bonbanners p {
+    font-size: calc(8px + (25 - 8) * ((100vw - 320px) / (1880 - 320)));
+  }
+}
+
+@media (max-width: 575px) {
+  #bonbanners a .banner-inner h4 {
+    font-size: calc(12px + (40 - 12) * ((100vw - 120px) / (575 - 120)));
+    margin-bottom: calc(7px + (15 - 7) * ((100vw - 120px) / (575 - 120)));
+  }
+  #bonbanners a .banner-inner {
+    padding-left: calc(10px + (100 - 10) * ((100vw - 120px) / (575 - 120)));
+  }
+  #bonbanners li {
+    margin-bottom: 10px;
+  }
+  #bonbanners p {
+    font-size: calc(8px + (15 - 8) * ((100vw - 120px) / (575 - 120)));
+  }
+}
+
+#bonbanners a .banner-inner h3 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0 0 5px;
+  color: #3a3a3a;
+}
+
+#bonbanners a .banner-inner .bonbanners-btn {
+  font-family: 'Poppins', sans-serif;
+  padding-left: calc(6px + (20 - 6) * ((100vw - 320px) / (1880 - 320)));
+  padding-right: calc(6px + (20 - 6) * ((100vw - 320px) / (1880 - 320)));
+  padding-top: calc(1px + (13 - 1) * ((100vw - 420px) / (1880 - 420)));
+  padding-bottom: calc(1px + (14 - 1) * ((100vw - 420px) / (1880 - 420)));
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1880 - 320)));
+  font-weight: 300;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+  background: transparent;
+  color: white;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  display: flex;
+  flex: 0 1 calc(110px + (183 - 110) * ((100vw - 320px) / (1880 - 320)));
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bonbanners a .bonbanners-btn:hover {
+  background: #fff;
+  box-shadow: none;
+  color: #3a3a3a;
+  text-shadow: none;
+}
+
+/* arrow-right button */
+#bonbanners a .bonbanners-btn .arrow-right {
+  position: relative;
+  height: 1px;
+  width: 21px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+#bonbanners a .banner-inner p {
+  display: flex;
+}
+#bonbanners a .bonbanners-btn .arrow-right:before,
+#bonbanners a .bonbanners-btn .arrow-right:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: calc(3px + (5 - 3) * ((100vw - 320px) / (1880 - 320)));
+  transition: all 0.2s;
+}
+
+#bonbanners a .bonbanners-btn .arrow-right:before {
+  transform-origin: top right;
+  transform: rotate(40deg);
+}
+#bonbanners a .bonbanners-btn .arrow-right:after {
+  transform-origin: bottom right;
+  transform: rotate(-40deg);
+}
+
+#bonbanners a .bonbanners-btn:hover .arrow-right {
+  background-color: #3a3a3a;
+}
+#bonbanners a .bonbanners-btn:hover .arrow-right:before,
+#bonbanners a .bonbanners-btn:hover .arrow-right:after {
+  background-color: #3a3a3a;
+}
+/* END arrow-right button */
+
+#bonbanners a:before,
+#bonbanners a:after {
+  pointer-events: none;
+}

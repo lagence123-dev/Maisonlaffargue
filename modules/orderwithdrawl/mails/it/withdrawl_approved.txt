@@ -1,0 +1,17 @@
+Richiesta di recesso approvata
+
+Gentile {firstname} {lastname},
+
+la sua richiesta di recesso per l’ordine {order_identifier} è stata approvata.
+
+Dettagli dell’approvazione
+Numero ordine: {order_identifier}
+E-mail: {email}
+Data della decisione: {date}
+
+{status_message}
+
+
+Se ha domande in merito a questo recesso, la preghiamo di rispondere direttamente a questa e-mail.
+
+

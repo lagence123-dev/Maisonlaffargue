@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>bonattribute</name>
+    <displayName><![CDATA[Attributs et combinaisons de produits]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Afficher l&#039;attribut et les combinaisons dans la liste des produits.]]></description>
+    <author><![CDATA[Bonpresta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

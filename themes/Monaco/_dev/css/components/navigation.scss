@@ -1,0 +1,86 @@
+.navigation {
+  position: fixed;
+  padding-top: calc(35px + (84 - 35) * ((100vh - 190px) / (1517 - 190)));
+  top: 0;
+  //margin-top: 34px;
+  right: 0;
+  z-index: 998;
+  background: #fff;
+  width: 77px;
+  height: 100vh;
+  border-left: 1px solid rgba(176, 176, 176, 0.2);
+  transition: padding-top 0.3s ease;
+
+  &.sticky-nav,
+  &.active {
+    padding-top: calc(1px + (50 - 1) * ((100vh - 190px) / (1517 - 190)));
+
+    .navigation-nav2 {
+      padding-bottom: 0;
+      height: calc(42vh + (85 - 42) * ((100vh - 720px) / (927 - 720)));
+    }
+  }
+
+  &.active {
+    padding-top: calc(1px + (50 - 1) * ((100vh - 190px) / (1517 - 190)));
+  }
+
+  .d-lg-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-nav1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100vh;
+    width: 100%;
+
+    >div {
+      padding-bottom: calc(1px + (25 - 1) * ((100vh - 320px) / (927 - 320)));
+      margin-bottom: calc(1px + (25 - 1) * ((100vh - 320px) / (927 - 320)));;
+      width: 101%;
+      margin-left: -2px;
+      padding-left: 2px;
+      opacity: 0;
+      transform: translateX(50px);
+      &.load {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 53px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  &-nav2 {
+    height: calc(42vh + (70 - 42) * ((100vh - 720px) / (927 - 720)));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 13px;
+    transition: all 0.3s ease;
+
+    &>div {
+      width: 101%;
+      margin-left: -2px;
+      padding-left: 2px;
+      padding-top: calc(1px + (20 - 1) * ((100vh - 320px) / (927 - 320)));
+      margin-top: calc(1px + (15 - 1) * ((100vh - 320px) / (927 - 320)));;
+      opacity: 0;
+      transform: translateX(50px);
+      &.load {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<?php
+
+$_html = "<script type=\"text/javascript\">
+    	$('document').ready( function() {
+
+			$( \"label[for='after_time_add_on']\" ).click(function() {
+			    $( \"input[name='publish_date']\" ).parent().parent().parent().show(200);
+            });
+
+            $( \"label[for='after_time_add_off']\" ).click(function() {
+    	        $( \"input[name='publish_date']\" ).parent().parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)$after_time_add." == 0){
+    	      $( \"input[name='publish_date']\" ).parent().parent().parent().hide(200);
+    	    }
+
+
+    	});
+    	</script>
+    	";
+
+?>

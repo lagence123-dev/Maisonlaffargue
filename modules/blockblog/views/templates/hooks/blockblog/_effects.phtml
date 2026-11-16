@@ -1,0 +1,15 @@
+<?php
+
+
+$_html = '';
+$_html .= '<select name="'.$value.'" id="'.$value.'">';
+
+foreach($all_effects as $k => $val){
+    $_html .= '<optgroup label="'.$k.'">';
+    foreach($val as $_val_item){
+        $_html .= '<option value="'.$_val_item.'" '.(($current_value == $_val_item)?'selected = "selected"':'').'>'.$_val_item.'</option>';
+    }
+    $_html .= '</optgroup>';
+}
+
+$_html .= '</select>';

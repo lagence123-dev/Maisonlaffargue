@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesDwfproductextrafieldsAdmin.xlf" source-language="fr-FR" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="0ce9f14cf8667a1e2aacb3ddc96d4dca">
+        <source>Add element</source>
+        <target>Element hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="56207078800b0bc6932c4ee049783baa">
+        <source>Add element block</source>
+        <target>Elementblock hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="2a136534ea1add90668a7f3f8b4dba1a">
+        <source>Add extra fields to the product page</source>
+        <target>Zusätzliche Felder zur Produktseite hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="58be4de806253a6ee411b6c0c99296c7">
+        <source>Add file</source>
+        <target>Datei hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="818008cb0380e36fe7d4864c47b94b45">
+        <source>Add option</source>
+        <target>Option hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="d52eaeff31af37a4a7e0550008aff5df">
+        <source>An error occurred while attempting to save.</source>
+        <target>Beim Speichern ist ein Fehler aufgetreten.</target>
+      </trans-unit>
+      <trans-unit id="4f8222964f9a317cef99dddc23a121bd">
+        <source>Checkbox</source>
+        <target>Kontrollkästchen</target>
+      </trans-unit>
+      <trans-unit id="6384e3733a98744e0e92ff15c60e6ef7">
+        <source>Collapsed by default:</source>
+        <target>Standardmäßig eingeklappt:</target>
+      </trans-unit>
+      <trans-unit id="cb5feb1b7314637725a2e73bdc9f7295">
+        <source>Color</source>
+        <target>Farbe</target>
+      </trans-unit>
+      <trans-unit id="44749712dbec183e983dcd78a7736c41">
+        <source>Date</source>
+        <target>Datum</target>
+      </trans-unit>
+      <trans-unit id="a1af5f0718bfae275ce162362d0e43c5">
+        <source>Datetime</source>
+        <target>Datum und Uhrzeit</target>
+      </trans-unit>
+      <trans-unit id="937504f318f04eaf0f1d701df4c4d7f3">
+        <source>Decimal</source>
+        <target>Dezimal</target>
+      </trans-unit>
+      <trans-unit id="ad1f2133cf1432e17f1df810334d2bd8">
+        <source>Extra Fields</source>
+        <target>Zusätzliche Felder</target>
+      </trans-unit>
+      <trans-unit id="d5337b4d4789fb0353bf92ba5c71278b">
+        <source>Fieldname</source>
+        <target>Feldname</target>
+      </trans-unit>
+      <trans-unit id="3e053943605d9e4bf7dd7588ea19e9d2">
+        <source>Forbidden characters:</source>
+        <target>Unzulässige Zeichen:</target>
+      </trans-unit>
+      <trans-unit id="d11c7e9c409c6ca80008c5dd01d44d1e">
+        <source>Hint</source>
+        <target>Hinweis</target>
+      </trans-unit>
+      <trans-unit id="29ee5d1ebcc033234938a5234f1f2075">
+        <source>Identifier</source>
+        <target>Bezeichner</target>
+      </trans-unit>
+      <trans-unit id="be53a0541a6d36f6ecb879fa2c584b08">
+        <source>Image</source>
+        <target>Bild</target>
+      </trans-unit>
+      <trans-unit id="a0faef0851b4294c06f2b94bb1cb2044">
+        <source>Integer</source>
+        <target>Ganzzahl</target>
+      </trans-unit>
+      <trans-unit id="ce5bf551379459c1c61d2a204061c455">
+        <source>Location</source>
+        <target>Ort</target>
+      </trans-unit>
+      <trans-unit id="d1280756fa7f48a8b152aa0441c2f961">
+        <source>Multiple:</source>
+        <target>Mehrfach:</target>
+      </trans-unit>
+      <trans-unit id="c6ad848a1ebe96d11e69bfb739ef9fc0">
+        <source>New Product Extra Field.</source>
+        <target>Zusätzliches Feld zur Produktseite hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="f14bd305b94fb8440867e789039d1768">
+        <source>New element (#[line_id])</source>
+        <target>Neues Element (#[line_id])</target>
+      </trans-unit>
+      <trans-unit id="bb38737aeba263050f2dbf7e9785263f">
+        <source>Option text</source>
+        <target>Optionstext</target>
+      </trans-unit>
+      <trans-unit id="3601146c4e948c32b6424d2c0a7f0118">
+        <source>Price</source>
+        <target>Preis</target>
+      </trans-unit>
+      <trans-unit id="53ce68379f26977db33af3657ea466fb">
+        <source>Product Extra Fields</source>
+        <target>Zusätzliche Produktfelder</target>
+      </trans-unit>
+      <trans-unit id="0f527c701a8caf14340f875eeaaab008">
+        <source>Product tab</source>
+        <target>Produkt-Tab</target>
+      </trans-unit>
+      <trans-unit id="cbd4df992316a7abb76128ef4f996d1f">
+        <source>Product var</source>
+        <target>Produkt-Variable</target>
+      </trans-unit>
+      <trans-unit id="d3b3350cb648f345b0a21a048df0cf45">
+        <source>Repeater</source>
+        <target>Repeater</target>
+      </trans-unit>
+      <trans-unit id="0c3cd33e7bf626da4897316a7158a7a4">
+        <source>Selector</source>
+        <target>Auswahl</target>
+      </trans-unit>
+      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675">
+        <source>Text</source>
+        <target>Textfeld</target>
+      </trans-unit>
+      <trans-unit id="b5d4d25fe3fa9f8263b5f279a372b709">
+        <source>Textarea</source>
+        <target>Textbereich</target>
+      </trans-unit>
+      <trans-unit id="7fc26aad1c2b3b32098ac57ed2b209cb">
+        <source>Textarea with tinymce editor</source>
+        <target>Textbereich mit Tinymce-Editor</target>
+      </trans-unit>
+      <trans-unit id="755af1bb8c9160cdd9966aa03473adef">
+        <source>The name of the uploaded file for the "[filename]" field is too long. It must be less than 128 characters.</source>
+        <target>Der Name der hochgeladenen Datei für das Feld "[filename]" ist zu lang. Er muss weniger als 128 Zeichen enthalten.</target>
+      </trans-unit>
+      <trans-unit id="ee43e32f460f7f240b6375d6e3ebc7f0">
+        <source>There are [nb] warnings.</source>
+        <target>Es gibt [nb] Warnungen.</target>
+      </trans-unit>
+      <trans-unit id="aa0e4834c5a1abef778777585bc2036e">
+        <source>This fieldname already exists in database.</source>
+        <target>Dieser Feldname existiert bereits in der Datenbank.</target>
+      </trans-unit>
+      <trans-unit id="5fc0ba6787295000622050c8ae3dba47">
+        <source>This message will be displayed on the product admin page, above the field, to help you fill this</source>
+        <target>Diese Nachricht wird auf der Produkt-Admin-Seite über dem Feld angezeigt, um Ihnen beim Ausfüllen zu helfen</target>
+      </trans-unit>
+      <trans-unit id="0075c134077748cb7fa85f78c692332d">
+        <source>To use this field call:</source>
+        <target>Um dieses Feld zu verwenden, rufen Sie auf:</target>
+      </trans-unit>
+      <trans-unit id="a1fa27779242b4902f7ae3bdd5c6d508">
+        <source>Type</source>
+        <target>Typ</target>
+      </trans-unit>
+      <trans-unit id="716dde9ed8861c5a5759c2b604ddacf2">
+        <source>Unable to execute the query : [statement]</source>
+        <target>Die Abfrage konnte nicht ausgeführt werden: [statement]</target>
+      </trans-unit>
+      <trans-unit id="689202409e48743b914713f96d93947c">
+        <source>Value</source>
+        <target>Wert</target>
+      </trans-unit>
+      <trans-unit id="2e1a1fe379d99fb86407d1531150686d">
+        <source>You can upload a maximum of [nb] files</source>
+        <target>Sie können maximal [nb] Dateien hochladen</target>
+      </trans-unit>
+      <trans-unit id="b639bcf7db41d03c2cc70e02aac800cc">
+        <source>[1]0[/1] of [2][maxchar][/2] characters allowed</source>
+        <target>[1]0[/1] von [2][maxchar][/2] Zeichen erlaubt</target>
+      </trans-unit>
+      <trans-unit id="570ca4d1b949873219a48e6dc4766aad">
+        <source>non-translatable text</source>
+        <target>Nicht übersetzbares Textfeld</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

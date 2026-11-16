@@ -1,0 +1,11 @@
+Dear {name},
+
+{action_name}
+
+You received {points} loyalty points.
+
+See your loyalty points here: {loyalty_account_url}
+
+Best Regards
+
+Your {shop_name} team

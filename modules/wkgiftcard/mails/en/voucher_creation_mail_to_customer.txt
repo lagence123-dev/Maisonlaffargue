@@ -1,0 +1,9 @@
+
+Hi {recipient_name},
+
+{message}
+
+Product     Code    Discount    Quantity    Valid upto  {order_html} {product_html}
+
+We are pleased to inform you that a voucher has been generated for you from {from_name}.
+In order to use it, just copy/paste this code during check out.

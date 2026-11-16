@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>pm_crosssellingoncart</name>
+    <displayName><![CDATA[Cross Selling On Cart]]></displayName>
+    <version><![CDATA[2.8.0]]></version>
+    <description><![CDATA[Augmentez vos ventes gr&acirc;ce &agrave; le vente crois&eacute;e. Affichez des recommandations de produits pertinentes sur les pages panier et produits]]></description>
+    <author><![CDATA[Presta-Module]]></author>
+    <tab><![CDATA[merchandizing]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

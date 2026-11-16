@@ -1,0 +1,31 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bonnotice}prestashop>bonnotice_54fa13a6e404b1200df887a63bc82c29'] = 'Upozornění na dopravu zdarma';
+$_MODULE['<{bonnotice}prestashop>bonnotice_77d9c1cc25c7b3ad6f5c1b03d8e71c45'] = 'Zobrazit oznámení o doručení zdarma';
+$_MODULE['<{bonnotice}prestashop>bonnotice_526a37ef550a583bc1719d46a2fc82cc'] = 'Odinstalujte tento modul';
+$_MODULE['<{bonnotice}prestashop>bonnotice_47a4a3546bebf5548a52ef59c074f618'] = 'Nastavení byla úspěšně aktualizována.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f4f70727dc34561dfde1a3c529b6205c'] = 'Parametry';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d73d2bdc982d68f7f6095a91b0d4d86c'] = 'Pozadí:';
+$_MODULE['<{bonnotice}prestashop>bonnotice_5177bdca0e157dd15da96b745e576eb3'] = 'Krytí:';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c9cc8cce247e49bae79f15173ce97354'] = 'Uložit';
+$_MODULE['<{bonnotice}prestashop>bonnotice_14949374771dc24156330dbda2863486'] = 'Chyba formátu „pozadí“.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f5c8e1264004a33789d0dcc82b29f783'] = 'Je nutná neprůhlednost.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c3f9eee6816f8fc9384666936d84d130'] = 'Formát limitu krytí';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f15c1cae7882448b3fb0404682e17e61'] = 'Obsah';
+$_MODULE['<{bonnotice}prestashop>bonnotice_ca0dbad92a874b2f69b549293387925e'] = 'Kód';
+$_MODULE['<{bonnotice}prestashop>bonnotice_db3794c7d704611ce61c9d8cc09cd806'] = 'Datum zahájení';
+$_MODULE['<{bonnotice}prestashop>bonnotice_3c1429dca1ae285353b112dfacae5fe5'] = 'Datum ukončení';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c06c1fdf2690acc9c0b4ed3f4c87b36e'] = 'Prvek nelze přidat.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d9b36eff81dbacc1d424b5460ddcc482'] = 'Položku nebylo možné aktualizovat.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_72ed90af737192981c4b0dbf7463b70b'] = 'Položka je uložena.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_f3b9de34364942606ebb991132523f83'] = 'Došlo k neznámé chybě.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c5abf5e49be9e3d6e9699a6dfcdff591'] = 'Spuštění dat je povinné.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_7d57726467bd43f570dd0d29cb84af5b'] = 'Konec údajů je povinný.';
+$_MODULE['<{bonnotice}prestashop>bonnotice_208cdbf284339a73fb0f7ae4c7737b08'] = 'Neplatné pole data';
+$_MODULE['<{bonnotice}prestashop>bonnotice_c7e56badecce297feefe2a9b50a68794'] = 'Neplatný rozsah data';
+$_MODULE['<{bonnotice}prestashop>bonnotice_44fdec47036f482b68b748f9d786801b'] = 'dny';
+$_MODULE['<{bonnotice}prestashop>bonnotice_adab7b701f23bb82014c8506d3dc784e'] = 'hodina';
+$_MODULE['<{bonnotice}prestashop>bonnotice_d8bd79cc131920d5de426f914d17405a'] = 'min';
+$_MODULE['<{bonnotice}prestashop>bonnotice_74459ca3cf85a81df90da95ff6e7a207'] = 'za druhé';

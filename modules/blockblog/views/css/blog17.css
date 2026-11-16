@@ -1,0 +1,85 @@
+
+/* ps 17  styles */
+.button.button-small-blockblog {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #6f6f6f none repeat scroll 0 0;
+    border-color: #666666 #5f5f5f #292929;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    font: bold 13px/17px Arial,Helvetica,sans-serif;
+    padding: 0;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+
+}
+.button.button-small-blockblog b {
+    border: 1px solid #8b8a8a;
+    display: block;
+    padding: 3px 8px;
+}
+
+.button-mini-blockblog{
+    color: #fff;
+    background-color: #2fb5d2;
+    border-color: transparent;
+
+    position: relative;
+    display: inline-block;
+    padding: 5px 7px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: normal;
+    text-align: left;
+}
+
+.search-blog17{
+    border: none;
+    padding: 10px;
+    background: #ebebeb;
+    color: #acaaa6;
+    width: 150px;
+}
+
+.block-content a i.fa-lg, .block-content i.fa-lg{font-size: 14px!important;}
+.block-content a i.fa-comments-o{font-size: 15px!important;}
+.block-blog-like a, .block-blog-date,.block-content .the-number, .block-blog-like{font-size: 13px}
+.name-category a, a.item-comm, .product-page-blockblog a{text-decoration: underline!important;}
+
+
+.search_blog .block_content{background: none;}
+
+.current-item-block a.item-article{margin-bottom: 10px}
+
+
+
+/* ps 17  styles */
+
+.col-lg-9 .mce-tinymce  {
+    border: 1px solid #c7d6db!important;
+}
+
+
+
+.owl_blog_home_recents_posts_type_carousel .owl-controls .owl-nav{
+    margin-bottom:10px!important;
+}
+
+.owl_blog_recents_posts_type_carousel, .owl_blog_cat_type_carousel, .owl_blog_com_type_carousel,
+.owl_users_type_carousel_blockblog, .block-archives17, .block-search-in-blog, .block-tags-blog, .block-gallery-blog, .block-authors17
+{padding:15px!important;}
+
+
+.blog-post-item .other-posts p{font-size:12px!important;}
+
+
+@media
+only screen and (max-width: 760px) {
+    .owl_blog_recents_posts_type_carousel, .owl_blog_cat_type_carousel, .owl_blog_com_type_carousel,
+    .owl_users_type_carousel_blockblog, .block-archives17, .block-search-in-blog, .block-tags-blog, .block-gallery-blog {
+        padding: 0px!important;
+    }
+}

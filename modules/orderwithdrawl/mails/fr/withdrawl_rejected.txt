@@ -1,0 +1,17 @@
+Demande de rétractation refusée
+
+Bonjour {firstname} {lastname},
+
+Votre demande de rétractation concernant la commande {order_identifier} a malheureusement été refusée.
+
+Détails de la décision
+Numéro de commande : {order_identifier}
+E-mail : {email}
+Date de décision : {date}
+
+{status_message}
+
+
+Si vous avez des questions concernant cette décision ou si vous souhaitez en clarifier les raisons, veuillez contacter notre service client à l’aide des coordonnées indiquées sur notre site web.
+
+

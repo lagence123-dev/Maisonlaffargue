@@ -1,0 +1,24 @@
+Conferma della richiesta di recesso
+
+Salve {firstname} {lastname},
+
+La sua richiesta di recesso è stata ricevuta. Di seguito trova i dati della sua richiesta:
+
+Numero ordine: {order_identifier}
+Nome: {consumer_name}
+E-mail per la conferma di ricezione: {email}
+Data e ora di ricezione: {date}
+Ambito del recesso: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Può seguire il suo ordine dal suo account nella Cronologia ordini:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

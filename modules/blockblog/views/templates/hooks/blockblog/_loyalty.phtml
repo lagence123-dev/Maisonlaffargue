@@ -1,0 +1,46 @@
+<?php
+
+$_html = '';
+
+$_html .= '<div class="row">
+    				<div class="col-lg-12">
+    					<div class="row">';
+
+$_html .= '<div class="productTabs col-lg-2 col-md-3">
+
+			<div class="list-group">
+				<ul class="nav nav-pills nav-stacked" id="loyalityprogram">
+				    <li class="active"><a href="#loyalitysettings" data-toggle="tab" class="list-group-item"><i class="fa fa-cogs fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_main_set'].'</a></li>';
+        $_html .= '<li><a href="#voucherloyality" data-toggle="tab" class="list-group-item"><i class="fa fa-usd fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_voucher_set_when_add_rev'].'</a></li>';
+        $_html .= '<li><a href="#pointsactions" data-toggle="tab" class="list-group-item"><i class="fa fa-dot-circle-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_points_actions'].'</a></li>';
+        $_html .= '<li><a href="#loyaltymessages" data-toggle="tab" class="list-group-item"><i class="fa fa-comment fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_msg'].'</a></li>';
+        $_html .= '<li><a href="#loyaltymy" data-toggle="tab" class="list-group-item"><i class="fa fa-user fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_my'].'</a></li>';
+        $_html .= '<li>&nbsp;</li>
+                    <li><a href="#loyaltyemails" data-toggle="tab" class="list-group-item"><i class="fa fa-envelope-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_em_set'].'</a></li>
+				    <li><a href="#loyaltyemailssubjects" data-toggle="tab" class="list-group-item"><i class="fa fa-envelope-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_loyalty_em_subj_set'].'</a></li>
+				    ';
+
+$_html .= '</ul>
+				  </div>
+		</div>';
+
+$_html .= '<div class="tab-content col-lg-10 col-md-9">';
+$_html .= '<div class="tab-pane active" id="loyalitysettings">'.$this->_loyalitysettings().'</div>';
+$_html .= '<div class="tab-pane" id="voucherloyality">'.$this->_voucherloyality().'</div>';
+$_html .= '<div class="tab-pane" id="pointsactions">'.$this->_pointsactions().'</div>';
+$_html .= '<div class="tab-pane" id="loyaltymessages">'.$this->_loyaltymessages().'</div>';
+$_html .= '<div class="tab-pane" id="loyaltymy">'.$this->_loyaltymy().'</div>';
+
+$_html .= '<div class="tab-pane" id="loyaltyemails">'.$this->_loyaltyemails().'</div>';
+$_html .= '<div class="tab-pane" id="loyaltyemailssubjects">'.$this->_loyaltyemailssubjects().'</div>';
+
+
+$_html .= '</div>';
+
+
+
+$_html .= '</div></div></div>';
+
+echo $_html;
+
+?>

@@ -1,0 +1,84 @@
+<?php
+$_html = '';
+$_html .= "<script type=\"text/javascript\">
+    	$('document').ready( function() {
+
+
+
+
+
+			if($(\"input#".$this->_name."isminamount".$_prefix_shop_reviews."\").is(\":checked\")) {
+
+	            $(\"#".$this->_name."isminamount".$_prefix_shop_reviews."\").val($(this).is(\":checked\"));
+	    	    $( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().show(200);
+
+
+	        } else {
+
+	        	$( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().hide(200);
+
+
+	        }
+
+
+			$(\"input#".$this->_name."isminamount".$_prefix_shop_reviews."\").change(function() {
+
+                if($(this).is(\":checked\")) {
+                    $(\"#".$this->_name."isminamount".$_prefix_shop_reviews."\").val($(this).is(\":checked\"));
+                    $( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().show(200);
+
+                } else {
+                    $( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().hide(200);
+
+                }
+
+	        });
+
+
+
+	        $( \"label[for='vis_on".$_prefix_shop_reviews."_on']\" ).click(function() {
+	            var obj_vis_on = $( \"input[name='vis_on".$_prefix_shop_reviews."']\" ).parent().parent().parent().parent();
+	            obj_vis_on.find( 'div.form-group' ).css('display','block');
+
+
+    		    if($(\"input#".$this->_name."isminamount".$_prefix_shop_reviews."\").is(\":checked\")) {
+
+
+
+                    $(\"#".$this->_name."isminamount".$_prefix_shop_reviews."\").val($(\"input#".$this->_name."isminamount".$_prefix_shop_reviews."\").is(\":checked\"));
+                    $( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().show(200);
+
+
+                } else {
+
+                    $( \".mincheckout_val".$_prefix_shop_reviews."\" ).parent().hide(200);
+
+
+                }
+
+            });
+
+            $( \"label[for='vis_on".$_prefix_shop_reviews."_off']\" ).click(function() {
+
+    	        var obj_vis_on = $( \"input[name='vis_on".$_prefix_shop_reviews."']\" ).parent().parent().parent().parent();
+	            obj_vis_on.find( 'div.form-group' ).css('display','none');
+	            $( \"input[name='vis_on".$_prefix_shop_reviews."']\" ).parent().parent().parent().css('display','block');
+
+    	    });
+
+    	    if(".(int)Configuration::get($this->_name.'vis_on'.$_prefix_shop_reviews)." == 0){
+
+    	        var obj_vis_on = $( \"input[name='vis_on".$_prefix_shop_reviews."']\" ).parent().parent().parent().parent();
+	            obj_vis_on.find( 'div.form-group' ).css('display','none');
+	            $( \"input[name='vis_on".$_prefix_shop_reviews."']\" ).parent().parent().parent().css('display','block');
+
+    	    }
+
+
+    	});
+    	</script>
+    	";
+
+echo $_html;
+
+?>

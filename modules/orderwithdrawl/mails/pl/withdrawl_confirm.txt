@@ -1,0 +1,24 @@
+Potwierdzenie otrzymania wniosku o odstąpienie od umowy
+
+Dzień dobry {firstname} {lastname},
+
+Państwa wniosek o odstąpienie od umowy został odebrany. Poniżej znajdują się dane wniosku:
+
+Numer zamówienia: {order_identifier}
+Imię i nazwisko: {consumer_name}
+E-mail do potwierdzenia odbioru: {email}
+Data i godzina otrzymania: {date}
+Zakres odstąpienia od umowy: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+Mogą Państwo śledzić zamówienie w swoim koncie w sekcji Historia zamówień:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

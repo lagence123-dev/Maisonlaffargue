@@ -1,0 +1,17 @@
+Herroepingsverzoek goedgekeurd
+
+Beste {firstname} {lastname},
+
+uw verzoek tot herroeping voor bestelling {order_identifier} is goedgekeurd.
+
+Details van de goedkeuring
+Bestelnummer: {order_identifier}
+E-mail: {email}
+Beslissingsdatum: {date}
+
+{status_message}
+
+
+Als u vragen heeft over deze herroeping, kunt u direct op deze e-mail antwoorden.
+
+

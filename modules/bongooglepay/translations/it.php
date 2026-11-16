@@ -1,0 +1,34 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_a69a8e250d7465b3357efed7e4251deb'] = 'Google Pay';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_f05cac309238da9ccce0aca7e95fa175'] = 'Questo modulo integra Google Pay.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_ff046bb1b0b321b6edfcc4740d9b5f94'] = 'Il pagamento è andato a buon fine!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b201d130466f9fcba785c82d924e2494'] = 'La contatteremo a breve.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_5911673d0a87f08866441c6388cdc0ac'] = 'Errore di pagamento!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_a7cc289efab9e5c372422d3fa0a98904'] = 'Salvare tutte le impostazioni.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_f4f70727dc34561dfde1a3c529b6205c'] = 'impostazioni';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_0099c0173a3c7758b36025bdae9b4fc7'] = 'Attivare:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_93cba07454f06a4a960172bbd6e2a435'] = 'sì';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_bafd7322c6e97d25b6299b5d6fe8920b'] = 'non';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_8a71fb55a68c5910e5dd344c74ca695a'] = 'Seleziona il colore del pulsante';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_25a81701fbfa4a1efdf660a950c1d006'] = 'bianco';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_e90dfb84e30edf611e326eeb04d680de'] = 'nero';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_3a6a677f37800e201af06b9d28b57c0e'] = 'Seleziona il fornitore di pagamento';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_72fa62ea700278e80357f11a512fd29f'] = 'Chiave pubblica del fornitore dei pagamenti (identificativo del commerciante):';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_0a875d6ec0f95e66df2b1008c7b7f4ab'] = 'Chiave segreta del fornitore di pagamento:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_d6e98485545670410ad2d3f59172312a'] = 'Nome del commerciante visibile dall \'utente:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_78ac2d22a70dd58386c29b9bd1367af0'] = 'ID del commerciante di Google:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_6d2c76c38df078aeefd883987c53bbd9'] = 'Chiedere al cliente di inserire l \'indirizzo di fatturazione:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_01bb42fa073a0905602e00f08b1df8cf'] = 'Chiedi al cliente di inserire l \'indirizzo di consegna nella pagina del prodotto:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b0ef101a17ed9399a8c167fb074a0e1b'] = 'Visualizza le modalità di consegna nella pagina del prodotto:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_9a4391a69ed0218dcd8747f9bf4e87d2'] = 'Modalità di consegna nella pagina del prodotto:';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_c9cc8cce247e49bae79f15173ce97354'] = 'salvare';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_b76390313a932045afef2d643cbeb22a'] = 'È richiesta la chiave pubblica del provider di pagamento.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_67ed543163e4f19b1ea9e16e46f8fc42'] = 'È richiesta la chiave segreta del provider di pagamento.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_8a4e4653f984447e3d7b2bf0664dd4fe'] = 'Si prega di indicare un nome commerciale visibile dall \'utente.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay_e1562bb51b86e50db885870bf40cf97d'] = 'L \'ID del commerciante Google è richiesto.';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-checkout_13848d8d7e2a7b2261de18fa4bc7a87e'] = 'Accettare le condizioni di utilizzo';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-return_1a81759353d36dbd31059fc261af0aa2'] = 'Le nostre più sentite congratulazioni!';
+$_MODULE['<{bongooglepay}prestashop>bongooglepay-return_32fa4aead2d74d08f731a564c8b37b0d'] = 'Hai appena completato un ordine con Google Pay!';

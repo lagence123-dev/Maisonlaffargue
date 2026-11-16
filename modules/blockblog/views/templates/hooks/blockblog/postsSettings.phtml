@@ -1,0 +1,46 @@
+<?php
+
+$_html .= '<div class="panel">
+				       <div class="panel-heading"><i class="fa fa-paper-plane fa-lg"></i>&nbsp;'.$title.'</div>';
+
+
+$_html .= '<div style="padding: 10px; border: 1px solid rgb(129, 207, 230); font-size: 13px;">
+    			  '.$hint1.
+    $hint2.'
+    			  </div>';
+
+
+
+$_html .= '<br/><div style="clear:both"></div><br/>';
+
+
+
+if($is_pstwitterpost){
+    $_html .= $this->_pstwitterform16($data);
+
+
+} else {
+    $_html .= '<h3 class="title-block-content">'.$title_pstwitterpost.'</h3>';
+    $_html .= '<div style="padding: 10px; border: 1px solid red; font-size: 13px;">
+    			  '.$buy_module_pstwitterpost.'
+    			  </div>';
+}
+
+$_html .= '<br/><div style="clear:both"></div><br/>';
+
+
+if($this->_is_vk) {
+    if ($is_psvkpost) {
+        $_html .= $this->_psvkform16($data);
+
+
+    } else {
+        $_html .= '<h3 class="title-block-content">' . $title_psvkpost . '</h3>';
+        $_html .= '<div style="padding: 10px; border: 1px solid red; font-size: 13px;">
+    			  ' . $buy_module_psvkpost . '
+    			  </div>';
+    }
+}
+
+$_html .= '</div>';
+

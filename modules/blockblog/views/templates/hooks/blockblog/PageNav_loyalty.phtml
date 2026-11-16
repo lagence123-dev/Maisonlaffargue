@@ -1,0 +1,29 @@
+<?php
+
+
+
+$res = '';
+$product_count = $count;
+
+
+
+
+$start1 = $start;
+for ($start1 = ($start - $step*4 >= 0 ? $start - $step*4 : 0); $start1 < ($start + $step*5 < $product_count ? $start + $step*5 : $product_count); $start1 += $step)
+{
+    $par = (int)($start1 / $step) + 1;
+    $res .= ' <li '.(($start1 == $start)?'class="active"':'').'>
+                            <a  class="pagination-link" href="'.$currentUrl . "&start_mod=" . ($start1 ? $start1 : 0).'&id_customer='.$customer_id.'&updateblockblog_loyalty=1">'. $par .'</a>
+                        </li>';
+
+
+
+}
+
+
+
+
+
+echo $res;
+
+?>

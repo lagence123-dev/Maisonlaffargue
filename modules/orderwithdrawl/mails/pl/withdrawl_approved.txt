@@ -1,0 +1,22 @@
+Wniosek o odstąpienie zatwierdzony
+
+Dzień dobry {firstname} {lastname},
+
+Państwa wniosek o odstąpienie od umowy dla zamówienia {order_identifier} został zatwierdzony.
+
+Szczegóły zatwierdzenia
+Numer zamówienia: {order_identifier}
+Adres e-mail: {email}
+Data decyzji: {date}
+
+{status_message}
+
+
+Jeśli mają Państwo pytania dotyczące tego odstąpienia od umowy, prosimy odpowiedzieć bezpośrednio na tę wiadomość e-mail.
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+#main {
+  padding-bottom: 0;
+}
+
+#content {
+  padding-top: 102px !important;
+  padding-bottom: 0 !important;
+  margin: 4px -15px 0 -15px;
+}
+
+#content .page-subtitle {
+  display: none !important;
+}
+
+#footer {
+  display: none !important;
+}

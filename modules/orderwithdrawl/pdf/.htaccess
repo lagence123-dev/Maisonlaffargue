@@ -1,0 +1,12 @@
+# Deny all direct web access to the bundled readme PDFs.
+# These files are shipped for internal reference and must not be served
+# via HTTP (they can disclose module internals and are >1MB each).
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

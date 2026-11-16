@@ -1,0 +1,81 @@
+<?php
+
+
+$res = '';
+$product_count = $count;
+
+
+
+$res .= '<nav>
+                <ul class="pagination">';
+
+### prev next ###
+
+if($start > 0) {
+
+    $start1 = $start;
+
+    $prev_next_start  = $start1;
+
+
+    $p_prev_next = $prev_next_start/$step + 1;
+
+    $prev_next_start = ($p_prev_next-2)*$step;
+
+    $par = '<';
+
+    $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_'.$prefix.'( ' . $prev_next_start . ', \''.$action.'\',\''.$ajax_url.'\')">' . $par . '</a></li>';
+
+
+}
+
+### prev next ###
+
+
+$start1 = $start;
+for ($start1 = ($start - $step*4 >= 0 ? $start - $step*4 : 0); $start1 < ($start + $step*5 < $product_count ? $start + $step*5 : $product_count); $start1 += $step)
+{
+
+
+    $par = (int)($start1 / $step) + 1;
+    if ($start1 == $start)
+    {
+        $res .= '<li class="page-item active"><span class="page-link">' . $par . '</span></li>';
+    }
+    else
+    {
+        $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_'.$prefix.'( ' . ($start1 ? $start1 : 0) . ', \''.$action.'\',\''.$ajax_url.'\' )">' . $par . '</a></li>';
+    }
+}
+
+
+
+
+### prev next ###
+
+if($start + $step < $product_count){
+
+    $start1 = $start;
+
+    $prev_next_start  = $start1;
+
+    $p_prev_next = $prev_next_start/$step + 1;
+
+    $prev_next_start = $p_prev_next*$step;
+
+    $par = '>';
+
+    $res .= '<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="go_page_'.$prefix.'( '.$prev_next_start.', \''.$action.'\',\''.$ajax_url.'\' )">'.$par.'</a></li>';
+
+
+}
+
+### prev next ###
+
+$res .= '</ul>
+                 </nav>';
+
+
+echo $res;
+
+?>

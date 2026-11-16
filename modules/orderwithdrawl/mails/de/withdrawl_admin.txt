@@ -1,0 +1,25 @@
+Widerrufsanfrage
+
+Ein Kunde hat eine Widerrufsanfrage eingereicht.
+
+Bestelldetails:
+Bestellnummer: {order_identifier}
+Bestellsumme: {order_total}
+
+Kundendetails:
+Kundenname: {customer_name}
+Kunden-E-Mail: {customer_email}
+
+Datum des Widerrufs: {date}
+Umfang des Widerrufs: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Kundenhinweis:
+{customer_note}
+
+Bitte bearbeiten Sie diese Widerrufsanfrage gemäß Ihrer Rückerstattungsrichtlinien.

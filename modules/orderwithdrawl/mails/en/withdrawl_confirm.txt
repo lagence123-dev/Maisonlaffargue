@@ -1,0 +1,24 @@
+Confirmation of your withdrawal request
+
+Hello {firstname} {lastname},
+
+Your withdrawal request has been received. Below you will find the details of your request:
+
+Order ID: {order_identifier}
+Name: {consumer_name}
+Email for receipt confirmation: {email}
+Date and time of receipt: {date}
+Scope of withdrawal: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{customer_note}
+
+You can track your order in your account under Order history:
+{history_url}
+
+--
+{shop_name}
+{shop_url}

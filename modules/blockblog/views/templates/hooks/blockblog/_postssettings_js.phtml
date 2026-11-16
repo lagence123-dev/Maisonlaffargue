@@ -1,0 +1,65 @@
+<?php
+
+
+$_html .= "<script type=\"text/javascript\">
+    	$('document').ready( function() {
+
+			$( \"label[for='relpr_slider_on']\" ).click(function() {
+                $( \"#npr_slider\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='relpr_slider_off']\" ).click(function() {
+    	        $( \"#npr_slider\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'relpr_slider')." == 0){
+    	        $( \"#npr_slider\" ).parent().parent().hide(200);
+    	    }
+
+
+    	    $( \"label[for='relp_slider_on']\" ).click(function() {
+                $( \"#np_slider\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='relp_slider_off']\" ).click(function() {
+    	        $( \"#np_slider\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'relp_slider')." == 0){
+    	        $( \"#np_slider\" ).parent().parent().hide(200);
+    	    }
+
+
+
+            $( \"label[for='relp_sliderp_on']\" ).click(function() {
+                $( \"#np_sliderp\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='relp_sliderp_off']\" ).click(function() {
+    	        $( \"#np_sliderp\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'relp_sliderp')." == 0){
+    	        $( \"#np_sliderp\" ).parent().parent().hide(200);
+    	    }
+
+
+            if(".$btabs_type." == 3){
+    				$( \"#btabs_type\" ).after(\"".$text_17."\");
+    		} else {
+    				$( \"#help-tabs-".$this->name."17\" ).remove();
+    		}
+
+
+    		$( \"#btabs_type\" ).change(function() {
+  				    if($( \"#btabs_type option:selected\" ).val() == 3){
+      				    $( \"#btabs_type\" ).after(\"".$text_17."\");
+		    		} else {
+		    			$( \"#help-tabs-".$this->name."17\" ).remove();
+		    		}
+			});
+
+    	});
+    	</script>
+    	";
+

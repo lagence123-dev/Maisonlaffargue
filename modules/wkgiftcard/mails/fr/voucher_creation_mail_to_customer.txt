@@ -1,0 +1,9 @@
+
+Salut {recipient_name},
+
+{message}
+
+Produit     Code    Rabais    Quantité    VValable jusqu'au  {order_html} {product_html}
+
+Nous avons le plaisir de vous informer qu'un bon a été généré pour vous à partir de {from_name}.
+Pour l'utiliser, il vous suffit de copier/coller ce code lors du paiement.

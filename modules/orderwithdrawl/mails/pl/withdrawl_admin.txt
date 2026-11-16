@@ -1,0 +1,25 @@
+Wniosek o odstąpienie od umowy
+
+Klient złożył wniosek o odstąpienie od umowy.
+
+Szczegóły zamówienia:
+Numer zamówienia: {order_identifier}
+Wartość zamówienia: {order_total}
+
+Dane klienta:
+Imię i nazwisko klienta: {customer_name}
+E-mail klienta: {customer_email}
+
+Data odstąpienia: {date}
+Zakres odstąpienia od umowy: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Uwagi klienta:
+{customer_note}
+
+Prosimy o obsłużenie tego wniosku zgodnie z obowiązującą polityką zwrotów.

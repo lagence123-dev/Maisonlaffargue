@@ -1,0 +1,43 @@
+.tab-pane-new-data {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#configuration_form #btn-payment-mode,
+#configuration_form #btn-quit-demo-mode,
+#demo_notif,
+#orders_notif{
+    display: none;
+}
+
+#MoneticoPaiementQuitDemoModal .modal-header,
+#MoneticoPaiementPaymentModeModal .modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .custom-ajax-loader {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+}
+
+#footer .custom-ajax-loader .icon-refresh{
+    font-size: 36px;
+}
+
+#footer .custom-ajax-loader-layout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+
+#footer .custom-loader{
+    display: none;
+}

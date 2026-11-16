@@ -1,0 +1,22 @@
+Wniosek o odstąpienie odrzucony
+
+Dzień dobry {firstname} {lastname},
+
+Państwa wniosek o odstąpienie od umowy dla zamówienia {order_identifier} został niestety odrzucony.
+
+Szczegóły decyzji
+Numer zamówienia: {order_identifier}
+Adres e-mail: {email}
+Data decyzji: {date}
+
+{status_message}
+
+
+Jeśli mają Państwo pytania dotyczące tej decyzji lub chcieliby Państwo poznać jej przyczyny, prosimy o kontakt z naszym działem obsługi klienta, korzystając z danych kontaktowych podanych na naszej stronie internetowej.
+
+
+
+
+
+
+

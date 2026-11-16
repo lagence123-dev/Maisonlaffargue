@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>konectorendpoint</name>
+    <displayName><![CDATA[Konector Endpoint]]></displayName>
+    <version><![CDATA[0.1.3]]></version>
+    <description><![CDATA[Enables Konector to fetch data from your store!]]></description>
+    <author><![CDATA[KONECTOR]]></author>
+    <tab><![CDATA[export]]></tab>
+	<confirmUninstall><![CDATA[You are going to uninstall Konector Endpoint. Are you sure?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

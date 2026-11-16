@@ -1,0 +1,27 @@
+<?php
+
+$_html  = '';
+$_html .= '<div class="panel">
+            <div class="panel-heading"><i class="fa fa-home fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_welcome16_w'].'</div>';
+$_html .=  '<p class="alert alert-info">'.$this->_data_translate_custom['_welcome16_w_and_thank_y'].'</p>';
+
+$_html .= '<br/><p class="alert alert-info"><b>Version</b> : '.$this->version.'</p>';
+
+
+$_html .= '<br/><p class="alert alert-info">';
+$_html .= $this->_data_translate_custom['_welcome16_to_conf'].'&nbsp;<b><a style="text-decoration:underline" id="tab-menu-6" onclick="tabs_custom(6)" href="javascript:void(0)">'.$this->_data_translate_custom['_welcome16_h_doc'].'</a></b>';
+$_html .= '</p><br/>';
+
+$_html .= '<h2>'.$this->_data_translate_custom['_welcome16_pre_check'].'</h2>';
+
+if (!$this->_is_gd_installed()) {
+    $_html .= "<p class=\"alert alert-danger\">PHP GD extension is disabled</p>";
+} else {
+    $_html .= "<p class=\"alert alert-success\">PHP GD extension is enabled</p>";
+}
+
+$_html .= '</div>';
+
+echo $_html;
+
+?>

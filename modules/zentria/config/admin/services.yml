@@ -1,0 +1,27 @@
+services:
+
+  zentria.module:
+    class: Zentria
+    public: true
+    factory: ['Module', 'getInstanceByName']
+    arguments:
+      - 'zentria'
+
+  zentria.context:
+    class: Context
+    public: true
+    factory: [ 'Context', 'getContext' ]
+    
+  #####################
+  # PS Account
+  zentria.ps_accounts_installer:
+    class: 'PrestaShop\PsAccountsInstaller\Installer\Installer'
+    public: true
+    arguments:
+      - "5.0"
+
+  zentria.ps_accounts_facade:
+    class: 'PrestaShop\PsAccountsInstaller\Installer\Facade\PsAccounts'
+    public: true
+    arguments:
+      - "@zentria.ps_accounts_installer"

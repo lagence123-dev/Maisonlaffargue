@@ -1,0 +1,25 @@
+Herroepingsverzoek
+
+Een klant heeft een herroepingsverzoek ingediend.
+
+Bestelgegevens:
+Bestelnummer: {order_identifier}
+Besteltotaal: {order_total}
+
+Klantgegevens:
+Naam klant: {customer_name}
+E-mail klant: {customer_email}
+
+Datum van herroeping: {date}
+Omvang van de herroeping: {withdrawal_scope}
+
+{contract_part_details}
+
+{deadline_review_notice}
+
+{process_continuation_notice}
+
+Opmerking klant:
+{customer_note}
+
+Gelieve dit herroepingsverzoek te verwerken volgens uw restitutiebeleid.

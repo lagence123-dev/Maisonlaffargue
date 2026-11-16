@@ -1,0 +1,19 @@
+{
+    "name": "sjmedia/orderwithdrawl",
+    "description": "European Legal Withdrawal Button for PrestaShop.",
+    "type": "prestashop-module",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrderWithdrawl\\": "classes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "prepend-autoloader": false,
+        "sort-packages": true
+    }
+}

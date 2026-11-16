@@ -1,0 +1,16 @@
+Cerere de retragere respinsă
+
+Bună ziua {firstname} {lastname},
+
+Cererea dvs. de retragere pentru comanda {order_identifier} a fost, din păcate, respinsă.
+
+Detalii decizie
+Număr comandă: {order_identifier}
+E-mail: {email}
+Data deciziei: {date}
+
+{status_message}
+
+
+Dacă aveți întrebări despre această decizie sau doriți să clarificați motivele, contactați serviciul nostru pentru clienți folosind datele de contact de pe site-ul nostru.
+

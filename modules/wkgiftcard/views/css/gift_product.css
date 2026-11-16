@@ -1,0 +1,132 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your
+* needs please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+#wk_giftProd_suggestion_cont {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 5px;
+    right: 0px;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    list-style: none;
+    padding: 5px 0;
+    max-height: 193px;
+    max-width: 98.7%;
+}
+
+#wk_giftProd_suggestion_cont li {
+    padding: 5px 10px;
+    color: #666;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#wk_giftProd_suggestion_cont li:hover {
+    color: #fff !important;
+    background-color: #337AB7;
+}
+
+#wk_giftProd_suggestion_cont li img {
+    max-width: 50px;
+	margin-right: 5px;
+}
+
+.wk-gift-prod-cont {
+	border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px 10px;
+    width: 100%;
+}
+.wk-gift-prod-cont img {
+	max-width: 100%;
+    margin-bottom: 15px;
+}
+.wk-gift-prod-cont h4 {
+    margin-bottom: 10px;
+}
+.wk-gift-prod-cont button {
+	position: absolute;
+    top: 11px;
+    right: 26px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+#wk_pd_name {
+	background-color: #FFFFFF;
+    border: 1px solid #e5e3e1;
+    left: 0;
+    list-style: outside none none;
+    padding: 5px 0;
+    position: absolute;
+    right: 0;
+    top: 31px;
+    z-index: 2000;
+}
+.wk_image_design {
+	background-color: rgb(255, 255, 255);
+	color: rgb(204, 204, 204);
+}
+.img-thumbnail {
+	width: 50px;
+	background-color: rgb(255, 255, 255);
+	margin-left:0px;
+	margin-top:2px;
+}
+.wk_product_list {
+	display: inline-block;
+	margin-left: 10px;
+    font-size: 13px;
+	color: rgb(81, 81, 81);
+}
+
+.deleteGiftProd {
+    margin-top: 5px;
+    padding: 4px 8px !important;
+}
+
+.wk_cus_btn_icon {
+    color: #6c868e !important;
+}
+
+.wk_cus_btn_icon:hover {
+    color: #25b9d7 !important;
+}
+
+.wk_cus_icon_font_size {
+    font-size: 1.45em !important;
+}
+
+.wk_cus_margin_right_10 {
+    margin-right: 10px;
+}
+
+.cus_display_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-inner {
+    padding: 10px 15px 10px 20px;
+    background: #6c868e !important;
+    border: 1px solid #6c868e !important;
+}

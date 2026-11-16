@@ -1,0 +1,253 @@
+<?php
+
+
+$_html = '';
+$_html .= '<form method="post" action="'.Tools::safeOutput($_SERVER['REQUEST_URI']).'">';
+$_html .= '<input type="hidden" value="1" name="sitemapsettings"/>';
+
+$_html .= '<div class="panel">
+
+                    <div class="panel-heading"><i class="fa fa-sitemap fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_sitemap_sit'].'</div>';
+
+
+
+
+
+include_once(_PS_MODULE_DIR_.$this->name.'/classes/blogspm.class.php');
+$obj_blog = new blogspm();
+$data_urls = $obj_blog->getSEOURLs();
+$sitemap_url = $data_urls['sitemap_url'];
+
+$_html .= '
+
+                    <b>'.$this->_data_translate_custom['_sitemap_your_cron'].'</b>:&nbsp;
+                    <a target="_blank" href="'.$sitemap_url.'?token='.$this->_token_cron.'"
+                        style="text-decoration:underline;font-weight:bold">
+                        '.$sitemap_url.'?token='.$this->_token_cron.'
+                        </a>
+
+                         <br/><br/><br/><br/>';
+
+$_html .= '<input type="submit" value="'.$this->_data_translate_custom['_sitemap_reg_sit'].'" name="submitsitemap"
+                                class="'.(version_compare(_PS_VERSION_, '1.6', '>')?'btn btn-primary pull':'button').'"/>';
+
+
+
+$all_shops = Shop::getShops();
+
+$is_exists_xml = 0;
+
+
+foreach($all_shops as $_shop) {
+
+    $id_shop = (int)$_shop['id_shop'];
+    $name_shop = $_shop['name'];
+
+
+
+//    if ($this->_is_cloud) {
+//        $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+//        $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+//    }else{
+//        $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'upload/' . $this->name . '/blog_' . $id_shop . '.xml';
+//        $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'upload/' . $this->name . '/blog_' . $id_shop . '.xml';
+//    }
+    $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+    $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+
+    if(@file_exists($is_exists)) {
+        $_html .= '<br/><br/><div style="font-weight: bold;font-size:16px;margin-bottom:20px">'.$name_shop.'</div>';
+
+        $_html .= ''.$this->_data_translate_custom['_sitemap_use_main'].':<br/><br/>';
+
+
+        $_html .= '<a target="_blank" style="text-decoration:underline;" ';
+        $_html .= 'href="' . $master_xml . '"';
+        $_html .= '>';
+        $_html .= $master_xml;
+        $_html .= '</a>';
+        $is_exists_xml = 1;
+
+    }
+
+
+
+
+    $all_laguages = Language::getLanguages(true,$id_shop);
+
+    $i_lang = 0;
+    foreach($all_laguages as $item_lng) {
+
+        $id_lang = $item_lng['id_lang'];
+        $iso_code = $item_lng['iso_code'];
+
+//        if ($this->_is_cloud) {
+//            $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//            $is_exists = _PS_MODULE_DIR_."..".DIRECTORY_SEPARATOR.'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//        }else{
+//            $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'upload/' . $this->name . '/blog_' .$iso_code .'_'. $id_shop . '.xml';
+//            $is_exists = _PS_MODULE_DIR_."..".DIRECTORY_SEPARATOR.'upload/' . $this->name . '/blog_' .$iso_code .'_'. $id_shop . '.xml';
+//        }
+        $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+        $is_exists = _PS_MODULE_DIR_."..".DIRECTORY_SEPARATOR.'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+
+
+        if(!@file_exists($is_exists)){
+            continue;
+        } else {
+            $is_exists_xml = 1;
+        }
+
+        if($i_lang == 0){
+            $_html .= '<br/><br/>'.$this->_data_translate_custom['_sitemap_all_sitemaps'].':<br/>';
+        }
+
+        $_html .= '<br/>';
+        $_html .= '&nbsp;<img src="'._PS_BASE_URL_SSL_ . __PS_BASE_URI__ .'img/l/'.$id_lang.'.jpg" />&nbsp;<a target="_blank" style="text-decoration:underline;" ';
+        $_html .= 'href="' .$path .'"';
+        $_html .= '>';
+        $_html .= $path ;
+        $_html .= '</a>';
+        $i_lang++;
+    }
+
+    if($is_exists_xml) {
+        $_html .= '<hr style="margin:20px 0 0 0;padding:0px"/>';
+    }
+
+}
+
+$_html .= '</p>';
+
+
+
+
+$_html .= '<br/><p>
+                            <b>'.$this->_data_translate_custom['_sitemap_way'].' 1</b> : '.$this->_data_translate_custom['_sitemap_to_decl'].': <br><br>
+							  <code>';
+$all_shops = Shop::getShops();
+
+$is_exists_sitemap = 0;
+
+foreach($all_shops as $_shop) {
+
+    $id_shop = (int)$_shop['id_shop'];
+    $name_shop = $_shop['name'];
+
+
+//    if ($this->_is_cloud) {
+//        $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+//        $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+//    }else{
+//        $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'upload/' . $this->name . '/blog_' . $id_shop . '.xml';
+//        $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'upload/' . $this->name . '/blog_' . $id_shop . '.xml';
+//    }
+    $master_xml = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+    $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $id_shop . '.xml';
+
+    if (!@file_exists($is_exists)) {
+        continue;
+    }
+
+    $_html .= '<br/>### '.$this->_data_translate_custom['_sitemap_main_sitemap'].' <b>'.$name_shop.'</b> ('.$this->_data_translate_custom['_sitemap_incl_separated'].') ###<br/><br/>';
+
+
+    $_html .= 'Sitemap ';
+    $_html .= $master_xml;
+    $is_exists_sitemap = 1;
+
+    $_html .= '<br/>';
+
+
+
+
+
+}
+
+
+
+if($is_exists_sitemap == 0){
+    $_html .= ''.$this->_data_translate_custom['_sitemap_sitemap_not_exists'].' <b style="text-transform: uppercase">"'.$this->_data_translate_custom['_sitemap_reg_sit'].'"</b>';
+}
+
+$_html .= '</code></p>';
+
+
+$_html .= '<br/><br/><p>
+                            <b>'.$this->_data_translate_custom['_sitemap_way'].' 2</b> : '.$this->_data_translate_custom['_sitemap_to_decl'].': <br><br>
+							  <code>';
+$all_shops = Shop::getShops();
+
+$is_exists_sitemap = 0;
+
+
+
+foreach($all_shops as $_shop) {
+
+    $id_shop = (int)$_shop['id_shop'];
+    $name_shop = $_shop['name'];
+
+
+
+
+    $all_laguages = Language::getLanguages(true,$id_shop);
+
+
+    $i_lang = 0;
+    foreach($all_laguages as $item_lng) {
+
+        $id_lang = $item_lng['id_lang'];
+        $iso_code = $item_lng['iso_code'];
+
+        //echo "<pre>"; var_dump($item_lng);exit;
+
+//        if ($this->_is_cloud) {
+//            $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//            $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//        } else {
+//            $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'upload/' . $this->name . '/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//            $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'upload/' . $this->name . '/blog_' . $iso_code . '_' . $id_shop . '.xml';
+//        }
+        $path = _PS_BASE_URL_SSL_ . __PS_BASE_URI__ . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+        $is_exists = _PS_MODULE_DIR_ . ".." . DIRECTORY_SEPARATOR . 'modules/' . $this->name . '/upload/blog_' . $iso_code . '_' . $id_shop . '.xml';
+
+
+        if (!@file_exists($is_exists)) {
+            continue;
+        }
+
+        if($i_lang == 0) {
+            $_html .= '<br/>### '.$this->_data_translate_custom['_sitemap_sep_sitemap'].' <b>' . $name_shop . '</b> ###<br/><br/>';
+        }
+
+        $_html .= 'Sitemap ';
+        $_html .= $path;
+        $is_exists_sitemap = 1;
+
+        $_html .= '<br/>';
+        $i_lang++;
+    }
+
+
+
+}
+
+
+
+if($is_exists_sitemap == 0){
+    $_html .= ''.$this->_data_translate_custom['_sitemap_sitemap_not_exists'].' <b style="text-transform: uppercase">"'.$this->_data_translate_custom['_sitemap_reg_sit'].'"</b>';
+}
+
+$_html .= '</code></p>';
+
+
+
+
+
+$_html .= '</div>';
+
+
+$_html .= '</form>';
+
+
+echo $_html;

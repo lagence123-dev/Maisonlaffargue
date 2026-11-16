@@ -1,0 +1,17 @@
+Widerrufsanfrage abgelehnt
+
+Hallo {firstname} {lastname},
+
+Ihre Widerrufsanfrage zur Bestellung {order_identifier} wurde leider abgelehnt.
+
+Details zur Entscheidung
+Bestellnummer: {order_identifier}
+E-Mail: {email}
+Entscheidungsdatum: {date}
+
+{status_message}
+
+
+Wenn Sie Fragen zu dieser Entscheidung haben oder die Gründe klären möchten, kontaktieren Sie bitte unseren Kundenservice über die Kontaktdaten auf unserer Website.
+
+

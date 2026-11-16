@@ -1,0 +1,791 @@
+{#
+#   Copyright since 2009 ohmyweb!
+#
+#   @author    ohmyweb <contact@ohmyweb.fr>
+#   @copyright since 2009 ohmyweb!
+#   @license   Proprietary - no redistribution without authorization
+#}
+
+{# ===================== MACRO: price ===================== #}
+{% macro dwfproductextrafields_price(field) %}
+  <div class="input-group money-type">
+    <input type="text"
+           name="product[dwfproductextrafields][{{ field.name }}]"
+           id="{{ field.id is defined ? field.id : field.name }}"
+           value="{{ convertPrice(field.value|number_format(2, '.', '')) }}" onkeyup="this.value = this.value.replace(/,/g, '.');"
+           class="form-control"
+      {% if field.size is defined %} size="{{ field.size }}"{% endif %}
+      {% if field.maxchar is defined and field.maxchar %} data-maxchar="{{ field.maxchar }}"{% endif %}
+      {% if field.maxlength is defined and field.maxlength %} maxlength="{{ field.maxlength }}"{% endif %}
+      {% if field.readonly is defined and field.readonly %} readonly="readonly"{% endif %}
+      {% if field.disabled is defined and field.disabled %} disabled="disabled"{% endif %}
+      {% if field.autocomplete is defined and not field.autocomplete %} autocomplete="off"{% endif %}
+      {% if field.required is defined and field.required %} required="required" {% endif %}
+      {% if field.placeholder is defined and field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+    />
+    <span class="input-group-text"> &euro;</span>
+  </div>
+{% endmacro %}
+
+{# ===================== MACRO: number ===================== #}
+{% macro dwfproductextrafields_number(field) %}
+  <input type="text"
+         id="{{ field.id }}"
+    {% if field.field_group is defined %}
+      name="{{ field.field_group }}[{{ field.name }}]"
+    {% else %}
+      name="product[dwfproductextrafields][{{ field.name }}]"
+    {% endif %}
+         class="{{ field.class is defined ? field.class : '' }} form-control"
+         value="{% if field.string_format is defined and field.string_format %}{{ field.value|format(field.string_format) }}{% else %}{{ field.value }}{% endif %}"
+         onkeyup="if (isArrowKey(event)) return ;updateFriendlyURL();"
+    {% if field.size is defined %} size="{{ field.size }}"{% endif %}
+    {% if field.maxchar is defined and field.maxchar %} counter="{{ field.maxchar }}"{% endif %}
+    {% if field.readonly is defined and field.readonly %} readonly="readonly"{% endif %}
+    {% if field.disabled is defined and field.disabled %} disabled="disabled"{% endif %}
+    {% if field.autocomplete is defined and not field.autocomplete %} autocomplete="off"{% endif %}
+    {% if field.required is defined and field.required %} required="required" {% endif %}
+    {% if field.placeholder is defined and field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+  />
+{% endmacro %}
+
+{# ===================== MACRO: checkbox ===================== #}
+{% macro dwfproductextrafields_checkbox(field, label) %}
+  <div class="checkbox">
+    <input
+      id="{{ field.id is defined ? field.id : field.name }}"
+      {% if field.field_group is defined %}
+        name="{{ field.field_group }}[{{ field.name }}]"
+      {% else %}
+        name="product[dwfproductextrafields][{{ field.name }}]"
+      {% endif %}
+      value="1"
+      {% if field.value == 1 %} checked="checked"{% endif %}
+      type="checkbox"
+    />
+    <label for="{{ field.id is defined ? field.id : field.name }}">{{ label }}</label>
+  </div>
+{% endmacro %}
+
+{# ===================== MACRO: selector ===================== #}
+{% macro dwfproductextrafields_selector(field) %}
+  <select
+    id="{{ field.id is defined ? field.id : field.name }}"
+    name="product[dwfproductextrafields][{{ field.name }}]{% if field.multiple %}[]{% endif %}"
+    class="form-control"
+    {% if field.multiple %} multiple{% endif %}>
+    {% for choice in field.choices %}
+      <option value="{{ choice.key }}"{% if choice.key in field.value %} selected="selected"{% endif %}>{{ choice.name }}</option>
+    {% endfor %}
+  </select>
+{% endmacro %}
+
+{# ===================== MACRO: date ===================== #}
+{% macro dwfproductextrafields_date(field) %}
+  <div class="input-group datepicker">
+    <input
+      id="{{ field.id is defined ? field.id : field.name }}"
+      type="text"
+      class="form-control"
+      name="product[dwfproductextrafields][{{ field.name }}]"
+      value="{{ field.value }}" />
+    <span class="input-group-text"><span class="material-icons">date_range</span></span>
+  </div>
+{% endmacro %}
+
+{# ===================== MACRO: datetime ===================== #}
+{% macro dwfproductextrafields_datetime(field) %}
+  {% set fieldId = field.id is defined ? field.id : field.name %}
+  <div class="input-group">
+    <input
+      id="{{ fieldId }}"
+      type="text"
+      class="form-control"
+      name="product[dwfproductextrafields][{{ field.name }}]"
+      value="{{ field.value }}" />
+    <span class="input-group-text"><span class="material-icons">date_range</span></span>
+  </div>
+
+  <script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+      if($('#product_dwfproductextrafields #{{ fieldId|escape('js') }}').length > 0) {
+        $('#product_dwfproductextrafields #{{ fieldId|escape('js') }}').datetimepicker({
+          locale: full_language_code,
+          format: 'YYYY-MM-DD HH:mm',
+          sideBySide: true
+        });
+      }
+    });
+    //-->
+  </script>
+{% endmacro %}
+
+{# ===================== MACRO: text (multilang) ===================== #}
+{% macro dwfproductextrafields_text(field, languages, defaultFormLanguage, defaultLanguageIso) %}
+  {% if languages is not empty and languages %}
+    <div class="input-group locale-input-group js-locale-input-group d-flex" id="{{ field.id is defined ? field.id : field.name }}">
+      {% for language in languages %}
+        {% set value_text = field.value[language.id_lang] is defined ? field.value[language.id_lang] : '' %}
+
+        <div data-lang-id="{{ language.id_lang }}" class="serp-watched-url js-locale-input js-locale-{{ language.iso_code }}{% if language.id_lang != defaultFormLanguage %} d-none{% endif %}" style="flex-grow: 1;">
+
+          {% if field.prefix is defined or field.suffix is defined %}
+          <div class="input-group">
+            {% endif %}
+
+            {% if field.prefix is defined %}
+              <span class="input-group-text">{{ field.prefix }}</span>
+            {% endif %}
+
+            <input type="text"
+                   id="{{ field.id }}_{{ language.id_lang }}"
+              {% if field.field_group is defined %}
+                name="{{ field.field_group }}[{{ field.name }}_{{ language.id_lang }}]"
+              {% else %}
+                name="product[dwfproductextrafields][{{ field.name }}_{{ language.id_lang }}]"
+              {% endif %}
+                   class="{{ field.class is defined ? field.class : '' }} form-control"
+                   value="{% if field.string_format is defined and field.string_format %}{{ value_text|format(field.string_format) }}{% else %}{{ value_text }}{% endif %}"
+                   onkeyup="if (isArrowKey(event)) return ;updateFriendlyURL();"
+              {% if field.size is defined %} size="{{ field.size }}"{% endif %}
+              {% if field.maxchar is defined and field.maxchar %} counter="{{ field.maxchar }}"{% endif %}
+              {% if field.readonly is defined and field.readonly %} readonly="readonly"{% endif %}
+              {% if field.disabled is defined and field.disabled %} disabled="disabled"{% endif %}
+              {% if field.autocomplete is defined and not field.autocomplete %} autocomplete="off"{% endif %}
+              {% if field.required is defined and field.required %} required="required" {% endif %}
+              {% if field.placeholder is defined and field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+            />
+
+            {% if field.maxchar is defined and field.maxchar %}
+              <span class="maxLength">
+                  {{ '[1]0[/1] of [2][maxchar][/2] characters allowed'|trans({
+                    '[1]': '<span class="currentLength">',
+                    '[/1]': '</span>',
+                    '[2]': '<span class="currentTotalMax">',
+                    '[/2]': '</span>',
+                    '[maxchar]': field.maxchar,
+                  }, 'Modules.Dwfproductextrafields.Admin')|raw }}
+              </span>
+            {% endif %}
+
+            {% if field.suffix is defined %}
+              <span class="input-group-text">{{ field.suffix }}</span>
+            {% endif %}
+
+            {% if field.prefix is defined or field.suffix is defined %}
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      {% if languages|length > 1 %}
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle js-locale-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="product_seo_link_rewrite_dropdown">{{ defaultLanguageIso|upper }}</button>
+          <div class="dropdown-menu dropdown-menu-right locale-dropdown-menu" aria-labelledby="product_seo_link_rewrite_dropdown">
+            {% for language in languages %}
+              <span class="dropdown-item js-locale-item" data-locale="{{ language.iso_code }}">{{ language.name }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{# ===================== MACRO: textarea (multilang / single) ===================== #}
+{% macro dwfproductextrafields_textarea(field, languages, defaultFormLanguage, autoload_rte, new_item) %}
+  {% set autoload_rte = autoload_rte|default(false) %}
+  {% set new_item = new_item|default(false) %}
+
+  {% if languages is not empty and languages|length %}
+    <div class="translations tabbable" id="{{ field.id }}">
+      {% if languages|length > 1 %}
+        <ul class="translationsLocales nav nav-pills">
+          {% for language in languages %}
+            <li class="nav-item">
+              <a href="#" data-locale="{{ language.iso_code }}" class="{% if language.id_lang == defaultFormLanguage %}active {% endif %}nav-link" data-toggle="tab" data-target=".translationsFields-{{ field.id }}_{{ language.id_lang }}">
+                {{ language.iso_code|upper }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <div class="translationsFields tab-content">
+        {% for language in languages %}
+          {% set value_text = field.value[language.id_lang] is defined ? field.value[language.id_lang] : '' %}
+
+          <div data-locale="{{ language.iso_code }}" class="translationsFields-{{ field.id }}_{{ language.id_lang }} tab-pane translation-field panel panel-default{% if language.id_lang == defaultFormLanguage %} show active{% endif %} translation-label-{{ language.iso_code }}">
+
+            {% if field.prefix is defined or field.suffix is defined %}
+            <div class="input-group">
+              {% endif %}
+
+              {% if field.prefix is defined %}
+                <span class="input-group-text">{{ field.prefix }}</span>
+              {% endif %}
+
+              <textarea
+                {% if field.field_group is defined %}
+                  name="{{ field.field_group }}[{{ field.name }}_{{ language.id_lang }}]"
+                {% else %}
+                  name="product[dwfproductextrafields][{{ field.name }}_{{ language.id_lang }}]"
+                {% endif %}
+                id="{{ field.id }}_{{ language.id_lang }}"
+                class="{% if autoload_rte %}autoload_rte{% else %}form-control textarea-autosize{% endif %}{% if field.class is defined %} {{ field.class }}{% endif %}"
+                {% if field.readonly is defined and field.readonly %} readonly="readonly"{% endif %}
+                {% if field.maxchar is defined and field.maxchar %} counter="{{ field.maxchar }}"{% endif %}>{{ value_text }}</textarea>
+
+              {% if field.maxchar is defined and field.maxchar %}
+                <span class="maxLength">
+                  {{ '[1]0[/1] of [2][maxchar][/2] characters allowed'|trans({
+                    '[1]': '<span class="currentLength">',
+                    '[/1]': '</span>',
+                    '[2]': '<span class="currentTotalMax">',
+                    '[/2]': '</span>',
+                    '[maxchar]': field.maxchar,
+                  }, 'Modules.Dwfproductextrafields.Admin')|raw }}
+                </span>
+              {% endif %}
+
+              {% if field.suffix is defined %}
+                <span class="input-group-text">{{ field.suffix }}</span>
+              {% endif %}
+
+              {% if field.prefix is defined or field.suffix is defined %}
+            </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  {% else %}
+    {# Non-translatable textarea #}
+    {% set value_text = field.value is defined ? field.value : '' %}
+
+    {% if field.prefix is defined or field.suffix is defined %}
+      <div class="input-group">
+    {% endif %}
+
+    {% if field.prefix is defined %}
+      <span class="input-group-text">{{ field.prefix }}</span>
+    {% endif %}
+
+    <textarea
+      {% if field.field_group is defined %}
+        name="{{ field.field_group }}[{{ field.name }}]"
+      {% else %}
+        name="product[dwfproductextrafields][{{ field.name }}]"
+      {% endif %}
+      id="{{ field.id }}"
+      class="{% if autoload_rte %}autoload_rte_{{ field.id }}{% else %}form-control textarea-autosize{% endif %}{% if field.class is defined %} {{ field.class }}{% endif %}"
+      {% if field.readonly is defined and field.readonly %} readonly="readonly"{% endif %}
+      {% if field.maxchar is defined and field.maxchar %} counter="{{ field.maxchar }}"{% endif %}>{{ value_text }}</textarea>
+
+    {% if field.maxchar is defined and field.maxchar %}
+      <span class="maxLength">
+        {{ '[1]0[/1] of [2][maxchar][/2] characters allowed'|trans({
+          '[1]': '<span class="currentLength">',
+          '[/1]': '</span>',
+          '[2]': '<span class="currentTotalMax">',
+          '[/2]': '</span>',
+          '[maxchar]': field.maxchar,
+        }, 'Modules.Dwfproductextrafields.Admin')|raw }}
+      </span>
+    {% endif %}
+
+    {% if field.suffix is defined %}
+      <span class="input-group-text">{{ field.suffix }}</span>
+    {% endif %}
+
+    {% if field.prefix is defined or field.suffix is defined %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+{# ===================== MACRO: color ===================== #}
+{% macro dwfproductextrafields_color(field) %}
+  <div class="form-group">
+    <div class="col-lg-2">
+      <div class="row">
+        <div class="input-group">
+          <input type="color"
+                 data-hex="true"
+                 class="color mColorPickerInput"
+                 name="product[dwfproductextrafields][{{ field.name }}]"
+                 value="{% if field.value is defined %}{{ field.value }}{% endif %}"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# ===================== MACRO: image ===================== #}
+{% macro dwfproductextrafields_image(field, dwfproductextrafields_adminController) %}
+  <ul id="{{ field.id }}-new_item" style="display:none;">
+    <li class="thumb-%FIELD_BASENAME%">
+      %FIELD_FILE%
+      <p>{{ 'File size'|trans({}, 'Admin.Advparameters.Feature') }} %FIELD_SIZE%</p>
+      <p>
+        <a data-rel="%FIELD_VALUE%" class="{{ field.id }}-delete btn btn-outline-primary" href="#">
+          <i class="material-icons">
+            delete_forever
+          </i>
+          {{ 'Delete'|trans({}, 'Admin.Global') }}
+        </a>
+      </p>
+    </li>
+  </ul>
+
+  <div id="{{ field.id }}-container" style="position:relative;">
+    <div class="row">
+      <div class="overlay-spinner" style="display:none;background: rgba(255,255,255,.8);position: absolute;top: 0;right: 0;left: 0;bottom: 0;z-index: 5;"><div class="spinner btn-primary-reverse onclick" style="position:absolute; top:calc(50% - 20px); left:calc(50% - 20px);"></div></div>
+      <div class="col-lg-6 mb-2">
+        <div class="form-inline">
+          <input type="hidden"
+            {% if field.field_group is defined %}
+              name="{{ field.field_group }}[{{ field.name }}_files]"
+            {% else %}
+              name="product[dwfproductextrafields][{{ field.name }}_files]"
+            {% endif %}
+                 id="{{ field.id }}_files"
+                 value="{% if field.value is defined %}{{ field.value }}{% endif %}"
+          />
+          <input type="file"
+                 id="{{ field.id }}"
+                 class="hide"
+          />
+          <div class="dummyfile input-group">
+            <span class="input-group-text">
+              <span class="material-icons">image</span>
+            </span>
+            <input id="{{ field.id }}-name" type="text" name="filename" class="form-control" readonly />
+          </div>
+          <button id="{{ field.id }}-selectbutton" type="button" name="submitAddAttachments" class="btn btn-default">
+            <i class="material-icons m-r-1">library_add</i>{{ 'Add file'|trans({}, 'Modules.Dwfproductextrafields.Admin') }}
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <ul class="clearfix" id="{{ field.id }}-images-thumbnails" style="list-style:none; padding:0;{% if field.image is not defined or not field.image %}  display:none;{% endif %}">
+          {% if field.image is defined and field.image %}
+            <li class="thumb-{{ field.basename }}">
+              {{ field.image|raw }}
+              <p class="mb-0">
+                {% if field.image_zoom is defined %}
+                  <a href="{{ field.image_zoom }}" class="btn btn-link btn-sm open-image" target="_blank">
+                    <i class="material-icons">zoom_in</i> {{ 'Zoom'|trans({}, 'Admin.Catalog.Feature') }}
+                  </a>
+                {% endif %}
+                {% if field.size is defined %}<span class="text-muted small-text">{{ 'File size'|trans({}, 'Admin.Advparameters.Feature') }} {{ field.size }}</span>{% endif %}
+              </p>
+
+              {% if field.delete_url is defined %}
+                <a data-rel="{{ field.value }}" class="{{ field.id }}-delete btn btn-outline-primary" href="{{ field.delete_url }}">
+                  <i class="material-icons">
+                    delete_forever
+                  </i>
+                  {{ 'Delete'|trans({}, 'Admin.Global') }}
+                </a>
+              {% endif %}
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var {{ field.id|escape('js') }}_max_files = 1;
+
+    $(document).ready(function() {
+      $('#{{ field.id|escape('js') }}').change(function(e) {
+        var file_data = $(this).prop("files")[0];
+        var form_data = new FormData();
+        form_data.append("{{ field.id|escape('js') }}", file_data)
+        form_data.append("action", 'callAddImage')
+        form_data.append("ajax", '1')
+        form_data.append("field", '{{ field.id|escape('js') }}')
+        form_data.append("fieldname", '{{ field.name|escape('js') }}')
+        $.ajax({
+          url: '{{ dwfproductextrafields_adminController|raw }}',
+          dataType: 'json',
+          cache: false,
+          contentType: false,
+          processData: false,
+          data: form_data,
+          type: 'post',
+          beforeSend: function() {
+            $('#{{ field.id|escape('js') }}-container .overlay-spinner').show();
+            $('.js-spinner').show();
+            $('#submit').attr('disabled', 'disabled');
+            $('.btn-submit').attr('disabled', 'disabled');
+          },
+          complete: function() {
+            $('#{{ field.id|escape('js') }}-container .overlay-spinner').hide();
+            $('.js-spinner').hide();
+            $('#submit').removeAttr('disabled');
+            $('.btn-submit').removeAttr('disabled');
+          },
+          success: function(data) {
+            $('#{{ field.id|escape('js') }}-name').val('');
+            var files = [];
+            $('#{{ field.id|escape('js') }}-images-thumbnails').empty();
+            $.each(data.{{ field.id|escape('js') }}, function(k, el) {
+              files.push(el.file);
+              $newItem = $('#{{ field.id|escape('js') }}-new_item').html();
+              $newItem = $newItem.replace(/%FIELD_FILE%/g, el.thumbnail);
+              $newItem = $newItem.replace(/%FIELD_VALUE%/g, el.file);
+              $newItem = $newItem.replace(/%FIELD_BASENAME%/g, el.basename);
+              $newItem = $newItem.replace(/%FIELD_SIZE%/g, el.size_kb);
+              $('#{{ field.id|escape('js') }}-images-thumbnails').append($newItem);
+            });
+
+            $('#{{ field.id|escape('js') }}_files').val(files.join());
+            if($('#{{ field.id|escape('js') }}_files').val() == '') {
+              $('#{{ field.id|escape('js') }}-images-thumbnails').hide();
+            } else {
+              $('#{{ field.id|escape('js') }}-images-thumbnails').show();
+            }
+          }
+        })
+      });
+
+      $(document).on('click', '.{{ field.id|escape('js') }}-delete', function(e) {
+        e.preventDefault();
+        $.ajax({
+          url: '{{ dwfproductextrafields_adminController }}',
+          dataType: 'json',
+          cache: false,
+          data: {
+            'action': 'callDeleteImage',
+            'field': '{% if field.field_group is defined %}{{ field.id|escape('js') }}{% else %}{{ field.name|escape('js') }}{% endif %}',
+            {% if field.reference is defined %}
+            'reference': '{{ field.reference|escape('js') }}',
+            {% endif %}
+            'file': $(this).data('rel')
+          },
+          type: 'post',
+          beforeSend: function() {
+            $('#{{ field.id|escape('js') }}-container .overlay-spinner').show();
+            $('.js-spinner').show();
+            $('#submit').attr('disabled', 'disabled');
+            $('.btn-submit').attr('disabled', 'disabled');
+          },
+          complete: function() {
+            $('#{{ field.id|escape('js') }}-container .overlay-spinner').hide();
+            $('.js-spinner').hide();
+            $('#submit').removeAttr('disabled');
+            $('.btn-submit').removeAttr('disabled');
+          },
+          success: function(data) {
+            $("#{{ field.id|escape('js') }}-images-thumbnails .thumb-"+data.basename).remove();
+
+            var files = [];
+            $.each(data.{{ field.id|escape('js') }}, function(k, el) {
+              files.push(el.file);
+            });
+            $("#{{ field.id|escape('js') }}_files").val(files.join());
+            if($("#{{ field.id|escape('js') }}_files").val() == '') {
+              $("#{{ field.id|escape('js') }}-images-thumbnails").hide();
+            } else {
+              $("#{{ field.id|escape('js') }}-images-thumbnails").show();
+            }
+          }
+        });
+      });
+
+      $('#{{ field.id|escape('js') }}-selectbutton').click(function(e) {
+        $enoughtImages = false;
+        if (typeof {{ field.id|escape('js') }}_max_files !== 'undefined') {
+          if ($('#{{ field.id|escape('js') }}_files').val() != '') {
+            var $files = $('#{{ field.id|escape('js') }}_files').val().split(',');
+            if ($files.length >= {{ field.id|escape('js') }}_max_files) {
+              $enoughtImages = true,
+                alert('{{ "You can upload a maximum of [nb] files"|trans({'[nb]': 1}, 'Modules.Dwfproductextrafields.Admin')|escape('js') }}');
+            }
+          }
+
+        }
+        if(!$enoughtImages) {
+          $('#{{ field.id|escape('js') }}').trigger('click');
+        }
+      });
+
+      $('#{{ field.id|escape('js') }}-name').click(function(e) {
+        $enoughtImages = false;
+        if (typeof {{ field.id|escape('js') }}_max_files !== 'undefined') {
+          if ($('#{{ field.id|escape('js') }}_files').val() != '') {
+            var $files = $('#{{ field.id|escape('js') }}_files').val().split(',');
+            if ($files.length >= {{ field.id|escape('js') }}_max_files) {
+              $enoughtImages = true,
+                alert('{{ "You can upload a maximum of [nb] files"|trans({'[nb]': 1}, 'Modules.Dwfproductextrafields.Admin')|escape('js') }}');
+            }
+          }
+
+        }
+        if (!$enoughtImages) {
+          $('#{{ field.id|escape('js') }}').trigger('click');
+        }
+      });
+
+      $('#{{ field.id|escape('js') }}-name').on('dragenter', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+      });
+
+      $('#{{ field.id|escape('js') }}-name').on('dragover', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+      });
+
+      $('#{{ field.id|escape('js') }}-name').on('drop', function(e) {
+        e.preventDefault();
+        var files = e.originalEvent.dataTransfer.files;
+        $('#{{ field.id|escape('js') }}')[0].files = files;
+        $(this).val(files[0].id);
+      });
+
+      $('#{{ field.id|escape('js') }}').change(function(e) {
+        if ($(this)[0].files !== undefined) {
+          var files = $(this)[0].files;
+          var name  = '';
+
+          $.each(files, function(index, value) {
+            name += value.name+', ';
+          });
+
+          $('#{{ field.id|escape('js') }}-name').val(name.slice(0, -2));
+        }
+        else { // Internet Explorer 9 Compatibility
+          var name = $(this).val().split(/[\\/]/);
+          $('#{{ field.id|escape('js') }}-name').val(name[name.length-1]);
+        }
+      });
+
+      if (typeof {{ field.id|escape('js') }}_max_files !== 'undefined' && !$('#{{ field.id|escape('js') }}').length) {
+        $('#{{ field.id|escape('js') }}').closest('form').on('submit', function(e) {
+          if ($('#{{ field.id|escape('js') }}')[0].files.length > {{ field.id|escape('js') }}_max_files) {
+            e.preventDefault();
+            alert('{{ "You can upload a maximum of [nb] files"|trans({'[nb]': 1}, 'Modules.Dwfproductextrafields.Admin')|escape('js') }}');
+          }
+        });
+      }
+    });
+  </script>
+{% endmacro %}
+
+{# ===================== MACRO: repeater ===================== #}
+{% macro dwfproductextrafields_repeater(field, languages, defaultFormLanguage, defaultLanguageIso, dwfproductextrafields_adminController) %}
+  {% import _self as macros %}
+
+  <div id="repeater_area_{{ field.name }}">
+    <div class="row">
+      <ul id="repeater_{{ field.name }}" class="col-12 col-xl-10 m-0">
+        {% if field.values|length %}
+          {% for rep_fields in field.values %}
+            <li id="repeater_{{ field.name }}_{{ loop.index0 }}" class="card card-secondary repeater_item">
+              <div class="card-header" id="heading_{{ field.name }}_{{ loop.index0 }}">
+                <span class="btn float-left"><i class="material-icons m-0">reorder</i></span>
+                <button type="button" class="js-deleteRepeaterEntry-{{ field.name }} btn btn-primary float-right"><i class="material-icons m-0">delete</i></button>
+                <h5 class="mb-0">
+                  <button type="button" class="btn btn-link{% if field.collapsed_default %} collapsed{% endif %}" data-toggle="collapse" data-target="#collapse_{{ field.name }}_{{ loop.index0 }}" aria-expanded="true" aria-controls="collapse_{{ field.name }}_{{ loop.index0 }}">
+                    {{ rep_fields[0].name }} -
+                    {% if rep_fields[0].value is iterable %}
+                      {% set text = rep_fields[0].value[defaultFormLanguage]|striptags %}
+                    {% else %}
+                      {% set text = rep_fields[0].value|striptags %}
+                    {% endif %}
+                    {{ text|length > 128 ? text|slice(0, 128) ~ '...' : text }}
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse_{{ field.name }}_{{ loop.index0 }}" class="collapse{% if not field.collapsed_default %} show{% endif %}" aria-labelledby="heading_{{ field.name }}_{{ loop.index0 }}">
+                <div class="card-body pb-2">
+                  {% for field_value in rep_fields %}
+                    <div class="mb-2">
+                      {% set current_field = {
+                        'field_group': 'product[dwfproductextrafields][' ~ field.name ~ '][' ~ loop.parent.loop.index0 ~ ']',
+                        'name': field_value.id,
+                        'id': field.name ~ '_' ~ loop.parent.loop.index0 ~ '_' ~ field_value.id,
+                        'reference': field.name ~ '|' ~ loop.parent.loop.index0 ~ '|' ~ field_value.id,
+                        'value': field_value.value
+                      } %}
+
+                      {% if field_value.type != 'checkbox' %}
+                        <label class="form-control-label" for="{{ current_field.id }}">
+                          {{ field_value.name }}
+                        </label>
+                      {% endif %}
+
+                      {% if field_value.type == 'checkbox' %}
+                        {{ macros.dwfproductextrafields_checkbox(current_field, field_value.name) }}
+
+                      {% elseif field_value.type == 'image' %}
+                        {% if field_value.value %}
+                          {% set current_field = current_field|merge({
+                            'basename': field_value.basename,
+                            'image': field_value.image,
+                            'image_zoom': field_value.image_zoom,
+                            'size': field_value.size,
+                            'delete_url': field_value.delete_url
+                          }) %}
+                        {% else %}
+                          {% set current_field = current_field|merge({
+                            'basename': null,
+                            'image': null,
+                            'image_zoom': null,
+                            'size': 0,
+                            'delete_url': null
+                          }) %}
+                        {% endif %}
+
+                        {{ macros.dwfproductextrafields_image(current_field, dwfproductextrafields_adminController) }}
+
+                      {% elseif field_value.type == 'text' %}
+                        {{ macros.dwfproductextrafields_text(current_field, languages, defaultFormLanguage, defaultLanguageIso) }}
+
+                      {% elseif field_value.type == 'textarea' %}
+                        {{ macros.dwfproductextrafields_textarea(current_field, languages, defaultFormLanguage) }}
+
+                      {% elseif field_value.type == 'textarea_mce' %}
+                        <div class="form-control">
+                          {{ macros.dwfproductextrafields_textarea(current_field, languages, defaultFormLanguage, true) }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+
+    <div style="display:none;" id="repeater_{{ field.name }}_newLine">
+      <div class="card-header" id="heading_{{ field.name }}_LINEID">
+        <span class="btn float-left"><i class="material-icons m-0">reorder</i></span>
+        <button class="js-deleteRepeaterEntry-{{ field.name }} btn btn-primary float-right" type="button"><i class="material-icons m-0">delete</i></button>
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse_{{ field.name }}_LINEID" aria-expanded="true" aria-controls="collapse_{{ field.name }}_LINEID">
+            {{ 'New element (#[line_id])'|trans({'[line_id]': 'LINEID'}, 'Modules.Dwfproductextrafields.Admin') }}
+          </button>
+        </h5>
+      </div>
+      <div id="collapse_{{ field.name }}_LINEID" class="collapse show" aria-labelledby="heading_{{ field.name }}_LINEID">
+        <div class="card-body pb-2">
+          {% for el in field.elements %}
+            <div class="mb-2">
+              {% set current_field = {
+                'field_group': 'product[dwfproductextrafields][' ~ field.name ~ '][LINEID]',
+                'name': el.id,
+                'id': field.name ~ '_LINEID_' ~ el.id,
+                'reference': field.name ~ '|LINEID|' ~ el.id,
+                'value': ''
+              } %}
+
+              {% if el.type != 'checkbox' %}
+                <label class="form-control-label" for="{{ current_field.id }}">
+                  {{ el.name }}
+                </label>
+              {% endif %}
+
+              {% if el.type == 'checkbox' %}
+                {{ macros.dwfproductextrafields_checkbox(current_field, el.name) }}
+
+              {% elseif el.type == 'image' %}
+                {{ macros.dwfproductextrafields_image(current_field|merge({'basename': null, 'image': null, 'size': 0, 'delete_url': null}), dwfproductextrafields_adminController) }}
+
+              {% elseif el.type == 'text' %}
+                {{ macros.dwfproductextrafields_text(current_field, languages, defaultFormLanguage, defaultLanguageIso) }}
+
+              {% elseif el.type == 'non-translatable_text' %}
+                {{ macros.dwfproductextrafields_textarea(current_field, false, defaultFormLanguage) }}
+
+              {% elseif el.type == 'textarea' %}
+                {{ macros.dwfproductextrafields_textarea(current_field, languages, defaultFormLanguage) }}
+
+              {% elseif el.type == 'textarea_mce' %}
+                <div class="form-control">
+                  {{ macros.dwfproductextrafields_textarea(current_field, languages, defaultFormLanguage, true, true) }}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix">
+      <button id="{{ field.name }}-repeaterAddButton" type="button" name="submitAddRepeater" class="btn btn-default">
+        <i class="material-icons">add</i> {{ 'Add element block'|trans({}, 'Modules.Dwfproductextrafields.Admin') }}
+      </button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if($('#product_dwfproductextrafields #repeater_area_{{ field.name|escape('js') }}').length > 0) {
+        $(document).on('click', ".js-deleteRepeaterEntry-{{ field.name|escape('js') }}", function(e) {
+          $(this).closest('li.repeater_item').hide( "slow", function() {
+            $(this).remove();
+          });
+        });
+
+        $(document).on('click', "#{{ field.name|escape('js') }}-repeaterAddButton", function(e) {
+          var new_line = $('#product_dwfproductextrafields #repeater_{{ field.name|escape('js') }}_newLine').html();
+          new_line = new_line.replace(/LINEID/gm, $('#repeater_{{ field.name|escape('js') }} > li').length);
+          $('#product_dwfproductextrafields #repeater_{{ field.name|escape('js') }}').append('<li id="repeater_{{ field.name|escape('js') }}_' + $('#repeater_{{ field.name|escape('js') }} > li').length + '" class="card card-secondary repeater_item">' + new_line  + '</li>');
+
+          $(new_line).find('textarea[class^="autoload_rte_"]').each(function() {
+            var editor_selector = $(this).attr('class');
+            tinySetup({
+              editor_selector: editor_selector,
+              setup : function(ed) {
+                ed.on('blur', function(ed) {
+                  tinyMCE.triggerSave();
+                });
+              }
+            });
+          });
+        });
+
+        $('#repeater_{{ field.name|escape('js') }}').sortable({
+          axis: 'y',
+          placeholder: "ui-state-highlight card",
+          forcePlaceholderSize: true
+        });
+      }
+    });
+  </script>
+{% endmacro %}
+
+
+{% block dwfproductextrafields_repeater_row %}
+  <div class="form-group">
+    <label>
+      {{ label|raw }}
+    </label>
+    <div>
+      {{ block('dwfproductextrafields_repeater_widget') }}
+      {{ form_errors(form) }}
+      {{ form_help(form) }}
+    </div>
+  </div>
+{% endblock %}
+
+{% block dwfproductextrafields_repeater_widget %}
+  {% import _self as macros %}
+  {% set field = form.vars %}
+  {% set field = form.vars %}
+  {% set languages = languages|default([]) %}
+  {% set defaultFormLanguage = defaultFormLanguage|default(0) %}
+  {% set defaultLanguageIso = defaultLanguageIso|default('en') %}
+  {% set dwfproductextrafields_adminController = dwfproductextrafields_adminController|default('') %}
+
+  {{ macros.dwfproductextrafields_repeater(field, languages, defaultFormLanguage, defaultLanguageIso, dwfproductextrafields_adminController) }}
+{% endblock %}

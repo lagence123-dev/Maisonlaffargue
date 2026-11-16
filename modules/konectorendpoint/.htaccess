@@ -1,0 +1,14 @@
+# Scripts de diagnostic et journal de debug : accès web interdit.
+# Ajouté le 2026-11-16 par L'AGENCE123 (exposition d'infos BDD et de la clé d'API).
+<FilesMatch "^(api_debug_capture\.php|api_diagnostic\.php|api_test_sql\.php|api_sql_test_variants\.php|api_create_product_traced\.php|.*\.log)$">
+    # Apache 2.2
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+
+    # Apache 2.4
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>

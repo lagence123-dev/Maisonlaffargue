@@ -1,0 +1,133 @@
+
+# ============================================================
+# MAISON LAFFARGUE - PRESTASHOP
+# GitHub / VM 772424
+# ============================================================
+
+# === 1. Secrets et configurations par environnement ===
+/app/config/parameters.php
+/app/config/parameters.yml
+/app/config/parameters.old.yml
+/app/config/config.php
+/config/settings.inc.php
+
+.env
+.env.*
+/.htpasswd
+/.htaccess
+/robots.txt
+*sitemap*.xml
+
+# Certificats et cles privees
+*.pem
+*.key
+*.p12
+*.pfx
+
+# === 2. Caches, logs et sessions ===
+/var/cache/
+/var/logs/
+/var/sessions/
+/cache/*
+/log/*
+/logs/
+/app/cache/*
+/app/logs/*
+/config/xml/*
+/config/themes/*
+
+/themes/*/cache/*
+/themes/*/assets/cache/
+/.sass-cache/
+
+*.log
+*.cache
+
+# === 3. Fichiers clients et medias ===
+/img/*
+!/img/index.php
+!/img/.htaccess
+
+/upload/*
+!/upload/index.php
+!/upload/.htaccess
+
+/download/*
+!/download/index.php
+!/download/.htaccess
+
+# === 4. Fichiers propres au domaine ===
+/.well-known/
+/gmerchantcenter*.xml
+/XMLFeed.cache
+
+# === 5. Back-office PrestaShop ===
+/admin708e2eoik/autoupgrade/*
+/admin708e2eoik/backups/*
+/admin708e2eoik/import/*
+
+!/admin708e2eoik/import/.htaccess
+!/admin708e2eoik/import/index.php
+
+# === 6. Fichiers generes par les modules ===
+/dynamicproduct/cache/
+/modules/colissimo/documents/
+/modules/colissimo/logs/
+/modules/creativeelements/views/css/ce/
+/modules/dgtranslationall/vendor/dingedi/dingedi-pstranslationsapi/cache/
+/modules/storecommander/module_sc.xml
+
+# === 7. Dependances et outils de build ===
+node_modules/
+bower_components/
+.grunt/
+composer.phar
+
+# IMPORTANT :
+# composer.lock est conserve dans Git.
+# vendor/ est conserve pour l'instant afin de rester
+# compatible avec le fonctionnement actuel des VM.
+
+# === 8. Dumps, exports et sauvegardes ===
+/*.sql
+/*-mysql*
+*.sql.gz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bak
+*.backup
+*.dump
+*.db
+*.sqlite
+
+# Les scripts SQL des modules ne sont PAS exclus :
+# modules/xxx/install.sql
+# modules/xxx/sql/uninstall.sql
+# modules/xxx/upgradesql/upgrade-1.0.0.sql
+
+# === 9. Outils locaux et fichiers developpeurs ===
+.claude/
+.idea/
+.vscode/
+
+.bash_logout
+.bash_profile
+
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*~
+
+# === 10. Fichiers temporaires ===
+*.tmp
+*.temp
+*.swp
+*.swo
+# === Configurations propres aux modules ===
+/modules/ps_eventbus/config/parameters.yml
+# === Application mailing / newsletters ===
+/mailing/uploads/
+/mailing/includes/config.php

@@ -1,0 +1,11 @@
+<?php
+$is_subtab = isset($is_subtab)?$is_subtab:0;
+
+$_html .= '<script>init_tabs('.$number_tab.');</script>';
+
+if($is_subtab){
+    $_html .= '<script>sidebarmenu_subtab("'.$number_subtab.'");</script>';
+}
+
+echo $_html;
+?>

@@ -1,0 +1,93 @@
+<?php
+
+$_html  = '';
+
+
+$_html .= '<div class="panel">
+
+		<div class="panel-heading"><i class="fa fa-question-circle fa-lg"></i>&nbsp;'.$this->l('Frequently Asked Questions').'</div>';
+
+
+$_html .= '<div class="row ">
+
+                       ';
+
+$_html .= '<div class="span">
+                          <p>
+                             <span style="font-weight: bold; font-size: 15px;" class="question">
+                             	- <b style="color:red">'.$this->l('CUSTOM HOOK HELP:').'</b> '.$this->l('How I can show Blog Categories, Posts, Comments, etc. on a single page (CMS or other places for example) ?').'
+                             </span>
+                             <br/><br/>
+                             <span style="color: black;" class="answer">
+                             	   <b>1.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Categories').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogCategoriesSPM\'}</pre>
+                              </span>
+                              <br/>
+                             <span style="color: black;" class="answer">
+                             	   <b>2.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Posts').':
+                                   <br/><br/>
+                                   <b>-</b>&nbsp;'.$this->l('For all Blog Posts').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogPostsSPM\'}</pre>
+                                    <br/>
+                                   <b>-</b>&nbsp;'.$this->l('For Blog Posts in the selected category (for example: id_category=\'2\')').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogPostsSPM\' id_category=\'2\' mod=\'blockblog\'}</pre>
+                              </span>
+                              <br/>
+                             <span style="color: black;" class="answer">
+                             	   <b>3.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Comments').':
+                                   <br/><br/>
+                                   <b>-</b>&nbsp;'.$this->l('For all Blog Comments').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogCommentsSPM\'}</pre>
+                                    <br/>
+                                   <b>-</b>&nbsp;'.$this->l('For Blog Comments in the selected post (for example: id_post=\'2\')').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogCommentsSPM\' id_post=\'2\' mod=\'blockblog\'}</pre>
+
+                              </span>
+                              <br/>
+                             <span style="color: black;" class="answer">
+                             	   <b>4.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Search').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogSearchSPM\'}</pre>
+                              </span>
+                              <br/>
+                              <span style="color: black;" class="answer">
+                             	   <b>5.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Archives').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogArchivesSPM\'}</pre>
+                              </span>
+                              <br/>
+                              <span style="color: black;" class="answer">
+                             	   <b>6.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Tags').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogTagsSPM\'}</pre>
+                              </span>
+                              <br/>
+                              <span style="color: black;" class="answer">
+                             	   <b>7.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Top Authors').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogTopAuthorsSPM\'}</pre>
+                              </span>
+                              <br/>
+                              <span style="color: black;" class="answer">
+                             	   <b>8.</b>&nbsp;'.$this->l('You just need to add a line of code to the tpl file of the page where you want to add the Blog Gallery').':
+                                   <br/><br/>
+                                   <pre>{hook h=\'blogGallerySPM\'}</pre>
+                              </span>
+
+                         </p>
+                       </div><br/><br/>';
+
+
+
+
+
+$_html .= '</div>';
+
+$_html .= '</div>';
+
+echo $_html;

@@ -1,0 +1,75 @@
+.advertise-text-blockblog{
+    background-color: #FAFAFA;
+    border: 1px solid #C4C4C4;
+    padding: 10px;
+}
+
+.advertise-text-blockblog-text-align{text-align:center}
+
+.advertise-text-blockblog img{vertical-align: sub;}
+
+table.std th, table.table_block th{padding:5px!important}
+
+.no-active-my-blockblog{background-color:#dddddd }
+
+.blockblog-my-img img{width:60px}
+.blockblog-my-title a{text-decoration: underline;}
+.blockblog-my-action-btn a{color:white!important;text-decoration: none!important;}
+
+.font-size-13{font-size:13px}
+.edit-comment-myaccount{float:left;margin-left:10px;margin-top:20px;text-decoration: underline}
+
+
+#leaveComment .img-thumbnail {
+    background-color: #eff1f2;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    height: auto;
+    line-height: 1.42857;
+    width: 250px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.b-guide {
+    padding: 7px 0 10px 7px;
+}
+
+.btn-default-custom {
+    background-color: #fff;
+    border-color: #dedede!important;
+    color: #363a41;
+}
+
+.btn-default-custom:hover{color:#363A41;background-color:#e6e6e6;border-color:#bfbfbf}
+
+.table-my-select-category{
+    border:1px solid #ddd
+}
+.table-my-select-category th{
+    border-top:1px solid #ddd
+}
+.table-my-select-category td{
+    padding: 5px;
+    border-top:1px solid #ddd
+}
+.my-select-category{
+    font-size:14px;
+
+}
+.my-select-category a{
+    text-decoration: underline;
+}
+.my-select-category img{
+    width:50px;
+}
+
+
+.add-post-myaccount{
+    text-align: center;
+    margin:20px 0;
+}
+.add-post-myaccount a{font-size:16px}
+
+

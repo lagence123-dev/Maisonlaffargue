@@ -1,0 +1,98 @@
+<?php
+
+$_html = '';
+
+$blog_h = (int)Configuration::get($this->name.'blog_h');
+
+
+$_html .= "<script type=\"text/javascript\">
+    	$('document').ready( function() {
+    		if(".$blog_h." == 3){
+    				$( \"input[name*='blog_bp_sl']\" ).parent().parent().show(200);
+
+    		} else {
+    				$( \"input[name*='blog_bp_sl']\" ).parent().parent().hide(200);
+    		}
+
+
+    		$( \"#blog_h\" ).change(function() {
+  				    if($( \"#blog_h option:selected\" ).val() == 3){
+
+  				    	$( \"input[name*='blog_bp_sl']\" ).parent().parent().show(200);
+
+		    		} else {
+		    			$( \"input[name*='blog_bp_sl']\" ).parent().parent().hide(200);
+		    		}
+			});
+
+
+
+
+			$( \"label[for='bposts_slider_on']\" ).click(function() {
+                $( \"#bposts_sl\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='bposts_slider_off']\" ).click(function() {
+    	        $( \"#bposts_sl\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'bposts_slider')." == 0){
+    	        $( \"#bposts_sl\" ).parent().parent().hide(200);
+    	    }
+
+
+    	    $( \"label[for='bcat_slider_on']\" ).click(function() {
+                $( \"#bcat_sl\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='bcat_slider_off']\" ).click(function() {
+    	        $( \"#bcat_sl\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'bcat_slider')." == 0){
+    	        $( \"#bcat_sl\" ).parent().parent().hide(200);
+    	    }
+
+
+    	    $( \"label[for='bcom_slider_on']\" ).click(function() {
+                $( \"#bcom_sl\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='bcom_slider_off']\" ).click(function() {
+    	        $( \"#bcom_sl\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'bcom_slider')." == 0){
+    	        $( \"#bcom_sl\" ).parent().parent().hide(200);
+    	    }
+
+
+
+    	    $( \"label[for='sr_slideru_on']\" ).click(function() {
+                $( \"#sr_slu\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='sr_slideru_off']\" ).click(function() {
+    	        $( \"#sr_slu\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'sr_slideru')." == 0){
+    	        $( \"#sr_slu\" ).parent().parent().hide(200);
+    	    }
+
+
+    	    $( \"label[for='sr_sliderhu_on']\" ).click(function() {
+                $( \"#sr_slhu\" ).parent().parent().show(200);
+			});
+
+            $( \"label[for='sr_sliderhu_off']\" ).click(function() {
+    	        $( \"#sr_slhu\" ).parent().parent().hide(200);
+    	    });
+
+    	    if(".(int)Configuration::get($this->name.'sr_sliderhu')." == 0){
+    	        $( \"#sr_slhu\" ).parent().parent().hide(200);
+    	    }
+
+    	});
+    	</script>
+    	";

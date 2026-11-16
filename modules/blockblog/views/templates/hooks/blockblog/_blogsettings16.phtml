@@ -1,0 +1,248 @@
+<?php
+
+
+$_html = '';
+
+
+
+
+$_html .= '<div class="row">
+    				<div class="col-lg-12">
+    					<div class="row">';
+
+$_html .= '<div class="productTabs col-lg-2 col-md-3">
+
+			<div class="list-group">
+				<ul class="nav nav-pills nav-stacked" id="blognavtabs16">
+				    <li class="active"><a href="#urlrewrite" data-toggle="tab" class="list-group-item"><i class="fa fa-link fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_seo_url'].'</a></li>
+
+                    <li><a href="#sidebarmenu" data-toggle="tab" class="list-group-item"><i class="fa fa-eye fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_sid_design'].'</a></li>
+                    <li><a href="#mainsettingsblog" data-toggle="tab" class="list-group-item"><i class="fa fa-cogs fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_main_set'].'</a></li>
+
+                    <li><a href="#categoriessettings" data-toggle="tab" class="list-group-item"><i class="fa fa-list fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_cat_set'].'</a></li>
+                    <li><a href="#postssettings" data-toggle="tab" class="list-group-item"><i class="fa fa-newspaper-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_posts_set'].'</a></li>
+				    <li><a href="#commentssettings" data-toggle="tab" class="list-group-item"><i class="fa fa-comments-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_com_set'].'</a></li>
+				    <li><a href="#fbcommentssettings" data-toggle="tab" class="list-group-item"><i class="fa fa-facebook fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_f_com'].'</a></li>
+
+                    <li><a href="#myaccount" data-toggle="tab" class="list-group-item"><i class="fa fa-user fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_my_acc_set'].'</a></li>
+
+				    <li><a href="#slider" data-toggle="tab" class="list-group-item"><i class="fa fa-puzzle-piece fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_slider_set'].'</a></li>
+				    <li><a href="#gallery" data-toggle="tab" class="list-group-item"><i class="fa fa-image fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_gal_set'].'</a></li>
+
+				    <li><a href="#avasettings" data-toggle="tab" class="list-group-item"><i class="fa fa-users fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_blog_auth'].'</a></li>
+                    <li><a href="#blockssettings" data-toggle="tab" class="list-group-item"><i class="fa fa-list-alt fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_blocks_set'].'</a></li>
+                    <li><a href="#blockpositions" data-toggle="tab" class="list-group-item"><i class="fa fa-th fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_pos_blocks'].'</a></li>
+
+
+
+                    <li><a href="#emailsettings" data-toggle="tab" class="list-group-item"><i class="fa fa-envelope-o fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_em_set'].'</a></li>
+
+
+
+                    <li><a href="#rssfeed" data-toggle="tab" class="list-group-item"><i class="fa fa-rss fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_rss_feed'].'</a></li>
+                    <li><a href="#sitemap" data-toggle="tab" class="list-group-item"><i class="fa fa-sitemap fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_sit'].'</a></li>
+                    <li><a href="#wordpress" data-toggle="tab" class="list-group-item"><i class="fa fa-upload fa-lg"></i>&nbsp;'.$this->_data_translate_custom['_blogsettings16_imp_wordpress'].'</a></li>
+
+                    ';
+
+
+$_html .= '</ul>
+				  </div>
+		</div>';
+
+$_html .= '<div class="tab-content col-lg-10 col-md-9">';
+$_html .= '<div class="tab-pane active" id="urlrewrite">'.$this->_urlrewrite().'</div>';
+
+
+
+$_html .= '<div class="tab-pane" id="sidebarmenu">';
+
+
+/* sidebar menu */
+
+$_html .= '<div class="row">';
+
+$_html .= '<div class="productTabs col-lg-3 col-md-3">
+
+               <div class="list-group">
+                  <ul class="nav nav-pills nav-stacked" id="sidebarmenutabs">';
+
+
+$_html .= '<li>
+                                   <span class="title-order-by">'.$this->_data_translate_custom['_blogsettings16_name_page'].'</span>';
+
+
+$_html .= '<div class="clear"></div></li>';
+
+$available_pages = $this->getAvailablePages();
+foreach($available_pages as $i_pos => $available_pages_array) {
+
+    $alias_position = $available_pages_array['alias'];
+    $name_position = $available_pages_array['name'];
+    $icon_position = $available_pages_array['icon'];
+
+    $_html .= '<li ' . ($i_pos == 1 ? 'class="active"' : '') . '>
+                                   <a href="#sidebarmenu_'.$alias_position.'" data-toggle="tab" class="list-group-item"><i class="fa '.$icon_position.' fa-lg"></i>&nbsp;'.$name_position.'</a>';
+
+    $_html .= '<div class="clear"></div></li>';
+}
+
+$_html .= '</ul>
+				</div>
+		        </div>';
+
+
+$_html .= '<div class="tab-content col-lg-9 col-md-9">';
+
+
+$available_pages = $this->getAvailablePages();
+foreach($available_pages as $i_pos => $available_pages_array) {
+
+    $alias_position = $available_pages_array['alias'];
+
+    $_html .= '<div class="tab-pane '.($i_pos == 1?'active':'').'" id="sidebarmenu_'.$alias_position.'">';
+
+    $_html .= $this->_sidebarmenu($available_pages_array);
+
+    $_html .= '</div>';
+}
+
+
+
+$_html .= '</div>';
+
+$_html .= '</div>';
+
+
+
+/* sidebar menu */
+
+$_html .= '</div>';
+
+
+
+$_html .= '<div class="tab-pane" id="mainsettingsblog">'.$this->_mainsettingsblog().'</div>';
+$_html .= '<div class="tab-pane" id="categoriessettings">'.$this->_categoriessettings().'</div>';
+$_html .= '<div class="tab-pane" id="postssettings">'.$this->_postssettings().'</div>';
+$_html .= '<div class="tab-pane" id="commentssettings">'.$this->_commentssettings().'</div>';
+$_html .= '<div class="tab-pane" id="fbcommentssettings">'.$this->_fbcommentssettings().'</div>';
+
+$_html .= '<div class="tab-pane" id="myaccount">'.$this->_myaccountsettings().'</div>';
+
+$_html .= '<div class="tab-pane" id="slider">'.$this->_slidersettings().'</div>';
+$_html .= '<div class="tab-pane" id="gallery">'.$this->_gallerysettings().'</div>';
+$_html .= '<div class="tab-pane" id="avasettings">'.$this->_avasettings().'</div>';
+$_html .= '<div class="tab-pane" id="blockssettings">'.$this->_blockssettings().'</div>';
+
+
+//$_html .= '<div class="tab-pane" id="blockpositions">'.$this->_blockpositions().'</div>';
+
+
+
+$_html .= '<div class="tab-pane" id="blockpositions">';
+
+    $_html .= '<div class="row">';
+
+    $_html .= '<div class="productTabs col-lg-4 col-md-4">
+
+               <div class="list-group">
+                  <ul class="nav nav-pills nav-stacked" id="positionsblogtabs">';
+
+
+$_html .= '<li>
+                                   <span class="title-order-by">'.$this->_data_translate_custom['_blogsettings16_name_pos'].'</span>
+                                    <span class="wrapper-title-order-by">
+
+                                    <span class="title-item-order-by">
+'.$this->_data_translate_custom['_blogsettings16_desktop'].'
+</span>
+
+                                    <span class="title-item-order-by">
+'.$this->_data_translate_custom['_blogsettings16_mobile'].'
+</span>
+
+                                    </span>
+                                    <div class="clear"></div>
+                                   </li>';
+
+                    $i_pos = 0;
+
+                    foreach($this->getAllAvailablePositionsBlog() as $alias_position => $item_position) {
+
+                        $desktop_position = (int)Configuration::get($this->name . $alias_position);
+
+                        $mobile_position = (int)Configuration::get($this->name . $alias_position. "mobile");
+
+
+                        $_html .= '<li '.($i_pos == 0?'class="active"':'').'>
+                                   <a href="#positionsblog_' . $alias_position . '" data-toggle="tab"
+                                     class="list-group-item"><i class="fa fa-anchor fa-lg"></i>&nbsp;' . $item_position . '</a>
+                                    <span class="blockblog_on_off_switch_wrapper">
+
+                                    <span class="blockblog-desktop ' . $alias_position . 'desktop blockblog_on_off_switch '.($desktop_position?'active':'').'" data-blockblog="' . $alias_position . 'desktop">
+                                        <input class="blockblog_on_off_slider" type="checkbox" '.($desktop_position?'checked="checked"':'').' value="1" >
+                                        <span class="blockblog_on_off_slider_label on">'.$this->_data_translate_custom['_blogsettings16_enable'].'</span>
+                                        <span class="blockblog_on_off_slider_label off">'.$this->_data_translate_custom['_blogsettings16_disable'].'</span>
+                                    </span>
+
+
+                                    <span class="blockblog-mobile ' . $alias_position . 'mobile blockblog_on_off_switch '.($mobile_position?'active':'').'" data-blockblog="' . $alias_position . 'mobile">
+                                        <input class="blockblog_on_off_slider" type="checkbox" '.($mobile_position?'checked="checked"':'').' value="1" >
+                                        <span class="blockblog_on_off_slider_label on">'.$this->_data_translate_custom['_blogsettings16_enable'].'</span>
+                                        <span class="blockblog_on_off_slider_label off">'.$this->_data_translate_custom['_blogsettings16_disable'].'</span>
+                                    </span>
+
+                                    </span>
+                                    <div class="clear"></div>
+                                   </li>';
+
+                        $i_pos++;
+                    }
+
+
+        $_html .= '</ul>
+				</div>
+		        </div>';
+
+
+$_html .= '<div class="tab-content col-lg-8 col-md-8">';
+
+        $i_pos = 0;
+
+
+
+        foreach($this->getAllAvailablePositionsBlog() as $alias_position => $item_position) {
+
+
+
+        $_html .= '<div class="tab-pane '.($i_pos == 0?'active':'').'" id="positionsblog_'.$alias_position.'">';
+                $_html .= $this->positionsForBlog(array('alias'=>$alias_position));
+                $_html .= '</div>';
+
+            $i_pos++;
+            }
+
+$_html .= '</div>';
+
+$_html .= '</div>';
+
+$_html .= $this->_blockpositions().$this->_customhookhelp();
+    $_html .= '</div>';
+
+
+$_html .= '<div class="tab-pane" id="emailsettings">'.$this->_emailsettings().'</div>';
+$_html .= '<div class="tab-pane" id="rssfeed">'.$this->_rssfeed().'</div>';
+$_html .= '<div class="tab-pane" id="sitemap">'.$this->_sitemap().'</div>';
+$_html .= '<div class="tab-pane" id="wordpress">'.$this->_wordpress().'</div>';
+
+
+
+$_html .= '</div>';
+
+
+
+$_html .= '</div></div></div>';
+
+echo $_html;
+
+?>

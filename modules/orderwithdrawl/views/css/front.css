@@ -1,0 +1,348 @@
+/* Footer button wrapper */
+.orderwithdrawl-footer-wrapper {
+  display: flex;
+  margin: 24px auto;
+  padding: 16px 16px;
+}
+
+.orderwithdrawl-footer-wrapper--left {
+  justify-content: flex-start;
+}
+
+.orderwithdrawl-footer-wrapper--center {
+  justify-content: center;
+}
+
+.orderwithdrawl-footer-wrapper--right {
+  justify-content: flex-end;
+}
+
+.orderwithdrawl-footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--orderwithdrawl-button-color, #f44708);
+  color: var(--orderwithdrawl-button-font-color, #ffffff);
+  padding: 10px 10px;
+
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.orderwithdrawl-footer-button--small {
+  padding: 6px 14px;
+  font-size: 0.875rem;
+}
+
+.orderwithdrawl-footer-button--medium {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.orderwithdrawl-footer-button--large {
+  padding: 14px 28px;
+  font-size: 1.0625rem;
+}
+
+.orderwithdrawl-footer-button:hover,
+.orderwithdrawl-footer-button:focus {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.18);
+  color: var(--orderwithdrawl-button-font-color, #ffffff);
+}
+
+.orderwithdrawl-footer-button:focus-visible,
+.orderwithdrawl-btn:focus-visible,
+.orderwithdrawl-form .form-control:focus-visible,
+.orderwithdrawl-form input:focus-visible,
+.orderwithdrawl-form textarea:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+@media (max-width: 576px) {
+  .orderwithdrawl-footer-button {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderwithdrawl-footer-button,
+  .orderwithdrawl-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    min-height: 44px;
+  }
+
+  .orderwithdrawl-note-textarea {
+    min-height: 80px;
+    rows: 3;
+  }
+
+  .orderwithdrawl-form .form-control {
+    font-size: 1rem;
+  }
+}
+
+.orderwithdrawl-account-legacy {
+  list-style: none;
+}
+
+/* Privacy / Withdrawal notice on CMS pages */
+.orderwithdrawl-privacy {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #f8fafc;
+}
+
+.orderwithdrawl-privacy__note {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.orderwithdrawl-privacy__title {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderwithdrawl-privacy__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.orderwithdrawl-privacy__link:hover,
+.orderwithdrawl-privacy__link:focus {
+  text-decoration: underline;
+}
+
+/* Front-side withdrawal form */
+.orderwithdrawl-form {
+  margin-bottom: 32px;
+}
+
+.orderwithdrawl-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.orderwithdrawl-form-group label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderwithdrawl-required-marker {
+  color: #dc2626;
+  margin-left: 0.2rem;
+}
+
+.orderwithdrawl-scope {
+  border: 0;
+  padding: 0;
+}
+
+.orderwithdrawl-scope__legend {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderwithdrawl-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.orderwithdrawl-radio input {
+  margin-top: 0.25rem;
+}
+
+.orderwithdrawl-contract-parts {
+  margin-top: 1rem;
+}
+
+.orderwithdrawl-contract-parts__rows {
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.orderwithdrawl-contract-part-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 2fr) minmax(140px, 1.4fr) minmax(80px, 0.6fr) auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 0.75rem;
+  min-width: 560px;
+}
+
+.orderwithdrawl-contract-part-field label {
+  display: block;
+  margin: 0;
+}
+
+.orderwithdrawl-contract-part-field .form-control {
+  margin-top: 0.25rem;
+}
+
+.orderwithdrawl-contract-part-add {
+  margin-top: 0.25rem;
+}
+
+.orderwithdrawl-contract-part-remove {
+  white-space: nowrap;
+}
+
+.orderwithdrawl-order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 0.75rem;
+}
+
+.orderwithdrawl-order-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(120px, 160px);
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #ffffff;
+}
+
+.orderwithdrawl-order-item__main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.orderwithdrawl-order-item__name {
+  color: #0f172a;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.orderwithdrawl-order-item__reference {
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.orderwithdrawl-order-item__quantity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: #0f172a;
+}
+
+.orderwithdrawl-order-item__quantity .form-control {
+  max-width: 80px;
+}
+
+.orderwithdrawl-form .form-control[aria-invalid="true"] {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.25);
+}
+
+.orderwithdrawl-field-error {
+  display: block;
+  margin-top: 4px;
+  color: #dc2626;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.orderwithdrawl-form-errors {
+  margin-bottom: 1rem;
+}
+
+.orderwithdrawl-policy {
+  margin: 0 0 1.5rem;
+  padding: 12px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.orderwithdrawl-policy > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
+  list-style: revert;
+}
+
+.orderwithdrawl-policy__content {
+  margin-top: 12px;
+  color: #0f172a;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.orderwithdrawl-btn {
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.orderwithdrawl-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.97);
+}
+
+@media (max-width: 576px) {
+  .orderwithdrawl-order-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .orderwithdrawl-order-item__quantity {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+/* Confirmation receipt */
+.orderwithdrawl-confirmation {
+  padding: 20px 24px;
+}
+
+.orderwithdrawl-confirmation__title {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.orderwithdrawl-confirmation__message {
+  margin-top: 12px;
+  color: #0f172a;
+}

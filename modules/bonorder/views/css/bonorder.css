@@ -1,0 +1,138 @@
+#bonorder {
+    padding: 30px;
+    border-radius: 0;
+}
+
+#btn-bonorder {
+    float: right;
+    margin-top: -82px;
+}
+
+#btn-bonorder a.btn-bonorder {
+    margin-top: 2px;
+    padding: 14px 28px;
+    text-transform: capitalize;
+    font-weight: 400;
+    white-space: inherit;
+    border: none;
+    transition: all .5s;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.14);
+    background: #60748f;
+    color: #fff;
+    text-shadow: 2px 1px rgba(0,0,0,.1);
+    letter-spacing: .5px;
+  }
+#btn-bonorder a.btn-bonorder:hover {
+    background: #324b6c;
+    box-shadow: none;
+}
+
+#bonorder-wrapper fieldset {
+    margin-top: 0;
+}
+
+#bonorder-wrapper .modal-body {
+    overflow: hidden;
+}
+
+#bonorder-wrapper .submit {
+    padding-top: 5px;
+}
+
+#bonorder sup {
+    color: red;
+    font-weight: bold;
+}
+
+#bonorder label {
+    font-size: 14px;
+    display: block;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+#bonorder .modal-content {
+    border-radius: 0;
+}
+
+#bonorder-wrapper .image-sticky-order {
+    width: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+#bonorder-wrapper label {
+    text-align: left;
+}
+
+#bonorder-wrapper .modal-content {
+    border-radius: 0;
+}
+
+#bonorder .quickbuy_errors,
+#bonorder .quickbuy_success {
+    margin: 0 15px;
+    display: none;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.btn-bonorder {
+    padding: 13px 35px;
+    font-size: 1rem;
+    /* margin-bottom: 16px; */
+    color: #fff;
+    display: inline-block;
+    position: relative;
+
+}
+
+.btn-bonorder:hover,
+.btn-bonorder:focus {
+    color: #fff;
+}
+
+.btn-bonorder:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url('../img/click.png') no-repeat 0 0;
+    margin-right: 5px;
+    vertical-align: -9px;
+}
+
+.bon_order_success.alert.alert-success {
+    margin: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    #btn-bonorder {
+        margin-top: -93px;
+        margin-top: 0;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #bonorder-wrapper .image-sticky-order {
+        display: none;
+    }
+
+    #bonorder-wrapper .modal-dialog {
+        margin: 0 auto;
+    }
+
+    #bonorder-wrapper label {
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    #bonorder-wrapper .modal-open .modal {
+        margin: 0 10px
+    }
+}

@@ -1,0 +1,137 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your
+* needs please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+
+.wk-text-center {
+    text-align: center;
+}
+
+#wrapper_header {
+    border: 1px solid #eee;
+    padding: 15px !important;
+    box-shadow: 2px 2px 8px 0rgba(0, 0, 0, .2);
+    background: #fff;
+    margin-bottom: 15px;
+
+}
+
+.wk_search_row {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.search_gift_cart_btn {
+    height: 38px;
+}
+
+.wk_display_flex {
+    display: flex;
+
+}
+
+.wk_flex_center {
+    align-items: center;
+    justify-content: center;
+}
+
+.wk_flex_direction_row_revese{
+    flex-direction: row-reverse;
+}
+
+.wk_background_white {
+    background-color: #fff !important;
+}
+
+.wk_width_100 {
+    width: 100%;
+}
+
+.wk_field_padding {
+    padding: 10px 7px;
+}
+
+.tag:hover {
+    background-color: #2FB5D2;
+    color: #fff;
+}
+
+.tag:hover::after {
+    border-left-color: #2FB5D2;
+}
+
+
+
+.tag {
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    color: #222;
+}
+
+.tag::before {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, .25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}
+
+.tag::after {
+    background: #fff;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #eee;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tag_active {
+    background-color: #2FB5D2;
+    color: #fff;
+}
+
+.tag_active::after {
+    border-left-color: #2FB5D2;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.wk_overflow_hidden {
+    overflow: hidden !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .wk_display_flex {
+        flex-direction: column;
+    }
+}
