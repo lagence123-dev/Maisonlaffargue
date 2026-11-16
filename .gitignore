@@ -131,3 +131,5 @@ Desktop.ini
 # === Application mailing / newsletters ===
 /mailing/uploads/
 /mailing/includes/config.php
+/modules/ps_emailsubscription/customers_export_*.csv
+/modules/wkgiftcard/views/voucher/*.pdf
