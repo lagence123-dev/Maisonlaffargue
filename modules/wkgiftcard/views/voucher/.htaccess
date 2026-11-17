@@ -1,0 +1,13 @@
+# Bons cadeaux PDF (voucher_<id_order>.pdf, numéros séquentiels) : accès web interdit.
+# Les PDF sont seulement lus sur disque par wkgiftcard.php pour être joints au mail.
+# Ajouté le 2026-11-16 par L'AGENCE123 (énumération possible des bons cadeaux).
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+</IfModule>
+
+# Apache 2.4
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
